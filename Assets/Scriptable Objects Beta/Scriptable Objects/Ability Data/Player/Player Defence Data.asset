@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aa1de691e56f014fa126b5fc0bff6f0, type: 3}
+  m_Name: Player Defence Data
+  m_EditorClassIdentifier: 
+  speed: 1
+  attackValue: 0
+  dmgValue: 0
+  staminaValue: 0
+  depletionRate: 0.4
+  replenishmentRate: 2
+  maxAvailabilityIndex: 1
+  isAbilityLocked: 0
+  abilityName: {fileID: 11400000, guid: bb878733a6cfe7d4088b1bd12608ffda, type: 2}

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8111135dd960cf46a92e8de78421a11, type: 3}
+  m_Name: Int Perks After Level 1
+  m_EditorClassIdentifier: 
+  perkPrefab: {fileID: 4282966848670354401, guid: 0e7c5b5daa1e4244ab2c161107a92c22, type: 3}
+  inttPerks_IncrementedWithAmount:
+  - perkPrefab: {fileID: 4282966848670354401, guid: 0e7c5b5daa1e4244ab2c161107a92c22, type: 3}
+    IntVariable: {fileID: 11400000, guid: f05e804490df90e4e9b78cb4ef1f2fde, type: 2}
+    incrementAmount: 20

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8111135dd960cf46a92e8de78421a11, type: 3}
+  m_Name: Coins_Plus_40
+  m_EditorClassIdentifier: 
+  perkPrefab: {fileID: 0}
+  coinsRequiredToUnlock: 0
+  playerCoinCount: {fileID: 11400000, guid: f05e804490df90e4e9b78cb4ef1f2fde, type: 2}
+  inttPerks_IncrementedWithAmount:
+  - IntVariable: {fileID: 11400000, guid: f05e804490df90e4e9b78cb4ef1f2fde, type: 2}
+    incrementAmount: 40

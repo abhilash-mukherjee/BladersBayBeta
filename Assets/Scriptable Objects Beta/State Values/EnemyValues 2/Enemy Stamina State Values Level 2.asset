@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1291d4263e79e854d8487bcb70a3399d, type: 3}
+  m_Name: Enemy Stamina State Values Level 2
+  m_EditorClassIdentifier: 
+  stateName: {fileID: 11400000, guid: 6b414c1a69546a940b1dbd3679e883e4, type: 2}
+  isLocked: {fileID: 11400000, guid: 654444c22f92926438f9fc90997847b0, type: 2}
+  attackValue: {fileID: 11400000, guid: 790fb71019bbac24a9dd90a526461aa5, type: 2}
+  defenceValue: {fileID: 11400000, guid: b54e599021494664fb86979019506df0, type: 2}
+  staminaValue: {fileID: 11400000, guid: 21278b213c1fea94482095e48030bcdd, type: 2}
+  damageValue: {fileID: 11400000, guid: f75342c41d584984eb6e95c36db8bddd, type: 2}
+  speed: {fileID: 11400000, guid: d84a9f98f86e71641a9a201296b23e85, type: 2}
+  stateReplenishmentRate: {fileID: 11400000, guid: b37a89d3e212eb34a8c63c038e909405, type: 2}
+  stateDepletionRate: {fileID: 11400000, guid: 36a6e4da19406ba4bb4116d12a1f36df, type: 2}
+  startingStateAvailabiltyIndx: {fileID: 11400000, guid: 3bee1592bce07aa47b6bbc69a47fc4f3, type: 2}
+  thresholdStateAvailabiltyIndex: {fileID: 11400000, guid: 906bf0f0d51f74643b5252172aaacebe, type: 2}
+  minimumStateAvailabiltyIndex: {fileID: 11400000, guid: 115a85349d2fe16478d3f5071bc9a8cf, type: 2}

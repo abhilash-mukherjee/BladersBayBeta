@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33938c714d57d1843b3269f59e9eeb29, type: 3}
+  m_Name: Enemy Data Level 3
+  m_EditorClassIdentifier: 
+  AttackData: {fileID: 11400000, guid: c36c01481680a374e96c598ce0b19e67, type: 2}
+  DefenceData: {fileID: 11400000, guid: 6d9d8096acca8594795300a0abbdce9e, type: 2}
+  StaminaData: {fileID: 11400000, guid: 21370aec944dcd745af32aa063278549, type: 2}
+  BalanceData: {fileID: 11400000, guid: 41f90ed775ff0574982fae6ca647b142, type: 2}
+  ModelName: El-Drago
+  Model: {fileID: 1709340809770954306, guid: 5e54046731cc4004897d7b9a376b9842, type: 3}
+  icon: {fileID: 21300000, guid: 4124916b8d808f4479b2a8cb55afba21, type: 3}

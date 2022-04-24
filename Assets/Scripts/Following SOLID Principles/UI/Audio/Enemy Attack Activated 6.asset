@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53a1ef31d127a344484a55d0783c4305, type: 3}
+  m_Name: Enemy Attack Activated 6
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 8363b244335843641b5b28f4044ef953, type: 3}
+  volume:
+    minValue: 0.008161931
+    maxValue: 0.008161931
+  pitch:
+    minValue: 0.8573291
+    maxValue: 2

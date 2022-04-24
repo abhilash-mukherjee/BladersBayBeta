@@ -1,0 +1,142 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3923870306183577402
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2028009801144245712}
+  - component: {fileID: 7470311451501492447}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2028009801144245712
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3923870306183577402}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.5540945, y: -0.3445332, z: 0.4592073}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7470311451501492447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3923870306183577402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b71aee970f4bfed42953216bffa963f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - clip: {fileID: 8300000, guid: f12a5e020d5c1fe449c3230b31f776e5, type: 3}
+    volume: 1
+    pitch: 0.36
+    loop: 0
+    name: BeyBladeHit
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: d4a444e41c070c34fa3c42bcdb6bb3c7, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    name: BeyBladeClash
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 6ef7aa7b2390bae40b19d064b95b4700, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    name: BeyBladeSpin
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: bdaa6408053047242ac8ca283e98c3de, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    name: SplashScreenAudio1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: bdaa6408053047242ac8ca283e98c3de, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    name: SplashScreenAudio2
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 785b060a4c915f6429eda2d2c7a599ec, type: 3}
+    volume: 1
+    pitch: 0.74
+    loop: 0
+    name: SplashScreenAudio3
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: ed3629852105c6f42af367bbf94da238, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 1
+    name: BGM1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: de458e4d360a4804ea295221a3490358, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    name: ButtonClick
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 8d7c18f503ef25545b54b4fe246200de, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    name: MovementMarkerReached
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 8c3c01810cd14a046b35cb913136f151, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    name: Three
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 4c1c7c2b2177605459607b0b4534c0de, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    name: Two
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: e3387d4c30ca9354cb331153a2e599f2, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    name: One
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 7325bbf5ec6c32348a07966aa8b2880e, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    name: LetsGo
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 8363b244335843641b5b28f4044ef953, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    name: Electricity
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 80ec82e653164a54ca6798aa92d48f46, type: 3}
+    volume: 0.164
+    pitch: 1
+    loop: 1
+    name: Wind
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: de458e4d360a4804ea295221a3490358, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    name: PanelPopUp
+    source: {fileID: 0}

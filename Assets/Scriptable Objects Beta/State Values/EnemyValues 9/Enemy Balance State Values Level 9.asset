@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1291d4263e79e854d8487bcb70a3399d, type: 3}
+  m_Name: Enemy Balance State Values Level 9
+  m_EditorClassIdentifier: 
+  stateName: {fileID: 11400000, guid: 5402a096736dcb347a525d1058419bf1, type: 2}
+  isLocked: {fileID: 11400000, guid: e2ef0347ca4dd9c41ad1a8c5cb294670, type: 2}
+  attackValue: {fileID: 11400000, guid: 8037e50d889f6204eba54b80a961d020, type: 2}
+  defenceValue: {fileID: 11400000, guid: 62a4d5bc10c466c47bce5016dbc09cd0, type: 2}
+  staminaValue: {fileID: 11400000, guid: a9cc7408c06fc3e4ba217c431e0c73fb, type: 2}
+  damageValue: {fileID: 11400000, guid: 04f558c4cf9e49042a57959dc417e4da, type: 2}
+  speed: {fileID: 11400000, guid: 4991c4a03c0ec974bbedbb3628cf8a95, type: 2}
+  stateReplenishmentRate: {fileID: 11400000, guid: be783db5deec4a241b09c221af2aabf4, type: 2}
+  stateDepletionRate: {fileID: 11400000, guid: c6a53290dee25a146ae03bb7a6baa731, type: 2}
+  startingStateAvailabiltyIndx: {fileID: 11400000, guid: 879f85294e796ca46bf70d5fc60ed8a4, type: 2}
+  thresholdStateAvailabiltyIndex: {fileID: 11400000, guid: 3e6c8ab61c7681442ab2b35caf552cd0, type: 2}
+  minimumStateAvailabiltyIndex: {fileID: 11400000, guid: 68f289bdb74e65541978d06a0ec4f0fa, type: 2}

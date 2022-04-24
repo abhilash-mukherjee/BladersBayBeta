@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1291d4263e79e854d8487bcb70a3399d, type: 3}
+  m_Name: Player Defence State Values Stamina Training
+  m_EditorClassIdentifier: 
+  stateName: {fileID: 11400000, guid: 9a096879bbd9d5f49a44befc9b74ac47, type: 2}
+  isLocked: {fileID: 11400000, guid: 179d7e4aa19f49c419a35960cb48ddbd, type: 2}
+  attackValue: {fileID: 11400000, guid: 1c9d82ab7df79d0429db32505dcf0879, type: 2}
+  defenceValue: {fileID: 11400000, guid: 4dcc620bcf1832e469a01eb6588029bd, type: 2}
+  staminaValue: {fileID: 11400000, guid: bafe6c91b457a904b84d62dd3d285c5a, type: 2}
+  damageValue: {fileID: 11400000, guid: 4ec2c1c3261f72143a4b7ea8a3a59318, type: 2}
+  speed: {fileID: 11400000, guid: f2462deb6193bad49a27dfaa1f042b98, type: 2}
+  stateReplenishmentRate: {fileID: 11400000, guid: 2a4ed5a1d6126c24b8183fda50c9575d, type: 2}
+  stateDepletionRate: {fileID: 11400000, guid: 80b7798ab8ab0474d9eee5c2c6791b00, type: 2}
+  startingStateAvailabiltyIndx: {fileID: 11400000, guid: 95d15708116c5074282f866d08f11682, type: 2}
+  thresholdStateAvailabiltyIndex: {fileID: 11400000, guid: 507cea7a9fce6434d8fe6565c4c363eb, type: 2}
+  minimumStateAvailabiltyIndex: {fileID: 11400000, guid: 91615d53b2396cb4aaea04b8bae6a00b, type: 2}

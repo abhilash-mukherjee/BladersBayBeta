@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c33183d77da35947a73bba082c9a667, type: 3}
+  m_Name: AI Run Away
+  m_EditorClassIdentifier: 
+  m_actionName: {fileID: 11400000, guid: 4d8dfd33c0e9f3b4b95281377a936ddc, type: 2}
+  fieldOfViewWhenInBoundary: 150
+  fieldOfViewWhenCloseToPlayer: 90
+  fieldOfViewWhenFarFromPlayer: 120
+  thresholdDistance: 0.5
+  stadiumRadius: 2.2
+  playerFarCallingRate: 100
+  playerNearCallingRate: 10

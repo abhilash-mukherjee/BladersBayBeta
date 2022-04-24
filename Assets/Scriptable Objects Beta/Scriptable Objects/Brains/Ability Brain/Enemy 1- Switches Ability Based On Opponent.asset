@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96b3f204cedd61a47b29de0fa82e82be, type: 3}
+  m_Name: Enemy 1- Switches Ability Based On Opponent
+  m_EditorClassIdentifier: 
+  modeSwitchProbabilityList:
+  - enemyAbility: {fileID: 11400000, guid: 4d50da047f0c20b46847936d49bb0acf, type: 2}
+    AbilitySwitchProbabilities:
+    - abilityName: {fileID: 11400000, guid: 4d50da047f0c20b46847936d49bb0acf, type: 2}
+      abilityTrigger: {fileID: 11400000, guid: 97554fdf419ca21408dd2a6016a1ad30, type: 2}
+      probability: 50
+    - abilityName: {fileID: 11400000, guid: a62e0e95569d70e48a2e0b1f5a8e97d3, type: 2}
+      abilityTrigger: {fileID: 11400000, guid: c2ce4d18006502548b3ea928630ce33a, type: 2}
+      probability: 10
+    - abilityName: {fileID: 11400000, guid: 437b48afea62ecf4f8682a356fee2354, type: 2}
+      abilityTrigger: {fileID: 11400000, guid: c86d251ac07e7a144970088b9eccd5c9, type: 2}
+      probability: 70
+    - abilityName: {fileID: 11400000, guid: bb878733a6cfe7d4088b1bd12608ffda, type: 2}
+      abilityTrigger: {fileID: 11400000, guid: a2d818ed50a2d0c43a39cce41ceae773, type: 2}
+      probability: 5
+  - enemyAbility: {fileID: 11400000, guid: 4d50da047f0c20b46847936d49bb0acf, type: 2}
+    AbilitySwitchProbabilities:
+    - abilityName: {fileID: 11400000, guid: 4d50da047f0c20b46847936d49bb0acf, type: 2}
+      abilityTrigger: {fileID: 11400000, guid: 97554fdf419ca21408dd2a6016a1ad30, type: 2}
+      probability: 25
+    - abilityName: {fileID: 11400000, guid: a62e0e95569d70e48a2e0b1f5a8e97d3, type: 2}
+      abilityTrigger: {fileID: 11400000, guid: c2ce4d18006502548b3ea928630ce33a, type: 2}
+      probability: 25
+    - abilityName: {fileID: 11400000, guid: bb878733a6cfe7d4088b1bd12608ffda, type: 2}
+      abilityTrigger: {fileID: 11400000, guid: a2d818ed50a2d0c43a39cce41ceae773, type: 2}
+      probability: 80
+    - abilityName: {fileID: 11400000, guid: 437b48afea62ecf4f8682a356fee2354, type: 2}
+      abilityTrigger: {fileID: 11400000, guid: c86d251ac07e7a144970088b9eccd5c9, type: 2}
+      probability: 5
+  - enemyAbility: {fileID: 11400000, guid: bb878733a6cfe7d4088b1bd12608ffda, type: 2}
+    AbilitySwitchProbabilities:
+    - abilityName: {fileID: 11400000, guid: 4d50da047f0c20b46847936d49bb0acf, type: 2}
+      abilityTrigger: {fileID: 11400000, guid: 97554fdf419ca21408dd2a6016a1ad30, type: 2}
+      probability: 15
+    - abilityName: {fileID: 11400000, guid: bb878733a6cfe7d4088b1bd12608ffda, type: 2}
+      abilityTrigger: {fileID: 11400000, guid: a2d818ed50a2d0c43a39cce41ceae773, type: 2}
+      probability: 5
+    - abilityName: {fileID: 11400000, guid: 437b48afea62ecf4f8682a356fee2354, type: 2}
+      abilityTrigger: {fileID: 11400000, guid: c86d251ac07e7a144970088b9eccd5c9, type: 2}
+      probability: 40
+    - abilityName: {fileID: 11400000, guid: a62e0e95569d70e48a2e0b1f5a8e97d3, type: 2}
+      abilityTrigger: {fileID: 11400000, guid: c2ce4d18006502548b3ea928630ce33a, type: 2}
+      probability: 25
+  - enemyAbility: {fileID: 11400000, guid: 437b48afea62ecf4f8682a356fee2354, type: 2}
+    AbilitySwitchProbabilities:
+    - abilityName: {fileID: 11400000, guid: 4d50da047f0c20b46847936d49bb0acf, type: 2}
+      abilityTrigger: {fileID: 11400000, guid: 97554fdf419ca21408dd2a6016a1ad30, type: 2}
+      probability: 70
+    - abilityName: {fileID: 11400000, guid: a62e0e95569d70e48a2e0b1f5a8e97d3, type: 2}
+      abilityTrigger: {fileID: 11400000, guid: c2ce4d18006502548b3ea928630ce33a, type: 2}
+      probability: 25
+    - abilityName: {fileID: 11400000, guid: bb878733a6cfe7d4088b1bd12608ffda, type: 2}
+      abilityTrigger: {fileID: 11400000, guid: a2d818ed50a2d0c43a39cce41ceae773, type: 2}
+      probability: 5
+    - abilityName: {fileID: 11400000, guid: 437b48afea62ecf4f8682a356fee2354, type: 2}
+      abilityTrigger: {fileID: 11400000, guid: c86d251ac07e7a144970088b9eccd5c9, type: 2}
+      probability: 30

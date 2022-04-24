@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad14b54462eb5db4e86c403e6596faed, type: 3}
+  m_Name: Enemy Primitive Ability Brain
+  m_EditorClassIdentifier: 
+  inputTriggers:
+  - {fileID: 11400000, guid: 97554fdf419ca21408dd2a6016a1ad30, type: 2}
+  - {fileID: 11400000, guid: c86d251ac07e7a144970088b9eccd5c9, type: 2}
+  - {fileID: 11400000, guid: a2d818ed50a2d0c43a39cce41ceae773, type: 2}
+  triggersAvailable: 3
