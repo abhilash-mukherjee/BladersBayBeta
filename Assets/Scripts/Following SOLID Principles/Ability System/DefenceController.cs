@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-
+﻿using System.Collections;
+using UnityEngine;
 public class DefenceController : AbilityController
 {
     [SerializeField]
@@ -10,6 +10,8 @@ public class DefenceController : AbilityController
     private float initialAvailabilityIndex;
     [SerializeField]
     private GameObject DefenceEffect;
+    [SerializeField]
+    private float defenceShieldDissolveTimeGap = 0.5f;
     private void Awake()
     {
         defenceStats.AvailabilityIndex = initialAvailabilityIndex;
@@ -23,6 +25,7 @@ public class DefenceController : AbilityController
         DefenceAbility.OnDefenceAbilityActivated += SwitchToAbilityStats;
         DefenceAbility.OnDefenceAbilityDeActivated += SwitchToNormalStats;
         DefenceAbility.OnDefenceAbilityExhausted += SwitchToNormalStats;
+        CollisionPhysicsProcessor.OnCollisionPhysicsProcessed += ExhaustDefenceAbility;
     }
 
 
@@ -34,6 +37,7 @@ public class DefenceController : AbilityController
         DefenceAbility.OnDefenceAbilityActivated -= SwitchToAbilityStats;
         DefenceAbility.OnDefenceAbilityDeActivated -= SwitchToNormalStats;
         DefenceAbility.OnDefenceAbilityExhausted -= SwitchToNormalStats;
+        CollisionPhysicsProcessor.OnCollisionPhysicsProcessed -= ExhaustDefenceAbility;
     }
 
     protected override void DeActivateVFX(GameObject gameObject, BaseData attackStats)
@@ -57,5 +61,17 @@ public class DefenceController : AbilityController
     {
         if (gameObject != this.gameObject) return;
         RaiseAbilityRemovedEvent(gameObject, attackStats, defenceAbility);
+    }
+    private void ExhaustDefenceAbility(GameObject _gameObject, Vector3 _finalVelAfterCollision)
+    {
+        if (_gameObject != gameObject) return;
+        if (!defenceStats.IsActive) return;
+        StartCoroutine(DissolveDefenceShield());
+    }
+    
+    IEnumerator DissolveDefenceShield()
+    {
+        yield return new WaitForSeconds(defenceShieldDissolveTimeGap);
+        defenceAbility.ExhaustAbility(gameObject, defenceStats);
     }
 }

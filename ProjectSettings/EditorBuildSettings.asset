@@ -47,4 +47,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TrainingScene.unity
     guid: 7d1b347a8cef0cb43842999229ac3e0c
+  - enabled: 1
+    path: Assets/Scenes/Level Parent 1.unity
+    guid: 4cfc29de4f5694844ad39afd8110595f
   m_configObjects: {}

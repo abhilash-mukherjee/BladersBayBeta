@@ -11,6 +11,8 @@ public class MovementMarkerManager : MonoBehaviour
     private Collider thisCollider;
     [SerializeField]
     private string markerReachedSoundName = "MovementMarkerReached";
+    [SerializeField]
+    private GameEvent markerReachedEvent;
     private Collider m_playerCollider;
     public void SetCollider(Collider _collider)
     {
@@ -28,6 +30,7 @@ public class MovementMarkerManager : MonoBehaviour
             if(CheckCollision())
             {
                 OnTargetReached?.Invoke();
+                markerReachedEvent.Raise();
                 GameAudioManager.Instance.PlaySoundOneShot(markerReachedSoundName);
                 DestroyMarker();
             }

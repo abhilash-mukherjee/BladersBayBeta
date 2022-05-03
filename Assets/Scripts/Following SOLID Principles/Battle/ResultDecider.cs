@@ -24,6 +24,7 @@ public class ResultDecider : MonoBehaviour
         if(_gameObject == player)
         {
             playerLostEvent.Raise();
+            return;
         }
         if(_gameObject == enemy)
         {

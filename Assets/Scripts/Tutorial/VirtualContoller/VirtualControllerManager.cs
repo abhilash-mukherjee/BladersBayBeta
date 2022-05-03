@@ -6,22 +6,27 @@ public class VirtualControllerManager : MonoBehaviour
 {
     [SerializeField]
     private GameObject backPart;
-    //[SerializeField]
-    //private GameObject particles;
-    private Vector3 backPartPosition;
-    public Vector3 controllerPosition
+    [SerializeField]
+    private VectorVariable ControllerPosition, ControllerUpAxis;
+    private Vector3 m_backPartPosition;
+    private Transform m_transform;
+    public Vector3 ControllerMouthPosition
     {
-        get { return backPartPosition; }
+        get { return m_backPartPosition; }
     }
-    private void Update()
+    private void Awake()
     {
+        m_transform = transform;
     }
 
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.layer != LayerMask.NameToLayer("Stadium"))
             return;
-        backPartPosition = backPart.transform.position;
-        //Instantiate(particles, backPartPosition, Quaternion.identity);
+        m_backPartPosition = backPart.transform.position;
+        var _upAxis = m_transform.up;
+        ControllerPosition.SetValue( m_backPartPosition.x, m_backPartPosition.y, m_backPartPosition.z);
+        ControllerUpAxis.SetValue(_upAxis.x, _upAxis.y, _upAxis.z);
+        
     }
 }

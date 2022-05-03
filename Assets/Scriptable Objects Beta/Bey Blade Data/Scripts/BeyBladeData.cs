@@ -4,9 +4,10 @@ using UnityEngine.UI;
 [CreateAssetMenu(fileName ="New BeyBlade Data", menuName = "Data / Bey Blade Data")]
 public class BeyBladeData : ScriptableObject
 {
-    public StateData AttackData, DefenceData, StaminaData, BalanceData;
-    public string ModelName;
+    public AbilityData AttackData, DefenceData, StaminaData, BalanceData;
+    public string ModelName, PlayerName;
     public GameObject Model;
     public Sprite icon;
+    public Sprite characterImage;
 }
  

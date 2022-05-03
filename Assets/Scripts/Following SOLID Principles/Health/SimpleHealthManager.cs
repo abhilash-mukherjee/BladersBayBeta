@@ -32,11 +32,10 @@ public class SimpleHealthManager : HealthManager
     {
         if (healthPoint.Value <= 0f && !m_eventRaised) 
         {
-            RaiseDiedEvent(gameObject);
-            Debug.Log("Death even raised");
+            StartRaiseDiedEventCoroutine(gameObject);
+            Debug.Log("Death event raised for " + gameObject);
             m_eventRaised = true;
         }
-        //HealthPoint += currentStatHolder.StaminaValue;
     }
     protected override void HasGotHit(GameObject _gameObject, float _collisionIndex, float _opponentAttackValue)
     {

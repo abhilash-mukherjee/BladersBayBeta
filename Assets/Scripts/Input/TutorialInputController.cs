@@ -34,7 +34,7 @@ public class TutorialInputController : InputController1, IFn1Handler, ISwipeHand
         Vector3 _moveDir;
         if(virtualControllerActive)
         {
-            Ray virtualRay = new Ray(virtualController.controllerPosition, virtualController.gameObject.transform.up);
+            Ray virtualRay = new Ray(virtualController.ControllerMouthPosition, virtualController.gameObject.transform.up);
             Debug.DrawRay(virtualRay.origin, virtualRay.direction, Color.red, 2f);
             if (Physics.Raycast(virtualRay, out RaycastHit hitInfo, maxDistanceOfRay, stadiumLayer))
             {

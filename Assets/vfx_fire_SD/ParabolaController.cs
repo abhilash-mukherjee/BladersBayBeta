@@ -14,6 +14,8 @@ public class ParabolaController : MonoBehaviour
     private float spiritDeactivateLerSpeed = 2f;
     [SerializeField]
     private string parabolaReachSoundName = "Electricity";
+    [SerializeField]
+    private GameEvent spiritShownEvent;
     /// <summary>
     /// Animation Speed
     /// </summary>
@@ -133,6 +135,8 @@ public class ParabolaController : MonoBehaviour
 
     private void RaiseParabolaCompletedEvent()
     {
+        spiritShownEvent.Raise();
+        Debug.Log("Parabola reached");
         GameAudioManager.Instance.PlaySoundOneShot(parabolaReachSoundName);
         OnParabolaReachedDestination?.Invoke();
     }

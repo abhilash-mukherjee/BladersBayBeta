@@ -42,8 +42,8 @@ public class TwoBeyBladeCollisionChecker : CollisionChecker
         {
             var obj = Instantiate(sparkPrefab, (collision.Collidable1.Transform.position + collision.Collidable2.Transform.position) / 2f, Quaternion.identity);
             obj.transform.localScale = sparkScale;
-            InvokeCollisionEvent(collision);
             InvokeAudioEvent(collision);
+            InvokeCollisionEvent(collision);
             CollisionTimer = timeGapBetweenTwoCollisions;
             StartCoroutine(TickClock());
         }

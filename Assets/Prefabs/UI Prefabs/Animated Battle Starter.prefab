@@ -1342,7 +1342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 7968027464792174415}
-  beybladeData: {fileID: 11400000, guid: 0ab1ebd96cd16154cb67eee12ed83f53, type: 2}
+  beybladeData: {fileID: 11400000, guid: 2bf5b66f633ad7747a5e8eff4813f2fc, type: 2}
 --- !u!114 &4906722110841904766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1356,7 +1356,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 7185805814540062094}
-  beyBladeData: {fileID: 11400000, guid: 0ab1ebd96cd16154cb67eee12ed83f53, type: 2}
+  beyBladeData: {fileID: 11400000, guid: 2bf5b66f633ad7747a5e8eff4813f2fc, type: 2}
 --- !u!1 &5375690856300442784
 GameObject:
   m_ObjectHideFlags: 0
@@ -1742,7 +1742,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5943942370508903890
 Transform:
   m_ObjectHideFlags: 0
@@ -1792,6 +1792,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb9e49b7924a7a84d990588019e4f210, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onMAtchStarted: {fileID: 11400000, guid: 92c250d13b6f58242b552e536c14178e, type: 2}
 --- !u!1 &6457062238400572005
 GameObject:
   m_ObjectHideFlags: 0

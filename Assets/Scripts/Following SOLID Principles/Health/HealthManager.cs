@@ -6,6 +6,8 @@ public abstract class HealthManager : MonoBehaviour
 {
     public delegate void DeathHandler(GameObject gameObject);
     public static event DeathHandler OnDied;
+    [SerializeField]
+    private float deathEventRaiseDelay;
     protected abstract float DamageValue { get; }
     protected abstract float HealthPoint { get; set; }
     protected abstract void HasAttcked(GameObject _gameObject, float _collisionIndex);
@@ -20,8 +22,14 @@ public abstract class HealthManager : MonoBehaviour
         CollisionHealthResponder.OnObjectIsAttacker -= HasAttcked;
         CollisionHealthResponder.OnObjectIsVictim -= HasGotHit;
     }
-    protected void RaiseDiedEvent(GameObject _gameObject)
+    protected void StartRaiseDiedEventCoroutine(GameObject _gameObject)
     {
-        OnDied(_gameObject);
+        StartCoroutine(RaiseOnDiedEvent(_gameObject));
+    }
+
+    IEnumerator RaiseOnDiedEvent(GameObject _gameObject)
+    {
+        yield return new WaitForSeconds(deathEventRaiseDelay);
+            OnDied(_gameObject);
     }
 }
