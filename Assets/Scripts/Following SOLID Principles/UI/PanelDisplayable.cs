@@ -7,12 +7,15 @@ public class PanelDisplayable : UIDisplayable
     [SerializeField]
     private Transform positionWhenActive, dissapearForwardTargetPosition, disappearReverseTargetPosition;
     [SerializeField]
-    private List<GameEvent> eventsToRaiseWhenActivated, eventsToRaiseWhenDeactivated;
+    protected List<GameEvent> eventsToRaiseWhenActivated, eventsToRaiseWhenDeactivated;
     [SerializeField]
     private float durationMultiplier;
     [SerializeField]
     private Vector3 localScaleWhenActive;
     private Coroutine animationCoroutine;
+
+    protected Vector3 LocalScaleWhenActive { get => localScaleWhenActive; set => localScaleWhenActive = value; }
+
     public override void EnterForward()
     {
         RaiseEvents(eventsToRaiseWhenActivated);
@@ -38,7 +41,7 @@ public class PanelDisplayable : UIDisplayable
         RaiseEvents(eventsToRaiseWhenDeactivated);
         Play(disappearReverseTargetPosition, AnimationType.DISAPPEAR);
     }
-    void Play(Transform _finalTransform, AnimationType animationType)
+    protected virtual void Play(Transform _finalTransform, AnimationType animationType)
     {
         if (animationCoroutine != null) StopCoroutine(animationCoroutine);
         float _duration = Vector3.Distance(transform.position, _finalTransform.position) * durationMultiplier;
@@ -58,7 +61,7 @@ public class PanelDisplayable : UIDisplayable
         if (animationType == AnimationType.DISAPPEAR) transform.localScale = Vector3.zero;
     }
 
-    private void RaiseEvents(List<GameEvent> _eventList)
+    protected void RaiseEvents(List<GameEvent> _eventList)
     {
         if (_eventList == null) return;
         foreach (var e in _eventList)
@@ -66,5 +69,5 @@ public class PanelDisplayable : UIDisplayable
             e.Raise();
         }
     }
-    enum AnimationType { APPEAR, DISAPPEAR }
+    protected enum AnimationType { APPEAR, DISAPPEAR }
 }

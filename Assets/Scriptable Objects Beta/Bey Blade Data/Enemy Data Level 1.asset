@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33938c714d57d1843b3269f59e9eeb29, type: 3}
   m_Name: Enemy Data Level 1
   m_EditorClassIdentifier: 
-  AttackData: {fileID: 11400000, guid: b5ca70d52c65a3d4a97ffb08705d702c, type: 2}
-  DefenceData: {fileID: 11400000, guid: 2fbd95cd3f48bba4596f1946984ca467, type: 2}
-  StaminaData: {fileID: 11400000, guid: 4b1abadb7cd4ae74498a77e38d958d2c, type: 2}
-  BalanceData: {fileID: 11400000, guid: 2a4f8b1f37198744f853d2ffc693beca, type: 2}
-  ModelName: El-Drago
-  Model: {fileID: 1709340809770954306, guid: 5e54046731cc4004897d7b9a376b9842, type: 3}
+  attackData: {fileID: 11400000, guid: 39236decf7a764e49bac5dc1b4f25f58, type: 2}
+  defenceData: {fileID: 11400000, guid: b0ac2dafad85f1b40b794c0dc9bcb558, type: 2}
+  staminaData: {fileID: 11400000, guid: bebd2357fd2a85b4baed7808b08bd53e, type: 2}
+  balanceData: {fileID: 11400000, guid: 7792b3b43af7c4646bb50d0a5b9cede2, type: 2}
+  playerName: Libra
+  model: {fileID: 8430003547532236104, guid: 9984fb0e4e772d04cb5d1aa9d837f790, type: 3}
   icon: {fileID: 21300000, guid: 4124916b8d808f4479b2a8cb55afba21, type: 3}
+  playerAvatar: {fileID: 0}
+  modelName: Libra

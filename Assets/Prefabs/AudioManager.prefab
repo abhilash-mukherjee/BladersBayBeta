@@ -123,7 +123,7 @@ MonoBehaviour:
     name: LetsGo
     source: {fileID: 0}
   - clip: {fileID: 8300000, guid: 8363b244335843641b5b28f4044ef953, type: 3}
-    volume: 1
+    volume: 0.282
     pitch: 1
     loop: 0
     name: Electricity
@@ -139,4 +139,10 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     name: PanelPopUp
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: ad343e12fbbdf1446a0ea4858771ec7e, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    name: Typing_Sound
     source: {fileID: 0}

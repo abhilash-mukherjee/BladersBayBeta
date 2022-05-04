@@ -13,7 +13,7 @@ public class IconDisplayManager : MonoBehaviour
 
 
     void Start(){
-        icon.sprite = beybladeData.icon;
+        icon.sprite = beybladeData.Icon;
     }
 
 }

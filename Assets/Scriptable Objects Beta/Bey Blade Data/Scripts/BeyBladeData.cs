@@ -4,10 +4,33 @@ using UnityEngine.UI;
 [CreateAssetMenu(fileName ="New BeyBlade Data", menuName = "Data / Bey Blade Data")]
 public class BeyBladeData : ScriptableObject
 {
-    public AbilityData AttackData, DefenceData, StaminaData, BalanceData;
-    public string ModelName, PlayerName;
-    public GameObject Model;
-    public Sprite icon;
-    public Sprite characterImage;
+    public delegate void PlayerDataChangeHandler();
+    public static event PlayerDataChangeHandler OnPlayerDataChanged;
+    public AbilityData attackData, defenceData, staminaData, balanceData;
+    [SerializeField]
+    private string playerName;
+    [SerializeField]
+    private GameObject model;
+    [SerializeField]
+    private Sprite icon;
+    [SerializeField]
+    private Sprite playerAvatar;
+    [SerializeField]
+    private string modelName;
+
+    public string PlayerName { get => playerName; set => playerName = value; }
+    public GameObject Model { get => model; set => model = value; }
+    public Sprite Icon { get => icon; set => icon = value; }
+    public Sprite PlayerAvatar { get => playerAvatar; set => playerAvatar = value; }
+    public string ModelName { get => modelName; set => modelName = value; }
+
+    public void SetFromSerializableData(SerializablePlayerData _playerData)
+    {
+        modelName = _playerData.ModelName;
+        playerName = _playerData.PlayerName;
+        model = _playerData.Model;
+        icon = _playerData.Icon;
+        playerAvatar = _playerData.PlayerAvatar;
+    }
 }
  

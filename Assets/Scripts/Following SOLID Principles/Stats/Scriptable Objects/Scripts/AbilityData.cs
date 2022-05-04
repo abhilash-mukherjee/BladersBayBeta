@@ -28,6 +28,7 @@ public class AbilityData : BaseData
     public override float AbilityDepletionRate { get => depletionRate; }
     public override float AbilityReplenishmentRate { get => replenishmentRate; }
     public override float MaxAvailabilityIndex { get => maxAvailabilityIndex; }
+    public override AbilityName AbilityName { get => abilityName; set => abilityName = value; }
     
 
     protected override float M_Speed { get=>speed; set=>speed = value; }
@@ -38,7 +39,6 @@ public class AbilityData : BaseData
     protected override float M_AbilityDepletionRate { get => depletionRate; set => depletionRate = value; }
     protected override float M_AbilityReplenishmentRate { get => replenishmentRate; set => replenishmentRate = value; }
 
-    public override AbilityName AbilityName { get => abilityName; set => abilityName = value; }
 
     private float availabilityIndex;
     private bool m_isReady, m_isActive;

@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisCollider: {fileID: 8837680853041385150}
-  markerReachedSoundName: MovementMarkerReached
+  markerReachedSoundName: Bonus
   markerReachedEvent: {fileID: 11400000, guid: e7159ce5b861c98409584dd5c6ed0a05, type: 2}
 --- !u!1 &5799672479629631596
 GameObject:

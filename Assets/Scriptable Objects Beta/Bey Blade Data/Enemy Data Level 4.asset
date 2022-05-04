@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33938c714d57d1843b3269f59e9eeb29, type: 3}
   m_Name: Enemy Data Level 4
   m_EditorClassIdentifier: 
-  AttackData: {fileID: 0}
-  DefenceData: {fileID: 0}
-  StaminaData: {fileID: 0}
-  BalanceData: {fileID: 0}
-  ModelName: Sageterio
-  PlayerName: Kenta
-  Model: {fileID: 1709340809770954306, guid: 5e54046731cc4004897d7b9a376b9842, type: 3}
+  attackData: {fileID: 11400000, guid: 39236decf7a764e49bac5dc1b4f25f58, type: 2}
+  defenceData: {fileID: 11400000, guid: b0ac2dafad85f1b40b794c0dc9bcb558, type: 2}
+  staminaData: {fileID: 11400000, guid: bebd2357fd2a85b4baed7808b08bd53e, type: 2}
+  balanceData: {fileID: 11400000, guid: 7792b3b43af7c4646bb50d0a5b9cede2, type: 2}
+  playerName: 
+  model: {fileID: 3191423454789802668, guid: e42299561e7c5ae469460ca45b2de0b0, type: 3}
   icon: {fileID: 21300000, guid: 4124916b8d808f4479b2a8cb55afba21, type: 3}
-  characterImage: {fileID: 0}
+  playerAvatar: {fileID: 0}
+  modelName: 
