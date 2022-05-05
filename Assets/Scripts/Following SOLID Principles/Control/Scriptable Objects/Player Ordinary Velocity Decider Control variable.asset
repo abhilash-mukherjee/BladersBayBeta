@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af31fa41e6d65ea47aa579c2695324b0, type: 3}
   m_Name: Player Ordinary Velocity Decider Control variable
   m_EditorClassIdentifier: 
-  floatValue: 0
+  floatValue: 1

@@ -25,10 +25,16 @@ public class InputManager : MonoBehaviour
     {
         inputManagers = GetComponents<InputManager>().ToList();
     }
+    private void OnDisable()
+    {
+        m_shouldTakeInput = false;
+        InputVector.SetValue(0, 0, 0);
+    }
     private void Update()
     {
         if (!m_shouldTakeInput)
         {
+            InputVector.SetValue(0, 0, 0);
             return;
         }
         var inp = input.UpdateInput(this);
@@ -41,14 +47,19 @@ public class InputManager : MonoBehaviour
     }
     public void StartInput(float time)
     {
-        StartCoroutine(StartAIAfterTime(time));
+        StartCoroutine(StartStopInputAfterTime(time, InputStartStop.START));
     }
-    IEnumerator StartAIAfterTime(float time)
+
+    IEnumerator StartStopInputAfterTime(float time, InputStartStop action)
     {
         yield return new WaitForSeconds(time);
         Debug.Log("AI Started");
+        if(action == InputStartStop.START)
         m_shouldTakeInput = true;
+        else m_shouldTakeInput = false;
     }
+
+    enum InputStartStop { START,STOP}
 
 }
 

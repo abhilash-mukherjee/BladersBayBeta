@@ -9,7 +9,6 @@ public abstract class InputSystem : ScriptableObject
     public abstract void CheckForAbilitySwitchTriggers(InputManager inputManager, GameObject enemyObject);
     protected void RaiseActionTriggerEvent(GameObject obj, InputTrigger inputTrigger)
     {
-        Debug.Log($"{inputTrigger} raised of {obj}");
         OnActionTriggered?.Invoke(obj, inputTrigger);
     }
     public abstract void ScriptableStart(GameObject gameObject);

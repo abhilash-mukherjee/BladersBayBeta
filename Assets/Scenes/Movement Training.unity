@@ -2981,6 +2981,7 @@ MonoBehaviour:
   looseMessege: {fileID: 0}
   levelRepeatWinMessege: {fileID: 0}
   levelData: {fileID: 11400000, guid: 3d4a8fe4e8d6594468736c612e4cfda3, type: 2}
+  objectsToDisable: []
 --- !u!114 &1400112310939635301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5392,6 +5393,7 @@ GameObject:
   - component: {fileID: 8808062562535992754}
   - component: {fileID: 8808062562535992755}
   - component: {fileID: 8808062562535992763}
+  - component: {fileID: 8808062562535992768}
   m_Layer: 5
   m_Name: HomeButton
   m_TagString: Untagged
@@ -5426,16 +5428,16 @@ MonoBehaviour:
   onButtonClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8808062562535992763}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 5
+      - m_Target: {fileID: 8808062562535992768}
+        m_TargetAssemblyTypeName: ButtonClickManager, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Home Screen
+          m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
 --- !u!224 &8808062562535992765
@@ -5547,6 +5549,18 @@ MonoBehaviour:
     - {fileID: 8808062562115993131}
     - {fileID: 8279739257505383382}
     - {fileID: 8279739257227200893}
+--- !u!114 &8808062562535992768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8808062562535992762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1434765c023f5e46ba881eafc282560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8808062563428444364
 GameObject:
   m_ObjectHideFlags: 0

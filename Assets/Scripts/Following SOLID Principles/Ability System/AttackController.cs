@@ -52,7 +52,6 @@ public class AttackController : AbilityController
     protected override void SwitchToAbilityStats(GameObject gameObject, BaseData attackStats)
     {
         if (gameObject != this.gameObject) return;
-        Debug.Log($"Attack mode on of {gameObject}");
         RaiseAbilityAddedEvent(gameObject, attackStats, attackAbility);
     }
     protected override void SwitchToNormalStats(GameObject gameObject, BaseData attackStats)

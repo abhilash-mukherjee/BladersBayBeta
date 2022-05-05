@@ -23,7 +23,6 @@ public class MovementBrainBasedOnEnemyPosition : MovementBrain
         int m_callingRate = _isTooClose || _isOverLAppingWithStadum ? playerNearCallingRate : playerFarCallingRate;
         if (_isOverLAppingWithStadum)
         {
-            Debug.Log("Overlapping with stadium");
             Vector3 _newMoveDir = MoveAwayFromStadiumBoundary(_playerPos, stadiumCentre);
             return _newMoveDir;
         }

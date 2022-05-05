@@ -17,7 +17,7 @@ MonoBehaviour:
   staminaData: {fileID: 11400000, guid: 55af6d4ad0c78c8439dd4a0a84863644, type: 2}
   balanceData: {fileID: 11400000, guid: b330b9d6352c3f248b31bc992162a9f1, type: 2}
   playerName: 
-  model: {fileID: 8902193564919954162, guid: 3cbfa6bae78e1d841ba38b43a1551621, type: 3}
+  model: {fileID: 5946723338347151846, guid: 15a1499598bdd44439f88e0807c2320c, type: 3}
   icon: {fileID: 21300000, guid: 496f21596db0d5a44904ddc2655c2d06, type: 3}
   playerAvatar: {fileID: 0}
   modelName: Albatroz

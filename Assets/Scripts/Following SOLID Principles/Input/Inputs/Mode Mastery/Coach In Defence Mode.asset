@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9dc25682a8e48e4897e6302c8fa01a7, type: 3}
+  m_Name: Coach In Defence Mode
+  m_EditorClassIdentifier: 
+  TickPeriodForMovementChange: 20
+  TickPeriodForAbilityChange: 60
+  movementBrain: {fileID: 11400000, guid: c4bce0ac14420f9469c6a90baef2f034, type: 2}
+  abilityBrain: {fileID: 11400000, guid: dbed9ab23d720a7428e3ab1b5addf007, type: 2}

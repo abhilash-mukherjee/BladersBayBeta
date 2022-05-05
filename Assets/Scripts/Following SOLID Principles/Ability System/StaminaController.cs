@@ -59,7 +59,6 @@ public class StaminaController : AbilityController
     protected override void SwitchToAbilityStats(GameObject gameObject, BaseData staminaStats)
     {
         if (gameObject != this.gameObject) return;
-        Debug.Log($"Stamina mode on of {gameObject}");
         RaiseAbilityAddedEvent(gameObject, staminaStats, staminaAbility);
     }
     protected override void SwitchToNormalStats(GameObject gameObject, BaseData staminaStats)

@@ -22,7 +22,8 @@ public class InputFieldDisplayable : PanelDisplayable
     }
     public override void ExitForward()
     {
-        m_name = inputField.Text;
+        if (inputField.Text == "") m_name = "Player"; 
+        else m_name = inputField.Text;
         GameDataManager.Instance.PlayerData.PlayerName = m_name;
         base.ExitForward();
     }

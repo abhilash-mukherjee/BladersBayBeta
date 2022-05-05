@@ -34,7 +34,6 @@ public class HeadOn_CollisionType : CollisionType
         var _AttackerList = new List<Collidable>();
         _AttackerList.Add(collision.Collidable1);
         _AttackerList.Add(collision.Collidable2);
-        Debug.Log($"Attacker's List length = {_AttackerList.Count} and Elements = {_AttackerList[0]} , {_AttackerList[1]}");
         return _AttackerList;
     }
 

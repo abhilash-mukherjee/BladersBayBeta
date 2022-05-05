@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33938c714d57d1843b3269f59e9eeb29, type: 3}
+  m_Name: Coach Steel Data
+  m_EditorClassIdentifier: 
+  attackData: {fileID: 11400000, guid: 0dd21f9cc81545c4298a0e57503a96f1, type: 2}
+  defenceData: {fileID: 11400000, guid: dfd81d2ca651169428e3201ccabaf3c7, type: 2}
+  staminaData: {fileID: 11400000, guid: 1b9b19af340d83c42ac1dbb9ce059271, type: 2}
+  balanceData: {fileID: 11400000, guid: 04191839c9667fd4f811a471b57634b6, type: 2}
+  playerName: 
+  model: {fileID: 9007181947938035963, guid: 86c717d638495cc44a420d59b3175a32, type: 3}
+  icon: {fileID: 21300000, guid: 4124916b8d808f4479b2a8cb55afba21, type: 3}
+  playerAvatar: {fileID: 0}
+  modelName: 

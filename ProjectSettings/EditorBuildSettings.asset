@@ -18,36 +18,15 @@ EditorBuildSettings:
     path: Assets/Scenes/CoinInventory.unity
     guid: 7fab0f71849d24847b1549ab7f84ca0e
   - enabled: 1
-    path: Assets/Scenes/Level 1.unity
-    guid: 8a0c5949744660e498a8aa05ba38e6dc
-  - enabled: 1
-    path: Assets/Scenes/Level 2.unity
-    guid: e0e9d4f1e2a170b4f9284d6243d439d2
-  - enabled: 1
-    path: Assets/Scenes/Level 3.unity
-    guid: 25fe5a7d5ead2f245a4269528bb0444a
-  - enabled: 1
-    path: Assets/Scenes/Level 4.unity
-    guid: cbb3260ec32dfea408c35b35249778bb
-  - enabled: 1
-    path: Assets/Scenes/Level 5.unity
-    guid: 23bb74e45eaa01d4880297f854ee74d8
-  - enabled: 1
-    path: Assets/Scenes/Movement Training.unity
-    guid: e1a9c8915982c334cbaeea80d019357c
-  - enabled: 1
-    path: Assets/Scenes/Attack Training.unity
-    guid: c9b9cecd57243964794af7ac07b00385
-  - enabled: 1
-    path: Assets/Scenes/Defence Training.unity
-    guid: f67cf7ba5ac55834ea8e27d8b0e6def0
-  - enabled: 1
-    path: Assets/Scenes/Stamina Training.unity
-    guid: c1fe0a71335e3f944947b8f6dd8ada43
-  - enabled: 1
     path: Assets/Scenes/TrainingScene.unity
     guid: 7d1b347a8cef0cb43842999229ac3e0c
   - enabled: 1
     path: Assets/Scenes/Level Parent 1.unity
     guid: 4cfc29de4f5694844ad39afd8110595f
+  - enabled: 1
+    path: Assets/Scenes/First Time UE.unity
+    guid: 1bb04b4e57f4ef84997a685d126145b4
+  - enabled: 1
+    path: Assets/Scenes/Movement Mastery.unity
+    guid: a2de6dcc70e7f364c9810cf6256238fa
   m_configObjects: {}

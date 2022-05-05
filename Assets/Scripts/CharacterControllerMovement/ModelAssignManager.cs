@@ -14,6 +14,7 @@ public class ModelAssignManager : MonoBehaviour
     private Vector3 ModelLocalPosition;
     private void OnEnable()
     {
+        if (ModelParet.transform.childCount > 0) Destroy(ModelParet.transform.GetChild(0).gameObject);
         var _model = Instantiate(beyBladeData.Model, ModelParet.transform);
         _model.transform.localPosition = ModelLocalPosition;
         _model.transform.localScale = ModelLocalScale;
