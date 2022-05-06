@@ -29,13 +29,13 @@ public class ConstantRunAway : MovementBrain
         else 
         { 
 
-            if (_dist <= thresholdDistance)
+            if (_dist >= thresholdDistance)
             {
-                    return MoveAwayFromEnemyWhenFar(_enemyPos, _playerPos);
+                return previousDir;
             }
             else
             {
-                return previousDir;
+                return MoveAwayFromEnemyWhenNear(_enemyPos, _playerPos);
             }
         }
     }
@@ -43,6 +43,14 @@ public class ConstantRunAway : MovementBrain
     {
         Vector3 _baseDir = (_enemyposition - _playerPosition).normalized;
         int _angle = UnityEngine.Random.Range(-fieldOfViewWhenFarFromPlayer / 2, fieldOfViewWhenFarFromPlayer / 2);
+        return Quaternion.AngleAxis(_angle, Vector3.up) * _baseDir;
+    }
+    private Vector3 MoveAwayFromEnemyWhenNear(Vector3 _enemyposition, Vector3 _playerPosition)
+    {
+        int r = Random.Range(0, 2);
+        int m = r == 1 ? 1 : -1;
+        Vector3 _baseDir = (_enemyposition - _playerPosition).normalized;
+        int _angle = m * (90 + UnityEngine.Random.Range(-fieldOfViewWhenCloseToPlayer / 2, fieldOfViewWhenCloseToPlayer / 2));
         return Quaternion.AngleAxis(_angle, Vector3.up) * _baseDir;
     }
     private Vector3 MoveTowardsEnemy(Vector3 _enemyposition, Vector3 _playerPosition)

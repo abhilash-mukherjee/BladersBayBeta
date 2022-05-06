@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Coach Run Away Movement Brain
   m_EditorClassIdentifier: 
   fieldOfViewWhenInBoundary: 150
-  fieldOfViewWhenCloseToPlayer: 120
+  fieldOfViewWhenCloseToPlayer: 30
   fieldOfViewWhenFarFromPlayer: 150
   marginOfErrorWhileAttacking: 10
   thresholdDistance: 2
   stadiumRadius: 2.32
-  playerFarCallingRate: 5
+  playerFarCallingRate: 10
   playerNearCallingRate: 1

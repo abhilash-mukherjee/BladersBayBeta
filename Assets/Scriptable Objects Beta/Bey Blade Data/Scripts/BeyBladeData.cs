@@ -24,7 +24,7 @@ public class BeyBladeData : ScriptableObject
     public Sprite PlayerAvatar { get => playerAvatar; set => playerAvatar = value; }
     public string ModelName { get => modelName; set => modelName = value; }
 
-    public void SetFromSerializableData(SerializablePlayerData _playerData)
+    public void SetFromSerializableData(Player _playerData)
     {
         modelName = _playerData.ModelName;
         playerName = _playerData.PlayerName;

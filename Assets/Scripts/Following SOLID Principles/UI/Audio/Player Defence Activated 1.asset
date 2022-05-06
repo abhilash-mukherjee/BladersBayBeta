@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53a1ef31d127a344484a55d0783c4305, type: 3}
-  m_Name: Enemy Defence Activated 1
+  m_Name: Player Defence Activated 1
   m_EditorClassIdentifier: 
   clips:
   - {fileID: 8300000, guid: 8363b244335843641b5b28f4044ef953, type: 3}

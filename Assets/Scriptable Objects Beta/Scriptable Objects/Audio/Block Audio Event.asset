@@ -18,5 +18,5 @@ MonoBehaviour:
     minValue: 0.8730711
     maxValue: 1
   pitch:
-    minValue: 0.9267858
-    maxValue: 1.2620583
+    minValue: 0.8056211
+    maxValue: 1.1408937

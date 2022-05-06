@@ -12,7 +12,7 @@ public class StateIconUIHolder : MonoBehaviour
     [SerializeField]
     private Image loader;
     [SerializeField]
-    private Image logo;
+    private List<Image> ImageList;
     [SerializeField]
     private GameObject transitionEffect;
     [SerializeField]
@@ -55,14 +55,14 @@ public class StateIconUIHolder : MonoBehaviour
             abilityActivationAudioEvent.Play(audioSource);
             transitionEffect.SetActive(true);
             Debug.Log("entered coroutine");
-            logo.GetComponent<Image>().color = activeColor;
+            foreach(var i in ImageList)i.color = activeColor;
             StartCoroutine(TransitionEffect());
         }
         else
         {
             isCharged = false;
             loader.fillAmount = AbilityData.AvailabilityIndex / maxAvailabilityIndex;
-            logo.GetComponent<Image>().color = inActiveColor;
+            foreach (var i in ImageList) i.color = inActiveColor;
         }
     }
 

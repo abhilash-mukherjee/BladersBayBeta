@@ -19,5 +19,5 @@ MonoBehaviour:
   playerName: Libra
   model: {fileID: 8430003547532236104, guid: 9984fb0e4e772d04cb5d1aa9d837f790, type: 3}
   icon: {fileID: 21300000, guid: 4124916b8d808f4479b2a8cb55afba21, type: 3}
-  playerAvatar: {fileID: 0}
+  playerAvatar: {fileID: 21300000, guid: 83273d19eb97c6645807cd69cd4df9b9, type: 3}
   modelName: Libra

@@ -13,6 +13,8 @@ public class TwoBeyBladeCollisionChecker : CollisionChecker
  
     [SerializeField]
     private Vector3 sparkScale;
+    [SerializeField]
+    private GameEvent oncollided;
     private float m_collisionTimer = 0;
 
     public float CollisionTimer
@@ -44,6 +46,7 @@ public class TwoBeyBladeCollisionChecker : CollisionChecker
             obj.transform.localScale = sparkScale;
             InvokeAudioEvent(collision);
             InvokeCollisionEvent(collision);
+            if (oncollided != null) oncollided.Raise();
             CollisionTimer = timeGapBetweenTwoCollisions;
             StartCoroutine(TickClock());
         }
@@ -58,7 +61,7 @@ public class TwoBeyBladeCollisionChecker : CollisionChecker
     {
         while (CollisionTimer > 0)
         {
-            CollisionTimer -= Time.deltaTime;
+            CollisionTimer -= Time.deltaTime ;
             yield return null;
         }
     }

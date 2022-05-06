@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5228254648687596025}
   - component: {fileID: 5228254648687596006}
   m_Layer: 5
-  m_Name: PlayerHealthHolder (1)
+  m_Name: EnemyHealthHolder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,17 +25,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5228254648687596005}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.98, y: 1, z: 1}
+  m_LocalScale: {x: 0.9482872, y: 0.96764, z: 0.96764}
   m_Children: []
   m_Father: {fileID: 5228254650005923317}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1, y: -0.000015258789}
-  m_SizeDelta: {x: 400, y: 100}
+  m_AnchoredPosition: {x: -4, y: 10}
+  m_SizeDelta: {x: 380, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5228254648687596025
 CanvasRenderer:
@@ -65,9 +65,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4bcd5f815a0ac1d49ad19d96b19f3b01, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a2edfb8d164730c499411b21592c4cf1, type: 3}
   m_Type: 3
-  m_PreserveAspect: 1
+  m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
   m_FillAmount: 1
@@ -159,7 +159,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 9
+          m_FloatArgument: 0.1
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 5228254648887235123}
   - component: {fileID: 5228254648887235120}
   m_Layer: 5
-  m_Name: EnemyHealthHolder (1)
+  m_Name: PlayerHealthHolder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -217,17 +217,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5228254648887235135}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.98, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5228254650335719950}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1, y: -0.000015258789}
-  m_SizeDelta: {x: 400, y: 100}
+  m_AnchoredPosition: {x: 0.9, y: 10}
+  m_SizeDelta: {x: 380, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5228254648887235123
 CanvasRenderer:
@@ -257,9 +257,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a2edfb8d164730c499411b21592c4cf1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4bcd5f815a0ac1d49ad19d96b19f3b01, type: 3}
   m_Type: 3
-  m_PreserveAspect: 1
+  m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
   m_FillAmount: 1
@@ -571,7 +571,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 160}
+  m_AnchoredPosition: {x: 0, y: 188}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5228254649773104930
@@ -625,7 +625,7 @@ GameObject:
   - component: {fileID: 5228254650005923319}
   - component: {fileID: 5228254650005923316}
   m_Layer: 5
-  m_Name: PlayerHealthHolder
+  m_Name: EnemyHealthHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -638,18 +638,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5228254650005923314}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 5228254648687596004}
   m_Father: {fileID: 5228254648782162337}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 233, y: 155}
-  m_SizeDelta: {x: 400, y: 100}
+  m_AnchoredPosition: {x: -230, y: 155}
+  m_SizeDelta: {x: 400, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5228254650005923318
 CanvasRenderer:
@@ -681,7 +681,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: bba700bc485ac704593bebca35051d1a, type: 3}
   m_Type: 0
-  m_PreserveAspect: 1
+  m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -706,7 +706,7 @@ MonoBehaviour:
     isConstant: 1
     constantValue: 100
     variable: {fileID: 0}
-  currentHealth: {fileID: 11400000, guid: cbb39bbc45becc340b4523dc3baff05d, type: 2}
+  currentHealth: {fileID: 11400000, guid: 49b6157cd96dd974d9edc8d24954cc6e, type: 2}
 --- !u!1 &5228254650201159503
 GameObject:
   m_ObjectHideFlags: 0
@@ -854,7 +854,7 @@ GameObject:
   - component: {fileID: 5228254650335719936}
   - component: {fileID: 5228254650335719937}
   m_Layer: 5
-  m_Name: EnemyHealthHolder
+  m_Name: PlayerHealthHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -867,18 +867,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5228254650335719951}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 5228254648887235134}
   m_Father: {fileID: 5228254648782162337}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -233, y: 155}
-  m_SizeDelta: {x: 400, y: 100}
+  m_AnchoredPosition: {x: 230, y: 155}
+  m_SizeDelta: {x: 400, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5228254650335719939
 CanvasRenderer:
@@ -910,7 +910,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: bba700bc485ac704593bebca35051d1a, type: 3}
   m_Type: 0
-  m_PreserveAspect: 1
+  m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -935,7 +935,7 @@ MonoBehaviour:
     isConstant: 1
     constantValue: 100
     variable: {fileID: 0}
-  currentHealth: {fileID: 11400000, guid: 49b6157cd96dd974d9edc8d24954cc6e, type: 2}
+  currentHealth: {fileID: 11400000, guid: cbb39bbc45becc340b4523dc3baff05d, type: 2}
 --- !u!1 &5228254650347841888
 GameObject:
   m_ObjectHideFlags: 0

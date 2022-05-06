@@ -21,6 +21,7 @@ public class InputManager : MonoBehaviour
     private List<InputManager> inputManagers;
     public GameObject Enemy { get => enemy; }
     public Transform StadiumCentre { get => stadiumCentre; }
+
     private void Awake()
     {
         inputManagers = GetComponents<InputManager>().ToList();
@@ -60,6 +61,11 @@ public class InputManager : MonoBehaviour
     }
 
     enum InputStartStop { START,STOP}
+
+    public void ChangeInputSystem(InputSystem _newInputSystem)
+    {
+        input = _newInputSystem;
+    }
 
 }
 

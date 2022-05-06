@@ -26,8 +26,13 @@ public class LaunchManager : MonoBehaviour
     IEnumerator LaunchAfterPause()
     {
         yield return new WaitForSeconds(launchDelay);
-        foreach (var b in beyBlades) b.GameObject.SetActive(true);
-                LaunchEvent.Raise();
+        bool _beybladesActivatedEarlier = false;
+        foreach (var b in beyBlades)
+        {
+            if (b.GameObject.activeSelf) _beybladesActivatedEarlier = true;
+            b.GameObject.SetActive(true);
+        }
+        if(!_beybladesActivatedEarlier) LaunchEvent.Raise();
     }
     IEnumerator DisableAfterPause(float time)
     {

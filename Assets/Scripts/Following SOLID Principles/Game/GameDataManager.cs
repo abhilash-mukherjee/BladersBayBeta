@@ -1,120 +1,30 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class GameDataManager : MonoBehaviour
 {
     [SerializeField]
-    private BeyBladeData initialPlayerData;
-    public static GameDataManager Instance;
-    private GameData m_gameData;
-    private SerializablePlayerData m_playerData;
-    public GameData GameData { get => m_gameData; set => m_gameData = value; }
-    public SerializablePlayerData PlayerData { 
-        get 
-        {
-            return m_playerData;
-        } 
-    }
-
-    private void Awake()
+    private GameEvent LoadFinishEvent;
+    [SerializeField] private DataContext dataContext;
+    [SerializeField] private UnitOfWork unitOfWork;
+    private async void Awake()
     {
-        if (Instance == null) Instance = this;
-        else Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
-
-        m_gameData = new GameData(0);
-        m_playerData = new SerializablePlayerData(initialPlayerData);
+        var _task = dataContext.Load();
+        CheckLoadStatus(_task);
     }
-
-    private void OnEnable()
+    async void CheckLoadStatus(Task _task)
     {
-        CoinPerk.OnCoinsAdded += (int _count) => GameData.CoinCount += _count;
-
+        while (!_task.IsCompleted) { await Task.Yield(); }
+        LoadFinishEvent.Raise();
+        Debug.Log("Loaded");
     }
-    private void OnDisable()
+    private void OnApplicationQuit()
     {
-        CoinPerk.OnCoinsAdded -= (int _count) => GameData.CoinCount += _count;
-        
+        unitOfWork.Save();
+        Debug.Log("Saved");
     }
-}
-
-[System.Serializable]
-public class GameData
-{
-    public int CoinCount { get => m_coinCount; set => m_coinCount = value; }
-
-    private int m_coinCount;
-    public GameData(int _coinCount)
-    {
-        m_coinCount = _coinCount;
-    }
-}
-
-[Serializable]
-public class SerializablePlayerData
-{
-    public delegate void PlayerDataChangeHandler();
-    public static event PlayerDataChangeHandler OnPlayerDataChanged;
-
-    private string playerName;
-    private GameObject model;
-    private Sprite icon;
-    private Sprite playerAvatar;
-    private string modelName;
-
-    public string ModelName
-    {
-        get => modelName;
-        set
-        {
-            modelName = value;
-            OnPlayerDataChanged?.Invoke();
-        }
-    }
-    public string PlayerName
-    {
-        get => playerName;
-        set
-        {
-            playerName = value;
-            Debug.Log("Name Changed to " + value);
-            OnPlayerDataChanged?.Invoke();
-        }
-    }
-    public GameObject Model
-    {
-        get => model;
-        set
-        {
-            model = value;
-            OnPlayerDataChanged?.Invoke();
-        }
-    }
-    public Sprite Icon
-    {
-        get => icon;
-        set
-        {
-            icon = value;
-            OnPlayerDataChanged?.Invoke();
-        }
-    }
-    public Sprite PlayerAvatar
-    {
-        get => playerAvatar;
-        set
-        {
-            playerAvatar = value;
-            OnPlayerDataChanged?.Invoke();
-        }
-    }
-    public SerializablePlayerData(BeyBladeData beyBladeData)
-    {
-        model = beyBladeData.Model;
-        icon = beyBladeData.Icon;
-        modelName = beyBladeData.ModelName;
-    }
-   
 }
