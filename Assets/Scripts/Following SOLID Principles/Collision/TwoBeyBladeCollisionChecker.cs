@@ -42,6 +42,7 @@ public class TwoBeyBladeCollisionChecker : CollisionChecker
         var collision = CheckCollisions(collidables);
         if (collision != null)
         {
+            Debug.Log("Collided");
             var obj = Instantiate(sparkPrefab, (collision.Collidable1.Transform.position + collision.Collidable2.Transform.position) / 2f, Quaternion.identity);
             obj.transform.localScale = sparkScale;
             InvokeAudioEvent(collision);

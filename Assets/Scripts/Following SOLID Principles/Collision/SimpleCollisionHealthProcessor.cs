@@ -16,7 +16,7 @@ public class SimpleCollisionHealthProcessor : CollisionHealthProcessor
             Debug.LogError("This collision did not have a valid type");
             return;
         }
-        Debug.Log("Collision index = " + type.CollisionIndex);
+        Debug.Log($"Inside Collision Helth process or of {gameObject.name} Collision index = " + type.CollisionIndex);
         victims = type.GetVictims(collision);
         attackers = type.GetAttackers(collision);
         foreach(var v in victims)

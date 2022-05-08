@@ -13,6 +13,8 @@ public class JMRControllerInputSystem : InputSystem
     private float minimumDistanceBetweenHitPointAndBeyBladeToAllowMovement = 0.26f;
     [SerializeField]
     private InputTrigger actionTriggeredByUpSwipe, actionTriggeredByLeftSwipe, actionTriggeredByRightSwipe;
+    [SerializeField]
+    private GameEvent UpSwipeEvent, LeftSwipeEvent, RightSwipeEvent;
 
     public override void CheckForAbilitySwitchTriggers(InputManager inputManager, GameObject enemyObject)
     {
@@ -22,10 +24,19 @@ public class JMRControllerInputSystem : InputSystem
         if (isSwipeRight)
         {
             RaiseActionTriggerEvent(inputManager.gameObject, actionTriggeredByRightSwipe);
+            RightSwipeEvent.Raise();
             Debug.Log("Right Swiped");
         }
-        if (isSwipeLeft) RaiseActionTriggerEvent(inputManager.gameObject, actionTriggeredByLeftSwipe);
-        if (isSwipeUp) RaiseActionTriggerEvent(inputManager.gameObject, actionTriggeredByUpSwipe);
+        if (isSwipeLeft)
+        {
+            RaiseActionTriggerEvent(inputManager.gameObject, actionTriggeredByLeftSwipe);
+            LeftSwipeEvent.Raise();
+        }
+        if (isSwipeUp)
+        {
+            RaiseActionTriggerEvent(inputManager.gameObject, actionTriggeredByUpSwipe);
+            UpSwipeEvent.Raise();
+        }
     }
 
     public override void ScriptableStart(GameObject gameObject)

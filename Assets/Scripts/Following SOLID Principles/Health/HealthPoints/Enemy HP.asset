@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 891dda010e3a11e47a8680c044076785, type: 3}
   m_Name: Enemy HP
   m_EditorClassIdentifier: 
-  floatValue: -0.88998175
+  floatValue: -2.3700056

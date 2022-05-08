@@ -18,6 +18,7 @@ public class PanelDisplayable : UIDisplayable
 
     public override void EnterForward()
     {
+        transform.position = disappearReverseTargetPosition.position;
         RaiseEvents(eventsToRaiseWhenActivated);
         transform.localScale = localScaleWhenActive;
         Play(positionWhenActive, AnimationType.APPEAR);
@@ -25,6 +26,7 @@ public class PanelDisplayable : UIDisplayable
 
     public override void EnterReverse()
     {
+        transform.position = dissapearForwardTargetPosition.position;
         RaiseEvents(eventsToRaiseWhenActivated);
         transform.localScale = localScaleWhenActive;
         Play(positionWhenActive, AnimationType.APPEAR);

@@ -19,5 +19,5 @@ MonoBehaviour:
   playerName: 
   model: {fileID: 9007181947938035963, guid: 86c717d638495cc44a420d59b3175a32, type: 3}
   icon: {fileID: 21300000, guid: 4124916b8d808f4479b2a8cb55afba21, type: 3}
-  playerAvatar: {fileID: 0}
+  playerAvatar: {fileID: 21300000, guid: c2e6553a7c43d9b469e6e0538622b059, type: 3}
   modelName: 

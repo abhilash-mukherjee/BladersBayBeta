@@ -12,6 +12,8 @@ public class AfterGamePerkGiver : PerkPool
     private FloatVariable EnemyHP;
     [SerializeField]
     private float ExpMultiplier = 0.5f;
+    [SerializeField]
+    private string perkRecieverID = "Player_Main";
     private int m_coinsToAdd = 0;
     private PerkPool.PerkMessege m_resultMessege;
     public override void GeneratePerks()
@@ -24,14 +26,14 @@ public class AfterGamePerkGiver : PerkPool
 
     private CoinPerk GenerateCoinPerk()
     {
-        return new CoinPerk(m_coinsToAdd, coinPerkType);
+        return new CoinPerk(m_coinsToAdd, coinPerkType, perkRecieverID);
         
     }
     
     private ExperiencePerk GenerateExperiencePerk()
     {
         float _expToAdd = ExpMultiplier * (100 - EnemyHP.Value);
-        return new ExperiencePerk((int)_expToAdd, experiencePerkType);
+        return new ExperiencePerk((int)_expToAdd, experiencePerkType, perkRecieverID);
         
     }
 

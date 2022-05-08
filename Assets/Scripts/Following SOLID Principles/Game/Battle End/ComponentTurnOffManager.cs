@@ -14,5 +14,6 @@ public class ComponentTurnOffManager : MonoBehaviour
             _script.enabled = false;
         foreach (var _collider in collidersToDisable)
             _collider.enabled = false;
+        Debug.Log("Components turned off");
     }
 }

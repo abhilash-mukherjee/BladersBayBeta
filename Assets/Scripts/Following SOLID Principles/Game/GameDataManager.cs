@@ -10,9 +10,13 @@ public class GameDataManager : MonoBehaviour
     private GameEvent LoadFinishEvent;
     [SerializeField] private DataContext dataContext;
     [SerializeField] private UnitOfWork unitOfWork;
-    private async void Awake()
+    private void Awake()
     {
         DontDestroyOnLoad(gameObject);
+        
+    }
+    void Start()
+    {
         var _task = dataContext.Load();
         CheckLoadStatus(_task);
     }

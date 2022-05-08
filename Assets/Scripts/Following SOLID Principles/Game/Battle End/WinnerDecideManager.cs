@@ -5,11 +5,15 @@ using UnityEngine;
 public class WinnerDecideManager : MonoBehaviour
 {
     public delegate void ResultsDecidedHandler(GameObject _winner, GameObject _looser);
+    public delegate void LevelResultsDecidedHandler(GameObject _winner, GameObject _looser, string _levelID);
     public static event ResultsDecidedHandler OnResultsDecided;
+    public static event LevelResultsDecidedHandler OnLevelResultsDecided;
     [SerializeField]
     private List<GameObject> BeyBladeList = new List<GameObject>();
     [SerializeField]
     private GameEvent matchEndEvent;
+    [SerializeField]
+    private string levelID;
     private GameObject m_winner, m_losser;
     public void DetermineWnnerAndLooser(GameObject _gameObject)
     {
@@ -22,6 +26,7 @@ public class WinnerDecideManager : MonoBehaviour
         else
         {
             OnResultsDecided?.Invoke(m_winner, m_losser);
+            OnLevelResultsDecided?.Invoke(m_winner, m_losser, levelID);
             matchEndEvent.Raise();
         }
     }

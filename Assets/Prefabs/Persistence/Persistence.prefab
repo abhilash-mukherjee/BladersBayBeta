@@ -14,6 +14,11 @@ GameObject:
   - component: {fileID: 3925732956469847451}
   - component: {fileID: 3925732956469847444}
   - component: {fileID: 3925732956469847449}
+  - component: {fileID: 8675995132998726887}
+  - component: {fileID: 2973414136813980316}
+  - component: {fileID: 8250164479062524948}
+  - component: {fileID: 1228675882118909940}
+  - component: {fileID: 1934296981}
   m_Layer: 0
   m_Name: Persistence
   m_TagString: Untagged
@@ -64,6 +69,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data:
     players: []
+    levels: []
+    inventories: []
+    gameState:
+      m_id: GAME_STATE
+      maximumLevelUnlocked: 0
+      maximumTrainingUnlocked: 0
+      didLastBattleUnlockNewLevel: 0
+      levelCount: 5
+      trainingCount: 4
   filename: GamData
 --- !u!114 &3925732956469847451
 MonoBehaviour:
@@ -78,6 +92,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   players: {fileID: 3925732956469847444}
+  levels: {fileID: 8675995132998726887}
+  inventories: {fileID: 8250164479062524948}
   dataContext: {fileID: 3925732956469847450}
 --- !u!114 &3925732956469847444
 MonoBehaviour:
@@ -91,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cda40f5416b3e054ab26578952e9812e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  context: {fileID: 3925732956469847450}
+  m_Context: {fileID: 3925732956469847450}
 --- !u!114 &3925732956469847449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,3 +123,112 @@ MonoBehaviour:
   playerID: Player_Main
   playerData: {fileID: 11400000, guid: 44f4e870716288f48a0beb368caf7090, type: 2}
   unitOfWork: {fileID: 3925732956469847451}
+--- !u!114 &8675995132998726887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3925732956469847447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30193d88117d307488f4b5f59037c6fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Context: {fileID: 3925732956469847450}
+--- !u!114 &2973414136813980316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3925732956469847447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9277a7f0076c34441abc73cea85e73b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitOfWork: {fileID: 3925732956469847451}
+  dataContext: {fileID: 3925732956469847450}
+  levelCount: 5
+  trainingCount: 4
+--- !u!114 &8250164479062524948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3925732956469847447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bdeef898719835459a690b872d58b4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Context: {fileID: 3925732956469847450}
+--- !u!114 &1228675882118909940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3925732956469847447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34bfc533f444b75458d6a4f0381c6d9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryID: PLAYER_INVENTORY
+  playerID: Player_Main
+  unitOfWork: {fileID: 3925732956469847451}
+--- !u!114 &1934296981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3925732956469847447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17dbc86e83f067f449d814880e809eee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3925732956469847449}
+        m_TargetAssemblyTypeName: PlayerDataManager, Assembly-CSharp
+        m_MethodName: StartLoad
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2973414136813980316}
+        m_TargetAssemblyTypeName: LevelDataManager, Assembly-CSharp
+        m_MethodName: OnDataLoaded
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1228675882118909940}
+        m_TargetAssemblyTypeName: InventoryDataManager, Assembly-CSharp
+        m_MethodName: OnDataLoaded
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  gameEvent: {fileID: 11400000, guid: 633af43713c536b45967b9e7e5e1de40, type: 2}

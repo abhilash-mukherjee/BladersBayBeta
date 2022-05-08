@@ -21,3 +21,6 @@ MonoBehaviour:
   actionTriggeredByUpSwipe: {fileID: 11400000, guid: 97554fdf419ca21408dd2a6016a1ad30, type: 2}
   actionTriggeredByLeftSwipe: {fileID: 11400000, guid: a2d818ed50a2d0c43a39cce41ceae773, type: 2}
   actionTriggeredByRightSwipe: {fileID: 11400000, guid: c86d251ac07e7a144970088b9eccd5c9, type: 2}
+  UpSwipeEvent: {fileID: 11400000, guid: d3e0356cd208ca048bf59e1cd4979dfc, type: 2}
+  LeftSwipeEvent: {fileID: 11400000, guid: 2c07dc0dc46b8154f9d320aa9a8162da, type: 2}
+  RightSwipeEvent: {fileID: 11400000, guid: 49e712e2f425eb248ad818f5a93584fe, type: 2}

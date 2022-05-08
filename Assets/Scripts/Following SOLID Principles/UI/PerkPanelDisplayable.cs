@@ -23,7 +23,11 @@ public class PerkPanelDisplayable : PanelDisplayable
 
     private void CachePerks(List<IPerk> _generatedPerks, PerkPool.PerkMessege _perkMessege)
     {
-        if (_perkMessege != perkMessege) return;
+        if (_perkMessege != perkMessege)
+        {
+            Debug.Log("Perks generated but not cached");
+            return;
+        }
         cachedPerks = _generatedPerks;
         Debug.Log("perks cached ");
         OnPerksCached?.Invoke(cachedPerks, this);

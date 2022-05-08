@@ -1,14 +1,21 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class ResultDecider : MonoBehaviour
+public abstract class ResultDecider: MonoBehaviour
 {
     [SerializeField]
-    private GameObject player, enemy;
+    private GameObject player;
     [SerializeField]
-    private GameEvent playerWonEvent, playerLostEvent;
+    private GameObject enemy;
+    [SerializeField]
+    private GameEvent playerWonEvent;
+    [SerializeField]
+    private GameEvent playerLostEvent;
+
+    protected GameObject Player { get => player; }
+    protected GameObject Enemy { get => enemy;  }
+    protected GameEvent PlayerWonEvent { get => playerWonEvent;  }
+    protected GameEvent PlayerLostEvent { get => playerLostEvent; }
+
     private void OnEnable()
     {
         HealthManager.OnDied += DecideResult;
@@ -16,19 +23,7 @@ public class ResultDecider : MonoBehaviour
     private void OnDisable()
     {
         HealthManager.OnDied -= DecideResult;
-        
-    }
 
-    private void DecideResult(GameObject _gameObject)
-    {
-        if(_gameObject == player)
-        {
-            playerLostEvent.Raise();
-            return;
-        }
-        if(_gameObject == enemy)
-        {
-            playerWonEvent.Raise();
-        }
     }
+    protected abstract void DecideResult(GameObject _gameObject);
 }

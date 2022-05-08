@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9dc25682a8e48e4897e6302c8fa01a7, type: 3}
+  m_Name: Coach Moving randomly
+  m_EditorClassIdentifier: 
+  TickPeriodForMovementChange: 20
+  TickPeriodForAbilityChange: 60
+  movementBrain: {fileID: 11400000, guid: 577d7b5e74b63754f910f644addc32d7, type: 2}
+  abilityBrain: {fileID: 11400000, guid: 979daed1417180243878d3f6b6d32fa5, type: 2}

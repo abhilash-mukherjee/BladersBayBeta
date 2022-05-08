@@ -8,6 +8,13 @@ public class SessionController : MonoBehaviour, ISession
     [SerializeField]
     private GameEvent sessionRevertEvent, sessionEndEvent;
     private Stack<UIDisplayable> forwardStack, reverseStack;
+
+    protected List<UIDisplayable> Displayables { get => displayables;  }
+    protected GameEvent SessionRevertEvent { get => sessionRevertEvent; }
+    protected GameEvent SessionEndEvent { get => sessionEndEvent;  }
+    protected Stack<UIDisplayable> ForwardStack { get => forwardStack;}
+    protected Stack<UIDisplayable> ReverseStack { get => reverseStack; }
+
     public void EndSession()
     {
         forwardStack.Clear();
@@ -16,7 +23,7 @@ public class SessionController : MonoBehaviour, ISession
         Debug.Log("SessionEnded");
     }
 
-    public void Next()
+    public virtual void Next()
     {
         if (forwardStack.Count == 0 && reverseStack.Count == 0) return;
         if (forwardStack.Count <= 0)
@@ -37,7 +44,7 @@ public class SessionController : MonoBehaviour, ISession
         forwardStack.Peek().EnterForward();
     }
 
-    public void Previous()
+    public virtual void Previous()
     {
         if (forwardStack.Count == 0 && reverseStack.Count == 0) return;
         if (reverseStack.Count <= 0)
