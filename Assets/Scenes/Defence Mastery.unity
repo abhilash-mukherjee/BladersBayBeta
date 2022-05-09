@@ -43294,9 +43294,7 @@ MonoBehaviour:
   localScaleWhenActive: {x: 10, y: 10, z: 20}
   dialogueText: {fileID: 1992928335}
   waitTimeBeforeDialogueBegins: 1
-  dialogue: 'Swipe Left to go to the attack mode
-
-'
+  dialogue: Swipe Left to go to the Defence Mode
   TYPE_SOUND: Typing_Sound
   typeSpeedSlowingFactor: 3
   endOfSentenceSlowingFactor: 80

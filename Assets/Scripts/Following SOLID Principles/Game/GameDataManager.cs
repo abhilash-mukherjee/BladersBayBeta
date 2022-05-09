@@ -10,8 +10,14 @@ public class GameDataManager : MonoBehaviour
     private GameEvent LoadFinishEvent;
     [SerializeField] private DataContext dataContext;
     [SerializeField] private UnitOfWork unitOfWork;
+    private static GameDataManager m_instance;
+    public UnitOfWork UnitOfWork { get => unitOfWork; }
+    public static GameDataManager Instance { get => m_instance;  }
+
     private void Awake()
     {
+        if (m_instance == null) m_instance = this;
+        else Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
         
     }

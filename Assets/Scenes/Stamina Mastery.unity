@@ -871,7 +871,7 @@ MonoBehaviour:
   unityEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2133019587}
         m_TargetAssemblyTypeName: SessionController, Assembly-CSharp
         m_MethodName: Next
         m_Mode: 1
@@ -8850,7 +8850,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Stamina Training
+  m_text: Bey Battle
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11635,7 +11635,6 @@ GameObject:
   m_Component:
   - component: {fileID: 759058099}
   - component: {fileID: 759058100}
-  - component: {fileID: 759058101}
   - component: {fileID: 759058103}
   - component: {fileID: 759058102}
   - component: {fileID: 759058104}
@@ -11690,22 +11689,8 @@ MonoBehaviour:
   displayables:
   - {fileID: 502175158}
   - {fileID: 265371205}
-  sessionRevertEvent: {fileID: 11400000, guid: e2d4756d7f8dce9459b139c2dda26ff3, type: 2}
-  sessionEndEvent: {fileID: 11400000, guid: 7acf2651b1b71ad45a1d90b990ec66cd, type: 2}
---- !u!114 &759058101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 759058098}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e63bcbb6f088fb4baf407fa0d19fe5e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unitOfWork: {fileID: 0}
-  mainPlayerID: Player_Main
+  sessionRevertEvent: {fileID: 11400000, guid: 1252ac322fa16d24490eed37599f3bd8, type: 2}
+  sessionEndEvent: {fileID: 11400000, guid: 5d9e8d6a9634a9846b76b309484dd417, type: 2}
 --- !u!114 &759058102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11733,7 +11718,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  gameEvent: {fileID: 11400000, guid: 7acf2651b1b71ad45a1d90b990ec66cd, type: 2}
+  gameEvent: {fileID: 11400000, guid: 5d9e8d6a9634a9846b76b309484dd417, type: 2}
 --- !u!114 &759058103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11773,7 +11758,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-  gameEvent: {fileID: 11400000, guid: 678fb90f0fb2cec43a015a19bd1abf5f, type: 2}
+  gameEvent: {fileID: 11400000, guid: d2f221e1e56c3f343be1e077d8deae7e, type: 2}
 --- !u!114 &759058104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11801,7 +11786,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  gameEvent: {fileID: 11400000, guid: e2d4756d7f8dce9459b139c2dda26ff3, type: 2}
+  gameEvent: {fileID: 11400000, guid: 1252ac322fa16d24490eed37599f3bd8, type: 2}
 --- !u!1 &799878999
 GameObject:
   m_ObjectHideFlags: 0
@@ -24884,7 +24869,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InputVector: {fileID: 11400000, guid: 5d966daed4d3f784a848300b06a9888c, type: 2}
-  input: {fileID: 11400000, guid: 26ea656fa7b22f24ba3bddfe2018277f, type: 2}
+  input: {fileID: 11400000, guid: 841ce562d01e2fc4298b488d7cfff130, type: 2}
   enemy: {fileID: 301150775}
   stadiumCentre: {fileID: 2077405193}
 --- !u!114 &1149436528
@@ -25792,22 +25777,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b8c8edba1bc9e242bc8d11293fcefe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  positionWhenActive: {fileID: 0}
-  dissapearForwardTargetPosition: {fileID: 0}
-  disappearReverseTargetPosition: {fileID: 0}
+  positionWhenActive: {fileID: 611225649}
+  dissapearForwardTargetPosition: {fileID: 1289079004}
+  disappearReverseTargetPosition: {fileID: 1850186255}
   eventsToRaiseWhenActivated:
-  - {fileID: 11400000, guid: 69e43db5e0d13f842a894788e293aaa8, type: 2}
-  - {fileID: 11400000, guid: 6b4c81d2055de0747b43fa9e1e0866dc, type: 2}
-  - {fileID: 11400000, guid: 6abc8f2b76898e240af2053910439432, type: 2}
+  - {fileID: 11400000, guid: 3ac7ac20754272648bef30f67baa5f63, type: 2}
+  - {fileID: 11400000, guid: 4c918dfc502ca424c9bfd0030831c53d, type: 2}
   eventsToRaiseWhenDeactivated:
-  - {fileID: 11400000, guid: 34f0d009aaf111a42a4c4198088ec2f4, type: 2}
+  - {fileID: 11400000, guid: 908e7d2ccdbba1e498e8910935e9aed7, type: 2}
   durationMultiplier: 0.05
   localScaleWhenActive: {x: 10, y: 10, z: 20}
   dialogueText: {fileID: 1992928335}
   waitTimeBeforeDialogueBegins: 1
-  dialogue: 'Swipe Left to go to the attack mode
-
-'
+  dialogue: Swipe Right to go to the stamina mode
   TYPE_SOUND: Typing_Sound
   typeSpeedSlowingFactor: 3
   endOfSentenceSlowingFactor: 80
@@ -25838,7 +25820,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  gameEvent: {fileID: 11400000, guid: 34f0d009aaf111a42a4c4198088ec2f4, type: 2}
+  gameEvent: {fileID: 11400000, guid: 908e7d2ccdbba1e498e8910935e9aed7, type: 2}
 --- !u!114 &1184625946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25866,7 +25848,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-  gameEvent: {fileID: 11400000, guid: 6b4c81d2055de0747b43fa9e1e0866dc, type: 2}
+  gameEvent: {fileID: 11400000, guid: 4c918dfc502ca424c9bfd0030831c53d, type: 2}
 --- !u!114 &1184625947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26864,7 +26846,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30a0903d5a18ca646bdc3953fea0887f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TrainingName: TRAINING_3
+  TrainingName: TRAINING_4
 --- !u!114 &1366806574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26892,7 +26874,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  gameEvent: {fileID: 11400000, guid: 678fb90f0fb2cec43a015a19bd1abf5f, type: 2}
+  gameEvent: {fileID: 11400000, guid: d2f221e1e56c3f343be1e077d8deae7e, type: 2}
 --- !u!1 &1376841298
 GameObject:
   m_ObjectHideFlags: 0
@@ -28022,7 +28004,7 @@ MonoBehaviour:
   dissapearForwardTargetPosition: {fileID: 837015555}
   disappearReverseTargetPosition: {fileID: 279019868}
   eventsToRaiseWhenActivated:
-  - {fileID: 11400000, guid: d81de51731dd72045b4866bbe9995908, type: 2}
+  - {fileID: 11400000, guid: da096821b2ebb2c4cbb0f5f20fcf8fd8, type: 2}
   eventsToRaiseWhenDeactivated: []
   durationMultiplier: 0.05
   localScaleWhenActive: {x: 10, y: 10, z: 20}
@@ -37696,11 +37678,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b8c8edba1bc9e242bc8d11293fcefe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  positionWhenActive: {fileID: 0}
-  dissapearForwardTargetPosition: {fileID: 0}
-  disappearReverseTargetPosition: {fileID: 0}
+  positionWhenActive: {fileID: 611225649}
+  dissapearForwardTargetPosition: {fileID: 1289079004}
+  disappearReverseTargetPosition: {fileID: 1850186255}
   eventsToRaiseWhenActivated:
-  - {fileID: 11400000, guid: 34f0d009aaf111a42a4c4198088ec2f4, type: 2}
+  - {fileID: 11400000, guid: 908e7d2ccdbba1e498e8910935e9aed7, type: 2}
   - {fileID: 11400000, guid: 9eb2e527ee2e6f84782f2e05c3eaf861, type: 2}
   eventsToRaiseWhenDeactivated: []
   durationMultiplier: 0.05
@@ -37728,7 +37710,7 @@ MonoBehaviour:
   unityEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2133019587}
         m_TargetAssemblyTypeName: SessionController, Assembly-CSharp
         m_MethodName: Next
         m_Mode: 1
@@ -37740,7 +37722,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  gameEvent: {fileID: 11400000, guid: cde268caacd998f4ca78d87390671284, type: 2}
+  gameEvent: {fileID: 11400000, guid: e42e269845a6ef341b6e5619061c6963, type: 2}
 --- !u!114 &2026565276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38601,19 +38583,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8928810079415369852, guid: 27cf7e32ddc12ec46bb7b2277c6c89b0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.023
+      value: 0.016
       objectReference: {fileID: 0}
     - target: {fileID: 8928810079415369852, guid: 27cf7e32ddc12ec46bb7b2277c6c89b0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.038
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8928810079415369852, guid: 27cf7e32ddc12ec46bb7b2277c6c89b0, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8928810079415369852, guid: 27cf7e32ddc12ec46bb7b2277c6c89b0, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8928810079415369852, guid: 27cf7e32ddc12ec46bb7b2277c6c89b0, type: 3}
       propertyPath: m_LocalRotation.y
@@ -38625,7 +38607,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8928810079415369852, guid: 27cf7e32ddc12ec46bb7b2277c6c89b0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8928810079415369852, guid: 27cf7e32ddc12ec46bb7b2277c6c89b0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -38857,7 +38839,7 @@ MonoBehaviour:
   - {fileID: 1184625944}
   - {fileID: 2026565274}
   sessionRevertEvent: {fileID: 11400000, guid: 22ccbbb1cec2a0c4cba9a8040a5dd6d4, type: 2}
-  sessionEndEvent: {fileID: 11400000, guid: 5bdafe9cc2924624bb95b16528c4a48f, type: 2}
+  sessionEndEvent: {fileID: 11400000, guid: d2f221e1e56c3f343be1e077d8deae7e, type: 2}
 --- !u!114 &2133019588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38885,7 +38867,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  gameEvent: {fileID: 11400000, guid: 5bdafe9cc2924624bb95b16528c4a48f, type: 2}
+  gameEvent: {fileID: 11400000, guid: d2f221e1e56c3f343be1e077d8deae7e, type: 2}
 --- !u!114 &2133019589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38938,7 +38920,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-  gameEvent: {fileID: 11400000, guid: 1bdd2efea06013b43b66941a5f006fdf, type: 2}
+  gameEvent: {fileID: 11400000, guid: 1252ac322fa16d24490eed37599f3bd8, type: 2}
 --- !u!1 &2135132270
 GameObject:
   m_ObjectHideFlags: 0
@@ -40656,6 +40638,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2372037006920379076}
   - component: {fileID: 2372037006920379079}
+  - component: {fileID: 2372037006920379081}
+  - component: {fileID: 2372037006920379080}
   m_Layer: 0
   m_Name: Demo Stamina Match Result Decider
   m_TagString: Untagged
@@ -40672,7 +40656,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2372037006920379078}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7c3ee37ee84d0142810c56eac60bac8, type: 3}
+  m_Script: {fileID: 11500000, guid: 47fdd780f1df01b468edab0886229a3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 301150775}
@@ -40681,6 +40665,63 @@ MonoBehaviour:
   playerLostEvent: {fileID: 11400000, guid: e42e269845a6ef341b6e5619061c6963, type: 2}
   resultDeclareEventRaiseTimeDelay: 2
   instantEventToRaiseAfterFinish: {fileID: 11400000, guid: 2b33fb0ed105a654b87030984b0527b4, type: 2}
+  PlayerStainaTrainingHP: {fileID: 11400000, guid: beeb1b1a12a120a4ba7115a4db52f6d8, type: 2}
+--- !u!114 &2372037006920379080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2372037006920379078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17dbc86e83f067f449d814880e809eee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2372037006920379079}
+        m_TargetAssemblyTypeName: StaminaTrainingResultDecider, Assembly-CSharp
+        m_MethodName: StopChecckingForPlayerHealthMaximization
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  gameEvent: {fileID: 11400000, guid: da096821b2ebb2c4cbb0f5f20fcf8fd8, type: 2}
+--- !u!114 &2372037006920379081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2372037006920379078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17dbc86e83f067f449d814880e809eee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2372037006920379079}
+        m_TargetAssemblyTypeName: StaminaTrainingResultDecider, Assembly-CSharp
+        m_MethodName: StartChecckingForPlayerHealthMaximization
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  gameEvent: {fileID: 11400000, guid: 61471ab3eb63df847b93b95f43fe04b7, type: 2}
 --- !u!33 &2372037007654449514
 MeshFilter:
   m_ObjectHideFlags: 0

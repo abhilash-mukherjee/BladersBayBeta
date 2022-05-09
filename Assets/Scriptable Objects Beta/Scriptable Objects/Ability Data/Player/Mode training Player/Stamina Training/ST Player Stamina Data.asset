@@ -15,7 +15,7 @@ MonoBehaviour:
   speed: 1
   attackValue: 0
   dmgValue: 4
-  staminaValue: 0.03
+  staminaValue: 0.5
   depletionRate: 0.3
   replenishmentRate: 0.5
   maxAvailabilityIndex: 1
