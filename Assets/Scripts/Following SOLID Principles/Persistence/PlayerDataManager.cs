@@ -29,6 +29,7 @@ public class PlayerDataManager : MonoBehaviour
         else
         {
             playerData.SetFromSerializableData(_player);
+            unitOfWork.Save();
         }
     }
     public void OnPlayerDataChanged(string _id)
