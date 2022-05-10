@@ -55,6 +55,9 @@ MonoBehaviour:
   LoadFinishEvent: {fileID: 11400000, guid: 633af43713c536b45967b9e7e5e1de40, type: 2}
   dataContext: {fileID: 3925732956469847450}
   unitOfWork: {fileID: 3925732956469847451}
+  FTUEBuildIndex: 1
+  HSBuildIndex: 2
+  splashScreenTime: 4
 --- !u!114 &3925732956469847450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76,8 +79,10 @@ MonoBehaviour:
       maximumLevelUnlocked: 0
       maximumTrainingUnlocked: 0
       didLastBattleUnlockNewLevel: 0
+      didLastBattleUnlockNewTrainingLevel: 0
       levelCount: 5
       trainingCount: 4
+      hasBeenOpenedEarlier: 0
   filename: GamData
 --- !u!114 &3925732956469847451
 MonoBehaviour:

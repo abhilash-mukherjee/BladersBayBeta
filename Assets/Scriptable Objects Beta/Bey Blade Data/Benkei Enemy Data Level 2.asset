@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33938c714d57d1843b3269f59e9eeb29, type: 3}
+  m_Name: Benkei Enemy Data Level 2
+  m_EditorClassIdentifier: 
+  attackData: {fileID: 11400000, guid: 596306723f57d7c4b87fe2150d633b66, type: 2}
+  defenceData: {fileID: 11400000, guid: f91b6c61afa924341b2ba05717208449, type: 2}
+  staminaData: {fileID: 11400000, guid: 6f0179a3f0e727b41bc68c30b177cfff, type: 2}
+  balanceData: {fileID: 11400000, guid: 3924fae57fc1da84194294f4d2801a51, type: 2}
+  playerName: Benkei
+  model: {fileID: 3642583009183372179, guid: 6b9f9dad7fc6ea44889e82e7442d5ecb, type: 3}
+  icon: {fileID: 21300000, guid: 1524b7642ed8dc04daca405a8963e20c, type: 3}
+  playerAvatar: {fileID: 21300000, guid: d0ce949fda30ed34d9f04660a476ad88, type: 3}
+  modelName: Dark Bull

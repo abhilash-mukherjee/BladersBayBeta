@@ -30,6 +30,7 @@ public class JsonDataContext : DataContext
         using var reader = new StreamReader(fullPath);
         var json = await reader.ReadToEndAsync();
         JsonUtility.FromJsonOverwrite(json, Data);
+        reader.Close();
     }
 
     public override async Task Save()
@@ -39,7 +40,8 @@ public class JsonDataContext : DataContext
         Debug.Log(json);
         var fullPath = Path.Combine(Application.persistentDataPath, filename);
         using var writer = new StreamWriter(fullPath);
-        await writer.WriteAsync(json); 
+        await writer.WriteAsync(json);
+        writer.Close();
     }
 }
 

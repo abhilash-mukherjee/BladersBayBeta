@@ -8,7 +8,7 @@ public class GameAudioManager : MonoBehaviour
 {
     public static GameAudioManager Instance;
     public List<Sound> sounds;
-
+    [SerializeField] private float BGMIPlayDelay = 3f;
     private void Awake()
     {
         if (Instance == null)
@@ -33,6 +33,12 @@ public class GameAudioManager : MonoBehaviour
     }
     private void Start()
     {
+        StartCoroutine(PlayeBGMIAfterDelay());
+    }
+
+    IEnumerator PlayeBGMIAfterDelay()
+    {
+        yield return new WaitForSeconds(BGMIPlayDelay);
         PlaySound("BGM1");
     }
     public void PlaySound(string clipName)

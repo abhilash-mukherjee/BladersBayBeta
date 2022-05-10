@@ -9,11 +9,23 @@ EditorBuildSettings:
     path: Assets/Scenes/SplashScreen.unity
     guid: 55916913bb85caa41b80a2fc8ce60c3e
   - enabled: 1
-    path: Assets/Scenes/FTUE.unity
-    guid: 412e19ea56303df49a0ad5ab1d3d572d
+    path: Assets/Scenes/First Time UE.unity
+    guid: 1bb04b4e57f4ef84997a685d126145b4
   - enabled: 1
     path: Assets/Scenes/Home Screen.unity
     guid: 3707b7dce39ed1840b369cc9b83451f7
+  - enabled: 1
+    path: Assets/Scenes/Movement Mastery.unity
+    guid: a2de6dcc70e7f364c9810cf6256238fa
+  - enabled: 1
+    path: Assets/Scenes/Attack Mastery.unity
+    guid: 3f4d607a33ea8d144a822f1c19478de4
+  - enabled: 1
+    path: Assets/Scenes/Defence Mastery.unity
+    guid: 382ac781e39a4684aaf7c8a6079e8c70
+  - enabled: 1
+    path: Assets/Scenes/Stamina Mastery.unity
+    guid: 2237cf01db58b364d95172c9e3f1410f
   - enabled: 1
     path: Assets/Scenes/CoinInventory.unity
     guid: 7fab0f71849d24847b1549ab7f84ca0e
@@ -24,9 +36,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Level Parent 1.unity
     guid: 4cfc29de4f5694844ad39afd8110595f
   - enabled: 1
-    path: Assets/Scenes/First Time UE.unity
-    guid: 1bb04b4e57f4ef84997a685d126145b4
+    path: Assets/Scenes/Level Parent 2.unity
+    guid: 1024cac5f35fbfe4197bb5dd89cfe31e
   - enabled: 1
-    path: Assets/Scenes/Movement Mastery.unity
-    guid: a2de6dcc70e7f364c9810cf6256238fa
+    path: Assets/Scenes/Level Parent 3.unity
+    guid: f20f4ae9d7a2b5c4e80b365da57a26c3
+  - enabled: 1
+    path: Assets/Scenes/Level Scene.unity
+    guid: 8658c3c8190a03a4ea45d0f20a02a847
   m_configObjects: {}

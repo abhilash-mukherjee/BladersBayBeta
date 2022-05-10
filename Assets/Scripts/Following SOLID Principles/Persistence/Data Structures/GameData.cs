@@ -15,6 +15,6 @@ public class GameData
         players = new List<Player>();
         levels = new List<Level>();
         inventories = new List<Inventory>();
-        gameState = new GameState();
+        gameState = new GameState(false);
     }
 }

@@ -11,13 +11,11 @@ public class InputFieldDisplayable : PanelDisplayable
     [SerializeField]
     private Image image;
     [SerializeField]
-    private UnitOfWork unitOfWork;
-    [SerializeField]
     private string playerID = "Player_Main";
     private string m_name;
     public override void EnterForward()
     {
-        image.sprite = unitOfWork.Players.GetByID(playerID).PlayerAvatar;
+        image.sprite = GameDataManager.Instance.UnitOfWork.Players.GetByID(playerID).PlayerAvatar;
         base.EnterForward();
     }
     public override void EnterReverse()
@@ -28,7 +26,7 @@ public class InputFieldDisplayable : PanelDisplayable
     {
         if (inputField.Text == "") m_name = "Player"; 
         else m_name = inputField.Text;
-        var player = unitOfWork.Players.GetByID(playerID);
+        var player = GameDataManager.Instance.UnitOfWork.Players.GetByID(playerID);
         player.PlayerName = m_name;
         base.ExitForward();
         StartCoroutine(SaveCoroutine());
@@ -40,6 +38,6 @@ public class InputFieldDisplayable : PanelDisplayable
     }
     private void Save()
     {
-        unitOfWork.Save();
+        GameDataManager.Instance.UnitOfWork.Save();
     }
 }

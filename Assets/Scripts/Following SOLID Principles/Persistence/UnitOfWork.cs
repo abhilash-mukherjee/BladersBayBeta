@@ -10,6 +10,7 @@ public class UnitOfWork : MonoBehaviour
     public Players Players { get => players; set => players = value; }
     public Levels Levels { get => levels; set => levels = value; }
     public Inventories Inventories { get => inventories; set => inventories = value; }
+    public DataContext DataContext { get => dataContext;  }
 
     public async void Save() => await dataContext.Save();
 }

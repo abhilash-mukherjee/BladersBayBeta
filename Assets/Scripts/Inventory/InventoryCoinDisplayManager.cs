@@ -1,13 +1,23 @@
 using UnityEngine;
 using TMPro;
+using System;
+
 public class InventoryCoinDisplayManager : MonoBehaviour
 {
     [SerializeField]
     TextMeshProUGUI coinCount;
     [SerializeField]
-    IntVariable playerCoinCount;
-    private void Update()
+    private string inventoryID = "PLAYER_INVENTORY";
+    private void OnEnable()
     {
-        coinCount.text = playerCoinCount.Value.ToString();
+        UpdateCoinCount();
     }
+
+    public void UpdateCoinCount()
+    {
+        var i = GameDataManager.Instance.UnitOfWork.Inventories.GetByID(inventoryID);
+        if (i == null) coinCount.text = 0.ToString();
+        else coinCount.text = i.CoinCount.ToString();
+    }
+
 }

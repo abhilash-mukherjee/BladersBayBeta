@@ -16,10 +16,10 @@ MonoBehaviour:
   defenceData: {fileID: 11400000, guid: 83a35181b295b094faaff840f2a8938c, type: 2}
   staminaData: {fileID: 11400000, guid: 55af6d4ad0c78c8439dd4a0a84863644, type: 2}
   balanceData: {fileID: 11400000, guid: b330b9d6352c3f248b31bc992162a9f1, type: 2}
-  playerName: 
+  playerName: Player
   model: {fileID: 5946723338347151846, guid: 15a1499598bdd44439f88e0807c2320c, type: 3}
   icon: {fileID: 21300000, guid: 5c5d8bf88b40f0f45aa9af7669548368, type: 3}
-  playerAvatar: {fileID: 0}
+  playerAvatar: {fileID: 21300000, guid: 83273d19eb97c6645807cd69cd4df9b9, type: 3}
   modelName: Albatroz
   CoinsEarned: {fileID: 11400000, guid: f05e804490df90e4e9b78cb4ef1f2fde, type: 2}
   m_maximumLevelUnlocked: {fileID: 11400000, guid: 349b00ae416eb5b43918a2a95928110e, type: 2}

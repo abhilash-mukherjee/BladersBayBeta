@@ -654,7 +654,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 55051080}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 377c60b21bb657e4ba5325a6e1d3cc50, type: 3}
+  m_Script: {fileID: 11500000, guid: 99165225899a26049a75a6d88acac99a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 818688503}
@@ -11871,7 +11871,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e63bcbb6f088fb4baf407fa0d19fe5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitOfWork: {fileID: 0}
   mainPlayerID: Player_Main
 --- !u!114 &490839446
 MonoBehaviour:
@@ -20278,7 +20277,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 715190902}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 377c60b21bb657e4ba5325a6e1d3cc50, type: 3}
+  m_Script: {fileID: 11500000, guid: 99165225899a26049a75a6d88acac99a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1859985113}
@@ -21598,7 +21597,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e63bcbb6f088fb4baf407fa0d19fe5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitOfWork: {fileID: 0}
   mainPlayerID: Player_Main
 --- !u!114 &759058102
 MonoBehaviour:
@@ -36038,21 +36036,21 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Alpha: 0.5
+    - _Alpha: 0
     - _BlendAmount: 0
     - _ColorMask: 15
     - _InvertMask: 0
     - _Radius: 0
-    - _Softness: 1
+    - _Softness: 0
     - _Stencil: 0
     - _StencilComp: 8
     - _StencilOp: 0
     - _StencilReadMask: 255
     - _StencilWriteMask: 255
     m_Colors:
-    - _CircleColor: {r: 1, g: 1, b: 1, a: 0}
+    - _CircleColor: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _MaskColor: {r: 1, g: 1, b: 1, a: 0}
+    - _MaskColor: {r: 0, g: 0, b: 0, a: 0}
     - _Position: {r: 0, g: 0, b: 0, a: 0}
     - _ResizeCircle: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
@@ -42831,7 +42829,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -71217,7 +71215,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e63bcbb6f088fb4baf407fa0d19fe5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitOfWork: {fileID: 0}
   mainPlayerID: Player_Main
 --- !u!1 &2135132270
 GameObject:
@@ -76869,7 +76866,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8272264269157347350}
   - component: {fileID: 8272264269157347351}
-  - component: {fileID: 8272264269157347348}
+  - component: {fileID: 8272264269157347346}
   m_Layer: 5
   m_Name: PlayerIcon
   m_TagString: Untagged
@@ -76877,7 +76874,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &8272264269157347348
+--- !u!114 &8272264269157347346
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -76886,7 +76883,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8272264269157347345}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 377c60b21bb657e4ba5325a6e1d3cc50, type: 3}
+  m_Script: {fileID: 11500000, guid: 99165225899a26049a75a6d88acac99a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 8272264269411307441}
@@ -77071,7 +77068,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8272264269371719192}
   - component: {fileID: 8272264269371719193}
-  - component: {fileID: 8272264269371719198}
+  - component: {fileID: 8272264269371719196}
   m_Layer: 5
   m_Name: CoachIcon
   m_TagString: Untagged
@@ -77079,7 +77076,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &8272264269371719198
+--- !u!114 &8272264269371719196
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -77088,7 +77085,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8272264269371719195}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 377c60b21bb657e4ba5325a6e1d3cc50, type: 3}
+  m_Script: {fileID: 11500000, guid: 99165225899a26049a75a6d88acac99a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 8272264269535174714}

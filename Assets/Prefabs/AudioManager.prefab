@@ -146,3 +146,9 @@ MonoBehaviour:
     loop: 1
     name: Typing_Sound
     source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 7d63c242803988d40b917befe924059e, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    name: Bonus
+    source: {fileID: 0}

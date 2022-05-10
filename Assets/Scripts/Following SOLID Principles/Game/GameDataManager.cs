@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameDataManager : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class GameDataManager : MonoBehaviour
     private GameEvent LoadFinishEvent;
     [SerializeField] private DataContext dataContext;
     [SerializeField] private UnitOfWork unitOfWork;
+    [SerializeField] private int FTUEBuildIndex = 2, HSBuildIndex = 3;
+    [SerializeField] private float splashScreenTime;
     private static GameDataManager m_instance;
     public UnitOfWork UnitOfWork { get => unitOfWork; }
     public static GameDataManager Instance { get => m_instance;  }
@@ -24,11 +27,28 @@ public class GameDataManager : MonoBehaviour
     void Start()
     {
         var _task = dataContext.Load();
+        StartCoroutine(StartActivityAfterSplashScreen(_task));
+    }
+
+    IEnumerator StartActivityAfterSplashScreen(Task _task)
+    {
+        yield return new WaitForSeconds(splashScreenTime);
         CheckLoadStatus(_task);
     }
     async void CheckLoadStatus(Task _task)
     {
         while (!_task.IsCompleted) { await Task.Yield(); }
+        if (!dataContext.Data.GameState.HasBeenOpenedEarlier)
+        {
+            dataContext.Data.GameState.MaximumLevelUnlocked = 1;
+            dataContext.Data.GameState.MaximumTrainingUnlocked = 1;
+            dataContext.Data.GameState.HasBeenOpenedEarlier = true;
+            SceneManager.LoadScene(FTUEBuildIndex);
+        }
+        else
+        {
+            SceneManager.LoadScene(HSBuildIndex);
+        }
         LoadFinishEvent.Raise();
         Debug.Log("Loaded");
     }

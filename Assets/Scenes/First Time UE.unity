@@ -1122,6 +1122,7 @@ MonoBehaviour:
   enemy: {fileID: 1149436501}
   playerWonEvent: {fileID: 11400000, guid: 4a1c36d56bfaa36458e45ad645a12600, type: 2}
   playerLostEvent: {fileID: 11400000, guid: 7c32bcca83bc3d844bcf00db18d20c5f, type: 2}
+  levelID: 
 --- !u!1 &139100920
 GameObject:
   m_ObjectHideFlags: 0
@@ -11550,7 +11551,6 @@ MonoBehaviour:
   localScaleWhenActive: {x: 10, y: 10, z: 20}
   inputField: {fileID: 2448723672430065053}
   image: {fileID: 1467287922}
-  unitOfWork: {fileID: 688670934}
   playerID: Player_Main
 --- !u!114 &517246017
 MonoBehaviour:
@@ -12926,17 +12926,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d074924b4bad01342a5eae184e0ca48d, type: 3}
---- !u!114 &688670934 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3925732956469847451, guid: d074924b4bad01342a5eae184e0ca48d, type: 3}
-  m_PrefabInstance: {fileID: 688670933}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64985110ea331924786abedf09d84601, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &702391411
 GameObject:
   m_ObjectHideFlags: 0
@@ -14607,7 +14596,7 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.2
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
@@ -15339,7 +15328,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 7
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -54828,7 +54817,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e63bcbb6f088fb4baf407fa0d19fe5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitOfWork: {fileID: 688670934}
   mainPlayerID: Player_Main
 --- !u!1 &2135132270
 GameObject:
@@ -57085,6 +57073,7 @@ MonoBehaviour:
   experiencePerkType: {fileID: 11400000, guid: 28a15b26703e47f4c8bb577624734c92, type: 2}
   EnemyHP: {fileID: 11400000, guid: 49b6157cd96dd974d9edc8d24954cc6e, type: 2}
   ExpMultiplier: 0.5
+  perkRecieverID: Player_Main
 --- !u!33 &2372037007654449514
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -62956,11 +62945,11 @@ MonoBehaviour:
       - m_Target: {fileID: 7114721447256999350}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: LoadScene
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: Home Screen
           m_BoolArgument: 0

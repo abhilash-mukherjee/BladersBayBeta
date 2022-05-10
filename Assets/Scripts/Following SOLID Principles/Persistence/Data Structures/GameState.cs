@@ -9,10 +9,16 @@ public class GameState : Base
     [SerializeField] private bool didLastBattleUnlockNewLevel;
     [SerializeField] private bool didLastBattleUnlockNewTrainingLevel;
     [SerializeField] private int levelCount, trainingCount;
+    [SerializeField] private bool hasBeenOpenedEarlier;
     public int MaximumLevelUnlocked { get => maximumLevelUnlocked; set => maximumLevelUnlocked = value; }
     public int MaximumTrainingUnlocked { get => maximumTrainingUnlocked; set => maximumTrainingUnlocked = value; }
     public bool DidLastBattleUnlockNewLevel { get => didLastBattleUnlockNewLevel; set => didLastBattleUnlockNewLevel = value; }
     public bool DidLastBattleUnlockNewTrainingLevel { get => didLastBattleUnlockNewTrainingLevel; set => didLastBattleUnlockNewTrainingLevel = value; }
     public int LevelCount { get => levelCount; set => levelCount = value; }
     public int TrainingCount { get => trainingCount; set => trainingCount = value; }
+    public bool HasBeenOpenedEarlier { get => hasBeenOpenedEarlier; set => hasBeenOpenedEarlier = value; }
+    public GameState(bool _hasBeenOpenedEarlier)
+    {
+        hasBeenOpenedEarlier = _hasBeenOpenedEarlier;
+    }
 }
