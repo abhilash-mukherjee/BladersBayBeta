@@ -25635,7 +25635,7 @@ GameObject:
   - component: {fileID: 6665209679755411505}
   - component: {fileID: 6903488843693995804}
   m_Layer: 5
-  m_Name: JMRKeyboardCanvas
+  m_Name: Custom JMRKeyboardCanvas 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25650,7 +25650,7 @@ RectTransform:
   m_GameObject: {fileID: 5325532512761497155}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 9}
-  m_LocalScale: {x: 0.001, y: 0.001, z: 0.001}
+  m_LocalScale: {x: 0.0028278695, y: 0.0028278695, z: 0.0028278695}
   m_Children:
   - {fileID: 5325532513633503772}
   m_Father: {fileID: 0}

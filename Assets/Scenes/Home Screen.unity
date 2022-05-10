@@ -415,7 +415,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 397458708}
-  - component: {fileID: 397458709}
   m_Layer: 5
   m_Name: Button Container
   m_TagString: Untagged
@@ -445,21 +444,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &397458709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 397458707}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f9f9a449ec8c39498c10b5eca4106d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  popUpAnimationTime: 0.5
-  activatedLocalScale: {x: 1, y: 1, z: 1}
-  deActivatedLocalScale: {x: 0, y: 0, z: 0}
 --- !u!1 &469669776
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,6 +636,10 @@ PrefabInstance:
       value: StadiumModel1
       objectReference: {fileID: 0}
     - target: {fileID: 100382747257944101, guid: 1bbd45d801e91bf4481c0a5365ebf53c, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 100382747257944101, guid: 1bbd45d801e91bf4481c0a5365ebf53c, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -698,6 +686,42 @@ PrefabInstance:
     - target: {fileID: 733929780710433439, guid: 1bbd45d801e91bf4481c0a5365ebf53c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 998123879384317517, guid: 1bbd45d801e91bf4481c0a5365ebf53c, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2297627891547872630, guid: 1bbd45d801e91bf4481c0a5365ebf53c, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122640540947982882, guid: 1bbd45d801e91bf4481c0a5365ebf53c, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3845949449530294294, guid: 1bbd45d801e91bf4481c0a5365ebf53c, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4324372597457425613, guid: 1bbd45d801e91bf4481c0a5365ebf53c, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4988308625011071908, guid: 1bbd45d801e91bf4481c0a5365ebf53c, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5078824295619296137, guid: 1bbd45d801e91bf4481c0a5365ebf53c, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5438467245835659445, guid: 1bbd45d801e91bf4481c0a5365ebf53c, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7037577163692240575, guid: 1bbd45d801e91bf4481c0a5365ebf53c, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bbd45d801e91bf4481c0a5365ebf53c, type: 3}
@@ -1142,7 +1166,7 @@ MonoBehaviour:
   - {fileID: 759328492}
   - {fileID: 1178499810}
   - {fileID: 0}
-  - {fileID: 397458709}
+  - {fileID: 0}
   elementsToDeActivateWhenFocused: []
 --- !u!1001 &936604078
 PrefabInstance:
@@ -1154,6 +1178,10 @@ PrefabInstance:
     - target: {fileID: 574440999439527994, guid: 633a1e3825e2f6e4c81ef8bf448d11cd, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1289862959122647405, guid: 633a1e3825e2f6e4c81ef8bf448d11cd, type: 3}
+      propertyPath: RaycastLayerMasks.Array.data[0].m_Bits
+      value: 24563
       objectReference: {fileID: 0}
     - target: {fileID: 3738879141627463824, guid: 633a1e3825e2f6e4c81ef8bf448d11cd, type: 3}
       propertyPath: m_RootOrder
@@ -2506,6 +2534,7 @@ GameObject:
   - component: {fileID: 5251307834004236066}
   - component: {fileID: 5251307834004236067}
   - component: {fileID: 5251307834004236075}
+  - component: {fileID: 5251307834004236080}
   m_Layer: 5
   m_Name: Training Island Button
   m_TagString: Untagged
@@ -2540,6 +2569,18 @@ MonoBehaviour:
   onButtonClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 5251307834004236080}
+        m_TargetAssemblyTypeName: ButtonClickManager, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 8
+          m_FloatArgument: 0
+          m_StringArgument: TrainingScene
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 5251307834004236075}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: LoadScene
@@ -2549,7 +2590,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 8
           m_FloatArgument: 0
-          m_StringArgument: TrainingScene
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!224 &5251307834004236077
@@ -2664,6 +2705,18 @@ MonoBehaviour:
     layerObjectsPool:
     - {fileID: 5251307834521039784}
     - {fileID: 5251307835276088226}
+--- !u!114 &5251307834004236080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5251307834004236074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1434765c023f5e46ba881eafc282560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &5251307834521039784
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3294,6 +3347,7 @@ GameObject:
   - component: {fileID: 7519303359856942984}
   - component: {fileID: 7519303359856942985}
   - component: {fileID: 7519303359856942977}
+  - component: {fileID: 7519303359856942978}
   m_Layer: 5
   m_Name: Play Button
   m_TagString: Untagged
@@ -3311,6 +3365,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d5063b18a392184180494e8c4f46e4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7519303359856942978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7519303359856942976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1434765c023f5e46ba881eafc282560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &7519303359856942980
@@ -3420,6 +3486,18 @@ MonoBehaviour:
   onButtonClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 7519303359856942978}
+        m_TargetAssemblyTypeName: ButtonClickManager, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 12
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 7519303359856942977}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: LoadScene
@@ -4281,6 +4359,7 @@ GameObject:
   - component: {fileID: 8601453244577259680}
   - component: {fileID: 8601453244577259681}
   - component: {fileID: 8601453244577259689}
+  - component: {fileID: 8601453244577259690}
   m_Layer: 5
   m_Name: Inventory Button
   m_TagString: Untagged
@@ -4298,6 +4377,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d5063b18a392184180494e8c4f46e4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8601453244577259690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8601453244577259688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1434765c023f5e46ba881eafc282560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &8601453244577259692
@@ -4407,16 +4498,28 @@ MonoBehaviour:
   onButtonClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8601453244577259689}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 5
+      - m_Target: {fileID: 8601453244577259690}
+        m_TargetAssemblyTypeName: ButtonClickManager, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: CoinInventory
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8601453244577259689}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 7
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!224 &8601453244577259695
@@ -4806,6 +4909,18 @@ MonoBehaviour:
   onButtonClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 9019103019243581489}
+        m_TargetAssemblyTypeName: ButtonClickManager, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 9019103019243581488}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: LoadScene
@@ -4922,6 +5037,7 @@ GameObject:
   - component: {fileID: 9019103019243581479}
   - component: {fileID: 9019103019243581478}
   - component: {fileID: 9019103019243581488}
+  - component: {fileID: 9019103019243581489}
   m_Layer: 5
   m_Name: MenuButton
   m_TagString: Untagged
@@ -4939,6 +5055,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d5063b18a392184180494e8c4f46e4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &9019103019243581489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9019103019243581487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1434765c023f5e46ba881eafc282560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!222 &9019103019930903480
