@@ -128,4 +128,20 @@ public class GameAudioManager : MonoBehaviour
             audioSource.volume -= decayRate * Time.deltaTime;
         StartCoroutine(Decay(decayRate, audioSource));
     }
+
+    public void StartAudio(){
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+        StartCoroutine(PlayeBGMIAfterDelay());
+    }
+    public void StopAudio(){
+        PauseSound("BGM1");
+    }
 }

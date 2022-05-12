@@ -57,4 +57,52 @@ public class GameDataManager : MonoBehaviour
         unitOfWork.Save();
         Debug.Log("Saved");
     }
+
+    private void OnApplicationFocus(bool hasFocus){
+        Debug.Log("App is Not Focused" +  hasFocus);
+        bool isPaused = !hasFocus;
+        if( isPaused ){ 
+            unitOfWork.Save();
+            if( GameAudioManager.Instance )
+                GameAudioManager.Instance.StopAudio();
+            Time.timeScale = 0f;
+            Debug.Log("Saved");
+        }
+        else{
+            Time.timeScale = 1;
+            Debug.Log("App is Focused");
+
+            if( GameAudioManager.Instance )
+                GameAudioManager.Instance.StartAudio();
+
+            var _task = dataContext.Load();
+            StartCoroutine(StartActivityAfterSplashScreen(_task));
+
+            Debug.Log("Application is Launched");
+        }
+    }
+
+    private void OnApplicationPause(bool pauseStatus){
+        Debug.Log("App is Paused");
+        bool isPaused = pauseStatus;
+        if( isPaused ){ 
+            unitOfWork.Save();
+            if( GameAudioManager.Instance )
+                GameAudioManager.Instance.StopAudio();
+            Time.timeScale = 0f;
+            Debug.Log("Saved");
+        }
+        else{
+            Time.timeScale = 1;
+            Debug.Log("Application is Started");
+
+            var _task = dataContext.Load();
+            StartCoroutine(StartActivityAfterSplashScreen(_task));
+
+            if( GameAudioManager.Instance )
+                GameAudioManager.Instance.StartAudio();
+
+            Debug.Log("Application is Launched");
+        }
+    }
 }
