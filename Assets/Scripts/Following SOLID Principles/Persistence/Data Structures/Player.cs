@@ -7,10 +7,8 @@ public class Player: Base
     public delegate void PlayerDataChangeHandler(string _id);
     public static event PlayerDataChangeHandler OnPlayerDataChanged;
     [SerializeField]private string playerName;
-    [SerializeField]private GameObject model;
-    [SerializeField]private Sprite icon;
-    [SerializeField]private Sprite playerAvatar;
     [SerializeField]private string modelName;
+    [SerializeField] private string model, icon, avatar;
     public string PlayerName
     { 
         get => playerName; set
@@ -19,33 +17,9 @@ public class Player: Base
             OnPlayerDataChanged?.Invoke(ID);
         } 
     }
-    public GameObject Model
-    {
-        get => model;
-        set
-        {
-            model = value;
-            OnPlayerDataChanged?.Invoke(ID);
-        }
-    }
-    public Sprite Icon
-    {
-        get => icon;
-        set
-        {
-            icon = value;
-            OnPlayerDataChanged?.Invoke(ID);
-        }
-    }
-    public Sprite PlayerAvatar
-    {
-        get => playerAvatar;
-        set
-        {
-            playerAvatar = value;
-            OnPlayerDataChanged?.Invoke(ID);
-        }
-    }
+
+
+
     public string ModelName
     {
         get => modelName;
@@ -55,13 +29,50 @@ public class Player: Base
             OnPlayerDataChanged?.Invoke(ID);
         }
     }
-    public Player(BeyBladeData _playerData)
+
+    public string ModelKey { get => model; }
+    public string IconKey { get => icon; }
+    public string AvatarKey { get => avatar; }
+
+    public Player(Player _player)
     {
-        modelName = _playerData.ModelName;
-        playerName = _playerData.PlayerName;
-        model = _playerData.Model;
-        icon = _playerData.Icon;
-        playerAvatar = _playerData.PlayerAvatar;
+        modelName = _player.ModelName;
+        playerName = _player.PlayerName;
+        model = _player.ModelKey;
+        avatar = _player.AvatarKey;
+        icon = _player.IconKey;
+        ID = _player.ID;
+        Debug.Log($"Model = {model}");
+        Debug.Log($"icon = {icon}");
+        Debug.Log($"avatar = {avatar}");
+    }
+
+    public void SetModel(string _model)
+    {
+        model = _model;
+        OnPlayerDataChanged?.Invoke(ID);
+    }
+    public void SetBeyBladeIcon(string _beyBladeIcon)
+    {
+        icon = _beyBladeIcon;
+        OnPlayerDataChanged?.Invoke(ID);
+    }
+    public void SetAvatar(string _avatar)
+    {
+        avatar = _avatar;
+        OnPlayerDataChanged?.Invoke(ID);
+    }
+    public GameObject GetModel()
+    {
+        return GameAssets.Instance.LoadGameObject(model);
+    }
+    public Sprite GetBeyBladeIcon()
+    {
+        return GameAssets.Instance.LoadIconSprite(icon);
+    }
+    public Sprite GetAvatar()
+    {
+        return GameAssets.Instance.LoadAvatarSprite(avatar);
     }
 }
 

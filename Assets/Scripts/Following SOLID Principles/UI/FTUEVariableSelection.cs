@@ -5,10 +5,10 @@ using UnityEngine;
 public class FTUEVariableSelection : MonoBehaviour
 {
     [SerializeField] public string mainPlayerID = "Player_Main";
-    public void SelectAvatar(Sprite avatarSprite)
+    public void SelectAvatar(string avatarSprite)
     {
         var player = GameDataManager.Instance.UnitOfWork.Players.GetByID(mainPlayerID);
-        player.PlayerAvatar = avatarSprite;
+        player.SetAvatar(avatarSprite);
         GameDataManager.Instance.UnitOfWork.Save();
     }
 

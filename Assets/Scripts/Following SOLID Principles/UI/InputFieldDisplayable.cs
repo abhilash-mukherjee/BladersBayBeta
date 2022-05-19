@@ -15,7 +15,7 @@ public class InputFieldDisplayable : PanelDisplayable
     private string m_name;
     public override void EnterForward()
     {
-        image.sprite = GameDataManager.Instance.UnitOfWork.Players.GetByID(playerID).PlayerAvatar;
+        image.sprite = GameDataManager.Instance.UnitOfWork.Players.GetByID(playerID).GetAvatar();
         base.EnterForward();
     }
     public override void EnterReverse()

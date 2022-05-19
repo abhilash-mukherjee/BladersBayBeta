@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using System;
+using UnityEngine.SceneManagement;
 
 public class GameAudioManager : MonoBehaviour
 {
@@ -33,7 +34,23 @@ public class GameAudioManager : MonoBehaviour
     }
     private void Start()
     {
+        StopAudio();
         StartCoroutine(PlayeBGMIAfterDelay());
+    }
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += StopAudioSpeceficToScene;
+    }
+    
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= StopAudioSpeceficToScene;
+    }
+
+    private void StopAudioSpeceficToScene(UnityEngine.SceneManagement.Scene arg0, LoadSceneMode arg1)
+    {
+        if (arg0.buildIndex == 0) return;
+        StopAllAudioExceptBGM();
     }
 
     IEnumerator PlayeBGMIAfterDelay()
@@ -128,18 +145,14 @@ public class GameAudioManager : MonoBehaviour
             audioSource.volume -= decayRate * Time.deltaTime;
         StartCoroutine(Decay(decayRate, audioSource));
     }
+    public void StopAllAudioExceptBGM()
+    {
+        foreach (var s in sounds) if (s.name != "BGM1") PauseSound(s.name);
+    }
 
     public void StartAudio(){
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
 
-        StartCoroutine(PlayeBGMIAfterDelay());
+        PlaySound("BGM1");
     }
     public void StopAudio(){
         PauseSound("BGM1");

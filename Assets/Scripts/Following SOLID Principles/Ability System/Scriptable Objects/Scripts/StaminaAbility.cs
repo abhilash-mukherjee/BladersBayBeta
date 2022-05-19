@@ -26,8 +26,15 @@ public class StaminaAbility : DynamicAbilities
     }
     public void IncreaseHealth(FloatVariable healthPoint, BaseData abilityData)
     {
-        if(!abilityData.IsAbilityLocked && abilityData.IsActive)
-        healthPoint.Value += abilityData.StaminaValue;
+        if (!abilityData.IsAbilityLocked && abilityData.IsActive)
+        {
+            if (healthPoint.Value >= 100)
+            {
+                healthPoint.Value = 100;
+                return;
+            }
+            healthPoint.Value += abilityData.StaminaValue;
+        }
     }
     protected override void InvokeExhaustionEvent(GameObject beyBlade, BaseData abilityData)
     {

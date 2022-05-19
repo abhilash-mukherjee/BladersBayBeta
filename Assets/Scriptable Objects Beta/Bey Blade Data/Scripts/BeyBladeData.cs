@@ -26,11 +26,12 @@ public class BeyBladeData : ScriptableObject
 
     public void SetFromSerializableData(Player _playerData)
     {
+        Debug.Log("Data getting set");
         modelName = _playerData.ModelName;
         playerName = _playerData.PlayerName;
-        model = _playerData.Model;
-        icon = _playerData.Icon;
-        playerAvatar = _playerData.PlayerAvatar;
+        model = _playerData.GetModel();
+        icon = _playerData.GetBeyBladeIcon();
+        playerAvatar = _playerData.GetAvatar();
     }
 }
  

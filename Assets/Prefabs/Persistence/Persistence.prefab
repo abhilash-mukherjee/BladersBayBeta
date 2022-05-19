@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3925732956469847445}
   - component: {fileID: 3925732956469847446}
-  - component: {fileID: 3925732956469847450}
   - component: {fileID: 3925732956469847451}
   - component: {fileID: 3925732956469847444}
   - component: {fileID: 3925732956469847449}
@@ -19,6 +18,7 @@ GameObject:
   - component: {fileID: 8250164479062524948}
   - component: {fileID: 1228675882118909940}
   - component: {fileID: 1934296981}
+  - component: {fileID: 8748578337672878703}
   m_Layer: 0
   m_Name: Persistence
   m_TagString: Untagged
@@ -53,37 +53,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LoadFinishEvent: {fileID: 11400000, guid: 633af43713c536b45967b9e7e5e1de40, type: 2}
-  dataContext: {fileID: 3925732956469847450}
+  pausedEvent: {fileID: 11400000, guid: 7f7058067251ce5449bf88d9e472f80f, type: 2}
+  resumedEvent: {fileID: 11400000, guid: 5a301ac8666277e4da16316b94d7d314, type: 2}
+  dataContext: {fileID: 8748578337672878703}
   unitOfWork: {fileID: 3925732956469847451}
   FTUEBuildIndex: 1
   HSBuildIndex: 2
   splashScreenTime: 4
---- !u!114 &3925732956469847450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3925732956469847447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b411f2c37abf0a4396ae31e9091fb83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data:
-    players: []
-    levels: []
-    inventories: []
-    gameState:
-      m_id: GAME_STATE
-      maximumLevelUnlocked: 0
-      maximumTrainingUnlocked: 0
-      didLastBattleUnlockNewLevel: 0
-      didLastBattleUnlockNewTrainingLevel: 0
-      levelCount: 5
-      trainingCount: 4
-      hasBeenOpenedEarlier: 0
-  filename: GamData
 --- !u!114 &3925732956469847451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,7 +75,7 @@ MonoBehaviour:
   players: {fileID: 3925732956469847444}
   levels: {fileID: 8675995132998726887}
   inventories: {fileID: 8250164479062524948}
-  dataContext: {fileID: 3925732956469847450}
+  dataContext: {fileID: 8748578337672878703}
 --- !u!114 &3925732956469847444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,7 +88,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cda40f5416b3e054ab26578952e9812e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Context: {fileID: 3925732956469847450}
+  m_Context: {fileID: 8748578337672878703}
 --- !u!114 &3925732956469847449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,6 +103,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerID: Player_Main
   playerData: {fileID: 11400000, guid: 44f4e870716288f48a0beb368caf7090, type: 2}
+  initialPlayerData:
+    m_id: Player_Main
+    playerName: Abhilash
+    modelName: Albatroz
+    model: M1
+    icon: I1
+    avatar: A1
   unitOfWork: {fileID: 3925732956469847451}
 --- !u!114 &8675995132998726887
 MonoBehaviour:
@@ -140,7 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30193d88117d307488f4b5f59037c6fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Context: {fileID: 3925732956469847450}
+  m_Context: {fileID: 8748578337672878703}
 --- !u!114 &2973414136813980316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,8 +137,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitOfWork: {fileID: 3925732956469847451}
-  dataContext: {fileID: 3925732956469847450}
-  levelCount: 5
+  dataContext: {fileID: 8748578337672878703}
+  levelCount: 3
   trainingCount: 4
 --- !u!114 &8250164479062524948
 MonoBehaviour:
@@ -169,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bdeef898719835459a690b872d58b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Context: {fileID: 3925732956469847450}
+  m_Context: {fileID: 8748578337672878703}
 --- !u!114 &1228675882118909940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,3 +220,29 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   gameEvent: {fileID: 11400000, guid: 633af43713c536b45967b9e7e5e1de40, type: 2}
+--- !u!114 &8748578337672878703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3925732956469847447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71a89f95f2c12bf47bdda5dae7fc3c17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data:
+    players: []
+    levels: []
+    inventories: []
+    gameState:
+      m_id: 
+      maximumLevelUnlocked: 0
+      maximumTrainingUnlocked: 0
+      didLastBattleUnlockNewLevel: 0
+      didLastBattleUnlockNewTrainingLevel: 0
+      levelCount: 0
+      trainingCount: 0
+      hasBeenOpenedEarlier: 0
+  identifier: SaveGame

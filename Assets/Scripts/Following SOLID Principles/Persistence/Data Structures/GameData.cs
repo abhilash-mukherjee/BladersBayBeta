@@ -9,7 +9,6 @@ public class GameData
     public List<Inventory> inventories;
     [SerializeField]private GameState gameState;
     public GameState GameState { get => gameState; set => gameState = value; }
-    [SerializeField]
     public GameData()
     {
         players = new List<Player>();

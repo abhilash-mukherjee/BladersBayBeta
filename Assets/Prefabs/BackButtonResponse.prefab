@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5503403955829747963}
   - component: {fileID: 5503403955829747962}
+  - component: {fileID: 1260909760544490340}
+  - component: {fileID: 4709486905402481364}
   m_Layer: 0
   m_Name: BackButtonResponse
   m_TagString: Untagged
@@ -44,3 +46,59 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnBackPressed: {fileID: 11400000, guid: 492ec29bb214ecc41885371172dc7a0d, type: 2}
+--- !u!114 &1260909760544490340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5503403955829747908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17dbc86e83f067f449d814880e809eee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5503403955829747962}
+        m_TargetAssemblyTypeName: BackButtonResponseManager, Assembly-CSharp
+        m_MethodName: DisableBackButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  gameEvent: {fileID: 11400000, guid: 7f7058067251ce5449bf88d9e472f80f, type: 2}
+--- !u!114 &4709486905402481364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5503403955829747908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17dbc86e83f067f449d814880e809eee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5503403955829747962}
+        m_TargetAssemblyTypeName: BackButtonResponseManager, Assembly-CSharp
+        m_MethodName: EnableBackButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  gameEvent: {fileID: 11400000, guid: 59ba4f026ce4517498c19f21c38d0472, type: 2}

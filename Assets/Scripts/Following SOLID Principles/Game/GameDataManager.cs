@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -8,12 +7,13 @@ using UnityEngine.SceneManagement;
 public class GameDataManager : MonoBehaviour
 {
     [SerializeField]
-    private GameEvent LoadFinishEvent;
+    private GameEvent LoadFinishEvent, pausedEvent, resumedEvent;
     [SerializeField] private DataContext dataContext;
     [SerializeField] private UnitOfWork unitOfWork;
     [SerializeField] private int FTUEBuildIndex = 2, HSBuildIndex = 3;
     [SerializeField] private float splashScreenTime;
     private static GameDataManager m_instance;
+    private bool m_isLodingFresh = true;
     public UnitOfWork UnitOfWork { get => unitOfWork; }
     public static GameDataManager Instance { get => m_instance;  }
 
@@ -26,6 +26,7 @@ public class GameDataManager : MonoBehaviour
     }
     void Start()
     {
+        Debug.Log("App launched");
         var _task = dataContext.Load();
         StartCoroutine(StartActivityAfterSplashScreen(_task));
     }
@@ -50,7 +51,7 @@ public class GameDataManager : MonoBehaviour
             SceneManager.LoadScene(HSBuildIndex);
         }
         LoadFinishEvent.Raise();
-        Debug.Log("Loaded");
+        Debug.Log("Loaded at the begining");
     }
     private void OnApplicationQuit()
     {
@@ -58,51 +59,37 @@ public class GameDataManager : MonoBehaviour
         Debug.Log("Saved");
     }
 
-    private void OnApplicationFocus(bool hasFocus){
-        Debug.Log("App is Not Focused" +  hasFocus);
-        bool isPaused = !hasFocus;
-        if( isPaused ){ 
+    private void OnApplicationPause(bool pauseStatus){
+        bool isPaused = pauseStatus;
+        if( isPaused )
+        {
+            Debug.Log("App is Paused");
             unitOfWork.Save();
-            if( GameAudioManager.Instance )
+            if( GameAudioManager.Instance != null)
                 GameAudioManager.Instance.StopAudio();
             Time.timeScale = 0f;
+            pausedEvent.Raise();
             Debug.Log("Saved");
         }
-        else{
-            Time.timeScale = 1;
-            Debug.Log("App is Focused");
-
-            if( GameAudioManager.Instance )
-                GameAudioManager.Instance.StartAudio();
-
+        else
+        {
+            if (m_isLodingFresh)
+            {
+                m_isLodingFresh = false;
+                return;
+            }
+            Debug.Log("Application is resumed");
             var _task = dataContext.Load();
-            StartCoroutine(StartActivityAfterSplashScreen(_task));
-
-            Debug.Log("Application is Launched");
+            CheckLoadStatusAfterPause(_task);
         }
     }
+    async void CheckLoadStatusAfterPause(Task _task)
+    {
+        while (!_task.IsCompleted) { await Task.Yield(); }
+        Time.timeScale = 1f;
+        LoadFinishEvent.Raise();
+        Debug.Log("Loaded after pause");
+        resumedEvent.Raise();
 
-    private void OnApplicationPause(bool pauseStatus){
-        Debug.Log("App is Paused");
-        bool isPaused = pauseStatus;
-        if( isPaused ){ 
-            unitOfWork.Save();
-            if( GameAudioManager.Instance )
-                GameAudioManager.Instance.StopAudio();
-            Time.timeScale = 0f;
-            Debug.Log("Saved");
-        }
-        else{
-            Time.timeScale = 1;
-            Debug.Log("Application is Started");
-
-            var _task = dataContext.Load();
-            StartCoroutine(StartActivityAfterSplashScreen(_task));
-
-            if( GameAudioManager.Instance )
-                GameAudioManager.Instance.StartAudio();
-
-            Debug.Log("Application is Launched");
-        }
     }
 }

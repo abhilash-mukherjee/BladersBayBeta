@@ -1,0 +1,242 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1246147335958265826
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1246147335958265824}
+  - component: {fileID: 1246147335958265827}
+  - component: {fileID: 1246147335958265838}
+  - component: {fileID: 1246147335958265825}
+  - component: {fileID: 1246147335958265836}
+  - component: {fileID: 6870072655824989842}
+  - component: {fileID: 1041322526389997801}
+  - component: {fileID: 6146936117186518625}
+  - component: {fileID: 3908305345649513857}
+  - component: {fileID: 2823815468978118112}
+  - component: {fileID: 1246147335958265829}
+  m_Layer: 0
+  m_Name: Persistence With SaveGame Asset
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1246147335958265824
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246147335958265826}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.9797305, y: 1.1999913, z: 4.13}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1246147335958265827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246147335958265826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd717f563f2952d479a5aab21879041e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoadFinishEvent: {fileID: 11400000, guid: 633af43713c536b45967b9e7e5e1de40, type: 2}
+  pausedEvent: {fileID: 11400000, guid: 7f7058067251ce5449bf88d9e472f80f, type: 2}
+  resumedEvent: {fileID: 11400000, guid: 5a301ac8666277e4da16316b94d7d314, type: 2}
+  dataContext: {fileID: 1246147335958265829}
+  unitOfWork: {fileID: 1246147335958265838}
+  FTUEBuildIndex: 1
+  HSBuildIndex: 2
+  splashScreenTime: 4
+--- !u!114 &1246147335958265838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246147335958265826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64985110ea331924786abedf09d84601, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  players: {fileID: 1246147335958265825}
+  levels: {fileID: 6870072655824989842}
+  inventories: {fileID: 6146936117186518625}
+  dataContext: {fileID: 1246147335958265829}
+--- !u!114 &1246147335958265825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246147335958265826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cda40f5416b3e054ab26578952e9812e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Context: {fileID: 1246147335958265829}
+--- !u!114 &1246147335958265836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246147335958265826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ca175273ce454e42a6f1b1eb147d587, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerID: Player_Main
+  playerData: {fileID: 11400000, guid: 44f4e870716288f48a0beb368caf7090, type: 2}
+  initialPlayerData: {fileID: 11400000, guid: 54cefc8fc2f097c45a4ee40049fe24a6, type: 2}
+  unitOfWork: {fileID: 1246147335958265838}
+--- !u!114 &6870072655824989842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246147335958265826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30193d88117d307488f4b5f59037c6fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Context: {fileID: 1246147335958265829}
+--- !u!114 &1041322526389997801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246147335958265826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9277a7f0076c34441abc73cea85e73b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitOfWork: {fileID: 1246147335958265838}
+  dataContext: {fileID: 1246147335958265829}
+  levelCount: 3
+  trainingCount: 4
+--- !u!114 &6146936117186518625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246147335958265826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bdeef898719835459a690b872d58b4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Context: {fileID: 1246147335958265829}
+--- !u!114 &3908305345649513857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246147335958265826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34bfc533f444b75458d6a4f0381c6d9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryID: PLAYER_INVENTORY
+  playerID: Player_Main
+  unitOfWork: {fileID: 1246147335958265838}
+--- !u!114 &2823815468978118112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246147335958265826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17dbc86e83f067f449d814880e809eee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1246147335958265836}
+        m_TargetAssemblyTypeName: PlayerDataManager, Assembly-CSharp
+        m_MethodName: StartLoad
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1041322526389997801}
+        m_TargetAssemblyTypeName: LevelDataManager, Assembly-CSharp
+        m_MethodName: OnDataLoaded
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3908305345649513857}
+        m_TargetAssemblyTypeName: InventoryDataManager, Assembly-CSharp
+        m_MethodName: OnDataLoaded
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  gameEvent: {fileID: 11400000, guid: 633af43713c536b45967b9e7e5e1de40, type: 2}
+--- !u!114 &1246147335958265829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246147335958265826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71a89f95f2c12bf47bdda5dae7fc3c17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data:
+    players: []
+    levels: []
+    inventories: []
+    gameState:
+      m_id: 
+      maximumLevelUnlocked: 0
+      maximumTrainingUnlocked: 0
+      didLastBattleUnlockNewLevel: 0
+      didLastBattleUnlockNewTrainingLevel: 0
+      levelCount: 3
+      trainingCount: 4
+      hasBeenOpenedEarlier: 0
+  identifier: SaveGame

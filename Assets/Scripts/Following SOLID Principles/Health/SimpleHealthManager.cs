@@ -6,7 +6,8 @@ public class SimpleHealthManager : HealthManager
     private BaseData currentStatHolder;
     [SerializeField]
     private FloatVariable healthPoint;
-    private bool m_eventRaised = false;
+    private bool m_hasEventRaised = false;
+
     protected override float DamageValue { get =>currentStatHolder.DamageValue; }
     protected override float HealthPoint 
     { 
@@ -23,6 +24,7 @@ public class SimpleHealthManager : HealthManager
     {
         HealthPoint = 100f;
     }
+
     protected override void HasAttcked(GameObject _gameObject, float _collisionIndex)
     {
         if (_gameObject != gameObject)
@@ -30,12 +32,13 @@ public class SimpleHealthManager : HealthManager
     }
     private void Update()
     {
-        if (healthPoint.Value <= 0f && !m_eventRaised) 
+        if (healthPoint.Value <= 0f && !EventRaised) 
         {
             StartRaiseDiedEventCoroutine(gameObject);
             Debug.Log("Death event raised for " + gameObject);
-            m_eventRaised = true;
-        }
+            EventRaised = true;
+            m_hasEventRaised = false;
+}
     }
     protected override void HasGotHit(GameObject _gameObject, float _collisionIndex, float _opponentAttackValue)
     {
@@ -43,5 +46,10 @@ public class SimpleHealthManager : HealthManager
             return;
         Debug.Log("Dmg value = " + DamageValue);
         HealthPoint -= _collisionIndex * DamageValue * _opponentAttackValue;
+    }
+
+    protected override void ChildOnEnable()
+    {
+        EventRaised = false;
     }
 }

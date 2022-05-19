@@ -9313,7 +9313,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5d4a95b73726c034f80e5efef53dce2e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5d40b598854b4db46800984e9440dc35, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -19741,7 +19741,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5503403955829747963, guid: 958b052711b3cdc4a8488fe5d4b224f9, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5503403955829747963, guid: 958b052711b3cdc4a8488fe5d4b224f9, type: 3}
       propertyPath: m_LocalScale.x
@@ -58762,6 +58762,112 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1001 &1972347041
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1400112310939635302}
+    m_Modifications:
+    - target: {fileID: 2035015531773758245, guid: 15d5dba0767e3544f8fe8961dda0eabb, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035015531773758245, guid: 15d5dba0767e3544f8fe8961dda0eabb, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035015531773758245, guid: 15d5dba0767e3544f8fe8961dda0eabb, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035015531773758245, guid: 15d5dba0767e3544f8fe8961dda0eabb, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035015531773758245, guid: 15d5dba0767e3544f8fe8961dda0eabb, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035015531773758245, guid: 15d5dba0767e3544f8fe8961dda0eabb, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035015531773758245, guid: 15d5dba0767e3544f8fe8961dda0eabb, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035015531773758245, guid: 15d5dba0767e3544f8fe8961dda0eabb, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035015531773758245, guid: 15d5dba0767e3544f8fe8961dda0eabb, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035015531773758245, guid: 15d5dba0767e3544f8fe8961dda0eabb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035015531773758245, guid: 15d5dba0767e3544f8fe8961dda0eabb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035015531773758245, guid: 15d5dba0767e3544f8fe8961dda0eabb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -117.89002
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035015531773758245, guid: 15d5dba0767e3544f8fe8961dda0eabb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035015531773758245, guid: 15d5dba0767e3544f8fe8961dda0eabb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035015531773758245, guid: 15d5dba0767e3544f8fe8961dda0eabb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035015531773758245, guid: 15d5dba0767e3544f8fe8961dda0eabb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035015531773758245, guid: 15d5dba0767e3544f8fe8961dda0eabb, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035015531773758245, guid: 15d5dba0767e3544f8fe8961dda0eabb, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035015531773758245, guid: 15d5dba0767e3544f8fe8961dda0eabb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035015531773758245, guid: 15d5dba0767e3544f8fe8961dda0eabb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035015531773758245, guid: 15d5dba0767e3544f8fe8961dda0eabb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035015531773758246, guid: 15d5dba0767e3544f8fe8961dda0eabb, type: 3}
+      propertyPath: m_Name
+      value: Resume Game After paused
+      objectReference: {fileID: 0}
+    - target: {fileID: 8554855961100670224, guid: 15d5dba0767e3544f8fe8961dda0eabb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 15d5dba0767e3544f8fe8961dda0eabb, type: 3}
+--- !u!224 &1972347042 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2035015531773758245, guid: 15d5dba0767e3544f8fe8961dda0eabb, type: 3}
+  m_PrefabInstance: {fileID: 1972347041}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1973074379
 GameObject:
   m_ObjectHideFlags: 0
@@ -58857,7 +58963,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5d4a95b73726c034f80e5efef53dce2e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5d40b598854b4db46800984e9440dc35, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -59620,7 +59726,7 @@ MonoBehaviour:
   waitTimeBeforeDialogueBegins: 1
   dialogue: "Good job. Now try defending my attacks. Notice the defence shield breaks
     apart every time I hit you and it takes a while to replenish. Let\u2019s see
-    how many blows you can survive\r\nHint: Swipe left to go to attack mode\r"
+    how many blows you can survive\r\nHint: Swipe left to go to defence mode\r"
   TYPE_SOUND: Typing_Sound
   typeSpeedSlowingFactor: 1
   endOfSentenceSlowingFactor: 40
@@ -72629,6 +72735,7 @@ RectTransform:
   - {fileID: 1317597206}
   - {fileID: 211674795}
   - {fileID: 3006182985430929324}
+  - {fileID: 1972347042}
   - {fileID: 1039762118}
   m_Father: {fileID: 0}
   m_RootOrder: 2

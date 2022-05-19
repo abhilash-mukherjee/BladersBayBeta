@@ -21,14 +21,15 @@ public abstract class Repository<T> : MonoBehaviour where T : Base
     public void Add(T _entity)
     {
         Entities.Add(_entity);
-        Debug.Log("Inside repository. Length of List = " + Entities.Count);
-        Debug.Log($"Length og player list of context.data = {Context.Data.players.Count}");
-        StartCoroutine(DebugStatement());
+        if (typeof(T) == typeof(Player))
+        {
+           Debug.Log($"ID = {m_Context.Data.players[0].ID} ,Model =  {m_Context.Data.players[0].GetModel()}, Icon =  {m_Context.Data.players[0].GetBeyBladeIcon()} , Avatar =  {m_Context.Data.players[0].GetAvatar()}");
+        }
     }
     IEnumerator DebugStatement()
     {
         yield return new WaitForSeconds(5f);
-        Debug.Log($"Length og player list of context.data = {Context.Data.players.Count}");
+        Debug.Log($"Length of player list of context.data = {Context.Data.players.Count}");
     }
     public void Delete(T _entity) => Entities.Remove(_entity);
     public void Modify(T _entity)
