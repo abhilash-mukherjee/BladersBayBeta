@@ -5,6 +5,15 @@ public class GroupedDislayable : UIDisplayable
 {
     [SerializeField]
     private List<UIDisplayable> displayables;
+    public void PushDisplayable(UIDisplayable uIDisplayable)
+    {
+        displayables.Add(uIDisplayable);
+    }
+    public void PopDisplayable(UIDisplayable uIDisplayable)
+    {
+        if(displayables.Contains(uIDisplayable))
+        displayables.Remove(uIDisplayable);
+    }
     public override void EnterForward()
     {
         foreach (var d in displayables) d.EnterForward();

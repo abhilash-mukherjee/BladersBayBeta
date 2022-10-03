@@ -3,6 +3,8 @@
 [CreateAssetMenu(fileName = "New Virtual Controller Input System", menuName = "Input Systems/ Virtual Controller")]
 public class VirtualControllerInputSystem : InputSystem
 {
+    // Next task is to ensure htat the touchpad animation is in sync with the virtual controller animation
+   
     [SerializeField]
     private LayerMask stadiumLayer;
     [SerializeField]
