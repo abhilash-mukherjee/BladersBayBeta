@@ -8,6 +8,8 @@ public class ControllerImageManager : MonoBehaviour
 {
      [SerializeField]
     private List<Sprite> controllerSprites;
+    [SerializeField]
+    private bool isControllerVirtual = false;
     
     
     // Start is called before the first frame update
@@ -20,6 +22,10 @@ public class ControllerImageManager : MonoBehaviour
             gameObject.GetComponent<Image>().sprite = controllerSprites[0];
         }
         else if (deviceType == JMRInteractionManager.InteractionDeviceType.VIRTUAL_CONTROLLER)
+        {
+            gameObject.GetComponent<Image>().sprite = controllerSprites[1];
+        }
+        else if(!isControllerVirtual)
         {
             gameObject.GetComponent<Image>().sprite = controllerSprites[1];
         }
