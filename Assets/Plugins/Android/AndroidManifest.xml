@@ -4,7 +4,7 @@
   <application android:theme="@style/UnityThemeSelector" android:icon="@mipmap/app_icon" android:label="@string/app_name" android:requestLegacyExternalStorage="true" android:screenOrientation="landscape">
     <meta-data android:name="com.jiotesseract.mr.category" android:value="7" />
     <meta-data android:name="com.jiotesseract.platform" android:value="LITE" />
-    <activity android:name="com.jiotesseract.mr.sdk.JmrUnityActivity" android:label="@string/app_name" android:launchMode="singleTask" android:configChanges="orientation|keyboardHidden|screenSize|screenLayout" android:excludeFromRecents="true">
+    <activity android:name="com.jiotesseract.mr.sdk.JmrUnityActivity" android:label="@string/app_name" android:launchMode="singleTask" android:configChanges="orientation|keyboardHidden|screenSize|screenLayout" android:excludeFromRecents="false">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <!--<category android:name="android.intent.category.LAUNCHER" />-->

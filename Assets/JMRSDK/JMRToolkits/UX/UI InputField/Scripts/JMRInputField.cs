@@ -1000,7 +1000,7 @@ namespace JMRSDK.Toolkit.UI
                     
                     verticalScrollbar.onValueChanged.AddListener(OnScrollbarValueChange);
 #elif UNITY_2019
-                    textComponent.ignoreRectMaskCulling = true;
+                    //textComponent.ignoreRectMaskCulling = true;
                     verticalScrollbar.onValueChanged.AddListener(OnScrollbarValueChange);
 #endif
                 }
