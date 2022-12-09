@@ -1,6 +1,11 @@
- #Bladers Bay
- <h2>Links</h2>   
+ <h1>Bladers Bay</h1>![bladers-bay-thumbnail](https://user-images.githubusercontent.com/84319482/206768823-064ebb55-edad-4036-86b8-0fb5254f8222.png)
 
+<h2>Links</h2>   
+<ul>
+    <li><strong>First Time User Experience: </strong><a href="https://youtu.be/tPAEXn84s98">https://youtu.be/tPAEXn84s98</a></strong></li>
+    <li><strong>Gameplay 1: </strong><a href="https://youtu.be/6Yl5kUBjbys">https://youtu.be/6Yl5kUBjbys</a></strong></li>
+    <li><strong>Gameplay 2: </strong><a href="https://youtu.be/2JT8YB-iHqA">https://youtu.be/2JT8YB-iHqA</a></strong></li>
+</ul>
 <h2>About Game</h2>
 
 <p>Blader’s Bay is a Mixed Reality Beyblade game where you strive to achieve Beyblade mastery and win the ultimate Beyblade championship. To do so, you go through constant cycles of “Training" and “Tournaments”.</p>
