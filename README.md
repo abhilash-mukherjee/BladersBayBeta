@@ -1,4 +1,6 @@
- <h1>Bladers Bay</h1>![bladers-bay-thumbnail](https://user-images.githubusercontent.com/84319482/206768823-064ebb55-edad-4036-86b8-0fb5254f8222.png)
+ <h1>Bladers Bay</h1>
+ 
+<img src = "bladers-bay-thumbnail.png">
 
 <h2>Links</h2>   
 <ul>
