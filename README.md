@@ -1,6 +1,6 @@
  <h1>Bladers Bay</h1>
  
-<img src = "bladers-bay-thumbnail.png">
+<img src = "https://github.com/abhilash-mukherjee/BladersBayBeta/blob/main/bladers-bay-thumbnail.png">
 
 <h2>Links</h2>   
 <ul>
