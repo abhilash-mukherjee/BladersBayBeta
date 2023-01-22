@@ -2,14 +2,15 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Shader Graphs_Dark Bull
   m_Shader: {fileID: -6465566751694194690, guid: 07b6156724b44ef448c30a699932012c, type: 3}
-  m_ShaderKeywords: 
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -35,6 +36,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - Vector1_9291e9657ef74d50825eda58d58c209d: 2.24
     - Vector1_a75e957df04144f4817742ba7062ed1f: 1.5
@@ -44,3 +46,16 @@ Material:
     - Color_4a0ad9af45f2426bb00de3a23d07d820: {r: 1024, g: 0, b: 0, a: 1}
     - Vector3_2fd412c7e1314b67bcc17bfad585a7a7: {r: 0.001, g: 0.001, b: 0.001, a: 0}
   m_BuildTextureStacks: []
+--- !u!114 &3292178869347009993
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 5

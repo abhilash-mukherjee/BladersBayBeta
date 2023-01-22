@@ -330,7 +330,7 @@ TextureImporter:
       213: -1720798632003168734
     second: 1024x1024 Grid-01 (1)_97
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -350,6 +350,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -358,12 +360,12 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: -1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -381,10 +383,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -412,6 +418,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
@@ -2289,7 +2307,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 3ed3a0a8d18aea660800000000000000
-      internalID: 7399036082639748579
+      internalID: 2545199552822891768
       vertices: []
       indices: 
       edges: []
@@ -2310,7 +2328,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: c23d0c4c3cf28b410800000000000000
-      internalID: 1492995794339418924
+      internalID: -7382812953945997816
       vertices: []
       indices: 
       edges: []
@@ -2331,7 +2349,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: fb514e57babcc0300800000000000000
-      internalID: 219774419112039871
+      internalID: -7116769974241157837
       vertices: []
       indices: 
       edges: []
@@ -2352,7 +2370,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 4be2495575e6f3cb0800000000000000
-      internalID: -4882062149669343564
+      internalID: -2790431620178282328
       vertices: []
       indices: 
       edges: []
@@ -2373,7 +2391,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 892a44e4c526148b0800000000000000
-      internalID: -5169742748654984552
+      internalID: 8413895367388218085
       vertices: []
       indices: 
       edges: []
@@ -2394,7 +2412,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: a785cd2de210015a0800000000000000
-      internalID: -6552736157206292358
+      internalID: -497028139542004889
       vertices: []
       indices: 
       edges: []
@@ -2415,7 +2433,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 5b20a54c45cedbdb0800000000000000
-      internalID: -4774400181127216459
+      internalID: 2542708074281129749
       vertices: []
       indices: 
       edges: []
@@ -2436,7 +2454,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 9e900d61ef024f0c0800000000000000
-      internalID: -4542969848433473047
+      internalID: 1901045437645847169
       vertices: []
       indices: 
       edges: []
@@ -2457,7 +2475,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 197131fe006d97a40800000000000000
-      internalID: 5366555730488006545
+      internalID: -2324564822682441211
       vertices: []
       indices: 
       edges: []
@@ -2478,7 +2496,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 2261979e2ce7e18e0800000000000000
-      internalID: -1720798632003168734
+      internalID: -4707979280321004634
       vertices: []
       indices: 
       edges: []
@@ -2514,6 +2532,106 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      1024x1024 Grid-01 (1)_77: 7368503362238934349
+      1024x1024 Grid-01 (1)_24: 1163601182701158445
+      1024x1024 Grid-01 (1)_64: -9206182279643612843
+      1024x1024 Grid-01 (1)_25: 680226728903726229
+      1024x1024 Grid-01 (1)_72: -4020345837726235273
+      1024x1024 Grid-01 (1)_60: 5570320019915963672
+      1024x1024 Grid-01 (1)_32: -1980468287277375627
+      1024x1024 Grid-01 (1)_0: -6882477693442885527
+      1024x1024 Grid-01 (1)_49: -1695001821020290166
+      1024x1024 Grid-01 (1)_6: -6841258573396129030
+      1024x1024 Grid-01 (1)_4: -2897117772748924093
+      1024x1024 Grid-01 (1)_70: -2496361812727540782
+      1024x1024 Grid-01 (1)_48: -1112600652209328801
+      1024x1024 Grid-01 (1)_94: 2542708074281129749
+      1024x1024 Grid-01 (1)_20: 8451648418036491880
+      1024x1024 Grid-01 (1)_36: -3872586815664539003
+      1024x1024 Grid-01 (1)_18: -3894584217123943675
+      1024x1024 Grid-01 (1)_39: 2866427039464309728
+      1024x1024 Grid-01 (1)_9: 8031000199565646127
+      1024x1024 Grid-01 (1)_21: 140950681483838776
+      1024x1024 Grid-01 (1)_92: 8413895367388218085
+      1024x1024 Grid-01 (1)_26: 4126703414858071746
+      1024x1024 Grid-01 (1)_79: 3399219730208644422
+      1024x1024 Grid-01 (1)_2: 8709333293176052927
+      1024x1024 Grid-01 (1)_44: -1996332479380416625
+      1024x1024 Grid-01 (1)_87: -6409406692796819864
+      1024x1024 Grid-01 (1)_91: -2790431620178282328
+      1024x1024 Grid-01 (1)_13: 3991267723641408632
+      1024x1024 Grid-01 (1)_7: -6012586098311734758
+      1024x1024 Grid-01 (1)_52: -4719656132345713831
+      1024x1024 Grid-01 (1)_17: -4707002737472862357
+      1024x1024 Grid-01 (1)_80: 3169169132743715753
+      1024x1024 Grid-01 (1)_69: -8832799344448267527
+      1024x1024 Grid-01 (1)_29: 6061028736375075630
+      1024x1024 Grid-01 (1)_84: -1649802001796267305
+      1024x1024 Grid-01 (1)_42: -5097448369832431220
+      1024x1024 Grid-01 (1)_89: -7382812953945997816
+      1024x1024 Grid-01 (1)_56: -6908898552386007184
+      1024x1024 Grid-01 (1)_62: 5245331162659376995
+      1024x1024 Grid-01 (1)_50: -7753598898931253225
+      1024x1024 Grid-01 (1)_85: 5997142386162662821
+      1024x1024 Grid-01 (1)_76: 1206567376955799156
+      1024x1024 Grid-01 (1)_61: 6686837815270614004
+      1024x1024 Grid-01 (1)_27: 2765591646050035805
+      1024x1024 Grid-01 (1)_58: -2603191605356973116
+      1024x1024 Grid-01 (1)_66: -7713544762647445136
+      1024x1024 Grid-01 (1)_93: -497028139542004889
+      1024x1024 Grid-01 (1)_10: 8658791617409224888
+      1024x1024 Grid-01 (1)_43: 4840236719532990474
+      1024x1024 Grid-01 (1)_35: 1643018497141864752
+      1024x1024 Grid-01 (1)_54: 1048341411110343700
+      1024x1024 Grid-01 (1)_63: 8411158402810896804
+      1024x1024 Grid-01 (1)_90: -7116769974241157837
+      1024x1024 Grid-01 (1)_83: 7253610596338041435
+      1024x1024 Grid-01 (1)_14: -3977969958477963540
+      1024x1024 Grid-01 (1)_67: -7860832549519886443
+      1024x1024 Grid-01 (1)_74: 6214284485267749682
+      1024x1024 Grid-01 (1)_22: 9050984849297301968
+      1024x1024 Grid-01 (1)_45: 3499131428756119006
+      1024x1024 Grid-01 (1)_73: -4712186692184770649
+      1024x1024 Grid-01 (1)_8: -7422087508883481300
+      1024x1024 Grid-01 (1)_33: 9207150261456732550
+      1024x1024 Grid-01 (1)_41: -5860754865373776873
+      1024x1024 Grid-01 (1)_81: 3332828782946980794
+      1024x1024 Grid-01 (1)_37: -4114795609881314259
+      1024x1024 Grid-01 (1)_28: 3329496639886693417
+      1024x1024 Grid-01 (1)_88: 2545199552822891768
+      1024x1024 Grid-01 (1)_86: -3506193701925143018
+      1024x1024 Grid-01 (1)_15: -2058048535411463680
+      1024x1024 Grid-01 (1)_19: -1855944596955608230
+      1024x1024 Grid-01 (1)_78: 5967747239525049651
+      1024x1024 Grid-01 (1)_75: 9047607208936087285
+      1024x1024 Grid-01 (1)_23: 918395574365566275
+      1024x1024 Grid-01 (1)_47: 2574238807244376145
+      1024x1024 Grid-01 (1)_68: -1103324215377079490
+      1024x1024 Grid-01 (1)_34: 1642762869412423887
+      1024x1024 Grid-01 (1)_53: -6749023747154318849
+      1024x1024 Grid-01 (1)_16: -9157550478416976760
+      1024x1024 Grid-01 (1)_57: 2459684052299927584
+      1024x1024 Grid-01 (1)_65: 999309522053027015
+      1024x1024 Grid-01 (1)_38: 3629508199276383728
+      1024x1024 Grid-01 (1)_1: 7043524595225037767
+      1024x1024 Grid-01 (1)_96: -2324564822682441211
+      1024x1024 Grid-01 (1)_31: -4532175120953745598
+      1024x1024 Grid-01 (1)_55: 5322416441780423825
+      1024x1024 Grid-01 (1)_95: 1901045437645847169
+      1024x1024 Grid-01 (1)_3: -4494793923698998585
+      1024x1024 Grid-01 (1)_5: 4395310452708813172
+      1024x1024 Grid-01 (1)_11: 3869578090764969590
+      1024x1024 Grid-01 (1)_51: 6273752617725210574
+      1024x1024 Grid-01 (1)_98: -2706147950654453552
+      1024x1024 Grid-01 (1)_40: -8111624890909691055
+      1024x1024 Grid-01 (1)_30: 104963576011304447
+      1024x1024 Grid-01 (1)_46: -1637102405732391653
+      1024x1024 Grid-01 (1)_59: 1329462136670070427
+      1024x1024 Grid-01 (1)_97: -4707979280321004634
+      1024x1024 Grid-01 (1)_12: -3255400707713154914
+      1024x1024 Grid-01 (1)_71: -6200223899349786126
+      1024x1024 Grid-01 (1)_82: -7167233552201120042
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

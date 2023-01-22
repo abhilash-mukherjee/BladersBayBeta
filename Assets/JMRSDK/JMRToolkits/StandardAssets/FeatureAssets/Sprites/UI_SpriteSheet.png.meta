@@ -183,7 +183,7 @@ TextureImporter:
       213: 7481308519805845965
     second: UI_SpriteSheet_0
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -203,6 +203,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -211,12 +213,12 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: -1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -234,10 +236,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -265,6 +271,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
@@ -420,7 +438,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 88ee61422e6834e70800000000000000
-      internalID: 9098263978044747400
+      internalID: 1871454365446325388
       vertices: []
       indices: 
       edges: []
@@ -462,7 +480,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 8305dbf5af3824370800000000000000
-      internalID: 8305345774195920952
+      internalID: 2023271933542497938
       vertices: []
       indices: 
       edges: []
@@ -1380,6 +1398,59 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Slider: 3320256117274126100
+      UI_SpriteSheet_16: -4049794993848228164
+      Button_Mask: 1871454365446325388
+      SearchIcon: -6782912746372111564
+      MEdiumCircle: -3007662718443921088
+      RadioGlow: 3151376211438112140
+      Big RadioPlatemask: -4256266044197491115
+      Radio_Plate_: -6313002280704479065
+      Circle_Knob: 8325030232146045142
+      KnobMask: 6738298383906633207
+      Sliderr2: -550916401680331861
+      RadioMask: 3649387568146861949
+      Space Plate: -7763049976123486877
+      9 Slice 10px: -8601288329423459297
+      Big Radio Plate: 2737534504613840763
+      Button Glow: -799520452015312401
+      Circle_Radio: 7492640298089698142
+      Panel Slider: -7671245474558137409
+      Up_Icon: 9004074117919930418
+      UI_SpriteSheet_49: -8088085319119760236
+      Slider Mask: 4932546068873987572
+      UI_SpriteSheet_19: 1268646239008624482
+      SearchPanel: -549899294674729541
+      UI_SpriteSheet_28: -6983555116808857366
+      Space_mask: -49688392737679028
+      DialoguePlate: -2129506965007406800
+      Button_Plate: 86950127826546775
+      UI_SpriteSheet_33: 810941878276341394
+      KeyBoard: 6817761710783551242
+      UI_SpriteSheet_35: -8630631327294278542
+      Mask_Circle_radio: -5000637242463785281
+      9 Slice 20Px: -1325665693977072079
+      SpaceMask: 2659235967192917165
+      Close_icon: 5472218031393722235
+      Space_Mask_1: 8596820662937834437
+      Tick_Icon: 2905905011506562312
+      UI_SpriteSheet_15: -6579913433095614499
+      ImageRef: -8182242825875463278
+      Button_Glow: 2023271933542497938
+      UI_SpriteSheet_10: -7348596064645043917
+      BigRadioGlow: -6992997975072326288
+      Big_Circle: 6460761068588708507
+      KnobGlow: 7756597199803532721
+      Know Circle: 6562571674167009759
+      Radio_Plate: 882115495372157852
+      UI_SpriteSheet_18: 1477438418901871767
+      SearchMask: -4696077939954729438
+      Mask: -8144013303045208290
+      UI_SpriteSheet_0: 7481308519805845965
+      Spacebig_mask: 8565959657579222278
+      UI_SpriteSheet_40: 4432181213251285642
+      SearchGlow: 1218546615228221309
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -39,7 +39,7 @@ namespace JMRSDK.EditorScript
         {
             currentPlatform = PlatformType.SM;
             ResetAndroidManifest();
-            EnableRecentHistoryAttributes();
+            // DisableRecentHistoryAttributes();
 
             Debug.Log("Status --> SM Manifest Setup Completed");
         }
@@ -52,7 +52,7 @@ namespace JMRSDK.EditorScript
         {
             currentPlatform = PlatformType.CU;
             ResetAndroidManifest();
-            DisableRecentHistoryAttributes();
+            // EnableRecentHistoryAttributes();
 
             Debug.Log("Status --> CU Manifest Setup Completed");
         }
@@ -182,17 +182,20 @@ namespace JMRSDK.EditorScript
         private const string AndroidName = "android:name";
         private const string PRO = "PRO";
         private const string LITE = "LITE";
+        private const string HOLOBOARD = "HOLOBOARD";
+        private const string CARDBOARD = "CARDBOARD";
+        private const string ALL = PRO + "|" + LITE  + "|" + HOLOBOARD + "|" + CARDBOARD;
 
         public static void DisableRecentHistoryAttributes()
         {
-            UpdateXMLNonRecurringAttributes(xmlActivityNodePath, NoHistory, false.ToString());
-            UpdateXMLNonRecurringAttributes(xmlActivityNodePath, ExcludeFromRecents, false.ToString());
+            UpdateXMLNonRecurringAttributes(xmlActivityNodePath, NoHistory, "false");
+            UpdateXMLNonRecurringAttributes(xmlActivityNodePath, ExcludeFromRecents, "false");
         }
 
         public static void EnableRecentHistoryAttributes()
         {
-            UpdateXMLNonRecurringAttributes(xmlActivityNodePath, NoHistory, true.ToString());
-            UpdateXMLNonRecurringAttributes(xmlActivityNodePath, ExcludeFromRecents, true.ToString());
+            UpdateXMLNonRecurringAttributes(xmlActivityNodePath, NoHistory, "true");
+            UpdateXMLNonRecurringAttributes(xmlActivityNodePath, ExcludeFromRecents, "true");
         }
 
         [MenuItem("JioMixedReality/Manifest/Configure for PRO")]
@@ -208,6 +211,21 @@ namespace JMRSDK.EditorScript
             UpdateXMLRecurringAttributes(xmlMetaDataNotePath, AndroidValue, LITE, AndroidName, attributeKey_PRO_LITE);
             SM_Setup();
         }
+
+        [MenuItem("JioMixedReality/Manifest/Configure for Holoboard")]
+        public static void ConfigForHoloboard()
+        {
+            UpdateXMLRecurringAttributes(xmlMetaDataNotePath, AndroidValue, HOLOBOARD, AndroidName, attributeKey_PRO_LITE);
+            SM_Setup();
+        }
+
+        [MenuItem("JioMixedReality/Manifest/Configure for Cardboard")]
+        public static void ConfigForCardboard()
+        {
+            UpdateXMLRecurringAttributes(xmlMetaDataNotePath, AndroidValue, CARDBOARD, AndroidName, attributeKey_PRO_LITE);
+            SM_Setup();
+        }
+
         /// <summary>
         /// For unique node attributes (which doesnt repeat in manifest)
         /// </summary>
