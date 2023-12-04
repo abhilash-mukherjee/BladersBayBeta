@@ -3,6 +3,8 @@ using UnityEngine;
 using System.IO;
 using System;
 using System.Xml;
+using UnityEditor.Build;
+
 
 
 namespace JMRSDK.EditorScript
@@ -18,6 +20,64 @@ namespace JMRSDK.EditorScript
         private static string manifestPath = Path.Combine(Environment.CurrentDirectory + "/Assets/Plugins/Android/AndroidManifest.xml");
 
         public static PlatformType currentPlatform = PlatformType.SM;
+
+        #region Iteraction Type Editor Prefs
+        private const string interactionTypeControllerPrefKey = "InteractionTypeController";
+        private static bool interactionTypeController {
+            get => EditorPrefs.GetBool(interactionTypeControllerPrefKey);
+            set => EditorPrefs.SetBool(interactionTypeControllerPrefKey, value);
+        }
+        private const string interactionTypeGazeAndClickPrefKey = "InteractionTypeGazeAndClick";
+        private static bool interactionTypeGazeAndClick
+        {
+            get => EditorPrefs.GetBool(interactionTypeGazeAndClickPrefKey);
+            set => EditorPrefs.SetBool(interactionTypeGazeAndClickPrefKey, value);
+        }
+        private const string interactionTypeGazeAndDwellPrefKey = "InteractionTypeGazeAndDwell";
+        private static bool interactionTypeGazeAndDwell {
+            get => EditorPrefs.GetBool(interactionTypeGazeAndDwellPrefKey);
+            set => EditorPrefs.SetBool(interactionTypeGazeAndDwellPrefKey, value);
+        }
+        private const string interactionConfigurationPrefKey = "InteractionType";
+        private static string interactionConfiguration
+        {
+            get => EditorPrefs.GetString(interactionConfigurationPrefKey);
+            set => EditorPrefs.SetString(interactionConfigurationPrefKey, value);
+        }
+
+
+      
+        #endregion
+
+        #region Device Type Editor Prefs
+        private const string deviceTypePROPrefKey = "DeviceTypePRO";
+        private static bool deviceTypePRO
+        {
+            get => EditorPrefs.GetBool(deviceTypePROPrefKey);
+            set => EditorPrefs.SetBool(deviceTypePROPrefKey, value);
+        }
+        private const string deviceTypeLITEPrefKey = "DeviceTypeLITE";
+        private static bool deviceTypeLITE
+        {
+            get => EditorPrefs.GetBool(deviceTypeLITEPrefKey);
+            set => EditorPrefs.SetBool(deviceTypeLITEPrefKey, value);
+        }
+        private const string deviceTypeCARDBOARDPrefKey = "DeviceTypeCARDBOARD";
+        private static bool deviceTypeCARDBOARD
+        {
+            get => EditorPrefs.GetBool(deviceTypeCARDBOARDPrefKey);
+            set => EditorPrefs.SetBool(deviceTypeCARDBOARDPrefKey, value);
+        }        
+        private const string deviceTypeHOLOBOARDPrefKey = "DeviceTypeHOLOBOARD";
+        private static bool deviceTypeHOLOBOARD
+        {
+            get => EditorPrefs.GetBool(deviceTypeHOLOBOARDPrefKey);
+            set => EditorPrefs.SetBool(deviceTypeHOLOBOARDPrefKey, value);
+        }
+
+
+        #endregion
+
 
         /// <summary>
         /// Completely Reset Android manifest [All permissions & attributes disabled]
@@ -178,13 +238,15 @@ namespace JMRSDK.EditorScript
 
         private const string xmlMetaDataNotePath = "//manifest/application/meta-data";
         private const string attributeKey_PRO_LITE = "com.jiotesseract.platform";
+        private const string attributeKey_CATEGORY = "com.jiotesseract.mr.category";
+        private const string attributeKey_INTERACTIONTYPE = "com.jiotesseract.mr.interactiontype";
+        private const string attributeKey_LICENSEKEY = "com.jiotesseract.licensekey";
         private const string AndroidValue = "android:value";
         private const string AndroidName = "android:name";
-        private const string PRO = "PRO";
-        private const string LITE = "LITE";
-        private const string HOLOBOARD = "HOLOBOARD";
-        private const string CARDBOARD = "CARDBOARD";
-        private const string ALL = PRO + "|" + LITE  + "|" + HOLOBOARD + "|" + CARDBOARD;
+        private static string[] CATEGORIES = {"0", "1", "2", "3", "4", "5", "6", "7"};
+        private static string[] INTERACTIONTYPE = {"Controller", "GazeAndClick", "GazeAndDwell"};
+        private static string[] DEVICETYPE = {"PRO", "LITE", "CARDBOARD","HOLOBOARD"};
+
 
         public static void DisableRecentHistoryAttributes()
         {
@@ -198,32 +260,252 @@ namespace JMRSDK.EditorScript
             UpdateXMLNonRecurringAttributes(xmlActivityNodePath, ExcludeFromRecents, "true");
         }
 
-        [MenuItem("JioMixedReality/Manifest/Configure for PRO")]
-        public static void ConfigForPRO()
+        #region Configure Device Type
+        [MenuItem("JioMixedReality/Manifest/Configure Device/Configure for PRO", priority = 1)]
+        public static void SetDeviceTypePROCheckBoxBool()
         {
-            UpdateXMLRecurringAttributes(xmlMetaDataNotePath, AndroidValue, PRO, AndroidName, attributeKey_PRO_LITE);
-            CU_Setup();
+            deviceTypePRO = !deviceTypePRO;
+            ConfigureDeviceAttributeStringValue();
         }
 
-        [MenuItem("JioMixedReality/Manifest/Configure for LITE")]
-        public static void ConfigForLITE()
+        [MenuItem("JioMixedReality/Manifest/Configure Device/Configure for PRO", true)]
+        public static bool ConfigDeviceType_PRO()
         {
-            UpdateXMLRecurringAttributes(xmlMetaDataNotePath, AndroidValue, LITE, AndroidName, attributeKey_PRO_LITE);
-            SM_Setup();
+            Menu.SetChecked("JioMixedReality/Manifest/Configure Device/Configure for PRO", deviceTypePRO);
+            return true;
         }
 
-        [MenuItem("JioMixedReality/Manifest/Configure for Holoboard")]
-        public static void ConfigForHoloboard()
+
+        
+        [MenuItem("JioMixedReality/Manifest/Configure Device/Configure for LITE", priority = 2)]
+        public static void SetDeviceTypeLITECheckBoxBool()
         {
-            UpdateXMLRecurringAttributes(xmlMetaDataNotePath, AndroidValue, HOLOBOARD, AndroidName, attributeKey_PRO_LITE);
-            SM_Setup();
+            deviceTypeLITE = !deviceTypeLITE;
+            ConfigureDeviceAttributeStringValue();
         }
 
-        [MenuItem("JioMixedReality/Manifest/Configure for Cardboard")]
-        public static void ConfigForCardboard()
+        [MenuItem("JioMixedReality/Manifest/Configure Device/Configure for LITE", true)]
+        public static bool ConfigDeviceType_LITE()
         {
-            UpdateXMLRecurringAttributes(xmlMetaDataNotePath, AndroidValue, CARDBOARD, AndroidName, attributeKey_PRO_LITE);
-            SM_Setup();
+            Menu.SetChecked("JioMixedReality/Manifest/Configure Device/Configure for LITE", deviceTypeLITE);
+            return true;
+        }
+
+        
+
+        
+        [MenuItem("JioMixedReality/Manifest/Configure Device/Configure for CARDBOARD", priority = 3)]
+        public static void SetDeviceTypeCARDBOARDCheckBoxBool()
+        {
+            deviceTypeCARDBOARD = !deviceTypeCARDBOARD;
+            ConfigureDeviceAttributeStringValue();
+        }
+
+        [MenuItem("JioMixedReality/Manifest/Configure Device/Configure for CARDBOARD", true)]
+        public static bool ConfigDeviceType_CARDBOARD()
+        {
+            Menu.SetChecked("JioMixedReality/Manifest/Configure Device/Configure for CARDBOARD", deviceTypeCARDBOARD);
+            return true;
+        }
+
+        
+        
+        [MenuItem("JioMixedReality/Manifest/Configure Device/Configure for HOLOBOARD", priority = 4)]
+        public static void SetDeviceTypeHOLOBOARDCheckBoxBool()
+        {
+            deviceTypeHOLOBOARD = !deviceTypeHOLOBOARD;
+            ConfigureDeviceAttributeStringValue();
+        }
+
+        [MenuItem("JioMixedReality/Manifest/Configure Device/Configure for HOLOBOARD", true)]
+        public static bool ConfigDeviceType_HOLOBOARD()
+        {
+            Menu.SetChecked("JioMixedReality/Manifest/Configure Device/Configure for HOLOBOARD", deviceTypeHOLOBOARD);
+            return true;
+        }
+
+        #endregion
+
+        #region Configure Category
+        [MenuItem("JioMixedReality/Manifest/Configure Category/Entertainment")]
+        public static void ConfigCategory_Entertainment()
+        {
+            UpdateXMLRecurringAttributes(xmlMetaDataNotePath, AndroidValue, CATEGORIES[0], AndroidName, attributeKey_CATEGORY);
+        }
+
+        [MenuItem("JioMixedReality/Manifest/Configure Category/Gaming")]
+        public static void ConfigCategory_Gaming()
+        {
+            UpdateXMLRecurringAttributes(xmlMetaDataNotePath, AndroidValue, CATEGORIES[1], AndroidName, attributeKey_CATEGORY);
+        }
+
+        [MenuItem("JioMixedReality/Manifest/Configure Category/Learning")]
+        public static void ConfigCategory_Learning()
+        {
+            UpdateXMLRecurringAttributes(xmlMetaDataNotePath, AndroidValue, CATEGORIES[2], AndroidName, attributeKey_CATEGORY);
+        }
+
+        [MenuItem("JioMixedReality/Manifest/Configure Category/Productivity")]
+        public static void ConfigCategory_Productivity()
+        {
+            UpdateXMLRecurringAttributes(xmlMetaDataNotePath, AndroidValue, CATEGORIES[3], AndroidName, attributeKey_CATEGORY);
+        }
+
+        [MenuItem("JioMixedReality/Manifest/Configure Category/Utilities")]
+        public static void ConfigCategory_Utilities()
+        {
+            UpdateXMLRecurringAttributes(xmlMetaDataNotePath, AndroidValue, CATEGORIES[4], AndroidName, attributeKey_CATEGORY);
+        }
+
+        [MenuItem("JioMixedReality/Manifest/Configure Category/Health And Wellness")]
+        public static void ConfigCategory_HealthAndWellness()
+        {
+            UpdateXMLRecurringAttributes(xmlMetaDataNotePath, AndroidValue, CATEGORIES[5], AndroidName, attributeKey_CATEGORY);
+        }
+
+        [MenuItem("JioMixedReality/Manifest/Configure Category/Shopping")]
+        public static void ConfigCategory_Shopping()
+        {
+            UpdateXMLRecurringAttributes(xmlMetaDataNotePath, AndroidValue, CATEGORIES[6], AndroidName, attributeKey_CATEGORY);
+        }
+
+        [MenuItem("JioMixedReality/Manifest/Configure Category/Miscellaneous")]
+        public static void ConfigCategory_Miscellaneous()
+        {
+            UpdateXMLRecurringAttributes(xmlMetaDataNotePath, AndroidValue, CATEGORIES[7], AndroidName, attributeKey_CATEGORY);
+        }
+        #endregion
+
+        #region Configure Interaction
+        [MenuItem("JioMixedReality/Manifest/Configure Interaction/Controller", priority =1)]
+        public static void SetControllerCheckBoxBool()
+        {
+            interactionTypeController = !interactionTypeController;
+            ConfigureInteractionAttributeStringValue();
+        }
+                
+        [MenuItem("JioMixedReality/Manifest/Configure Interaction/Controller", true)]
+        public static bool ConfigInteraction_ControllerlInteraction()
+        {
+            Menu.SetChecked("JioMixedReality/Manifest/Configure Interaction/Controller", interactionTypeController);
+            return true;
+        }
+        
+        [MenuItem("JioMixedReality/Manifest/Configure Interaction/Gaze and Click",priority =2)]
+        public static void SetGazeAndClickCheckBoxBool()
+        {
+            interactionTypeGazeAndClick = !interactionTypeGazeAndClick;
+            ConfigureInteractionAttributeStringValue();
+        } 
+                
+        [MenuItem("JioMixedReality/Manifest/Configure Interaction/Gaze and Click",true)]
+        public static bool ConfigInteraction_GazeAndClickInteraction()
+        {
+            Menu.SetChecked("JioMixedReality/Manifest/Configure Interaction/Gaze and Click", interactionTypeGazeAndClick);
+            return true;
+        }
+
+        [MenuItem("JioMixedReality/Manifest/Configure Interaction/Gaze and Dwell",priority =3)]
+        public static void SetGazeAndDwellCheckBoxBool()
+        {
+            interactionTypeGazeAndDwell = !interactionTypeGazeAndDwell;
+            ConfigureInteractionAttributeStringValue();
+        }
+        
+        [MenuItem("JioMixedReality/Manifest/Configure Interaction/Gaze and Dwell",true)]
+        public static bool ConfigInteraction_GazeAndDwellInteraction()
+        {
+            Menu.SetChecked("JioMixedReality/Manifest/Configure Interaction/Gaze and Dwell", interactionTypeGazeAndDwell);
+            return true;
+        }
+        #endregion
+
+        #region Configure License
+        public static void ConfigureLisenceKey(string key)
+        {
+            UpdateXMLRecurringAttributes(xmlMetaDataNotePath, AndroidValue, key , AndroidName, attributeKey_LICENSEKEY);
+        }
+        #endregion
+
+        private static void ConfigureInteractionAttributeStringValue()
+        {
+
+            string interactionTypeStringVal = "";
+            if (interactionTypeController)
+            {
+                interactionTypeStringVal = INTERACTIONTYPE[0];
+            }
+
+            if (interactionTypeGazeAndClick)
+            {
+                if(string.IsNullOrEmpty(interactionTypeStringVal))
+                {
+                    interactionTypeStringVal = INTERACTIONTYPE[1];
+                }
+                else
+                {
+                    interactionTypeStringVal= string.Concat(interactionTypeStringVal,"|",INTERACTIONTYPE[1]);
+                }
+            }
+            if (interactionTypeGazeAndDwell)
+            {
+                if(string.IsNullOrEmpty(interactionTypeStringVal))
+                {
+                    interactionTypeStringVal = INTERACTIONTYPE[2];
+                }
+                else
+                {
+                    interactionTypeStringVal= string.Concat(interactionTypeStringVal,"|",INTERACTIONTYPE[2]);
+                }
+            }
+                Debug.LogWarning("JMRSDK=> Interaction Attribute Key Set =>> " + interactionTypeStringVal);
+                UpdateXMLRecurringAttributes(xmlMetaDataNotePath, AndroidValue, interactionTypeStringVal, AndroidName, attributeKey_INTERACTIONTYPE);
+        }        
+        private static void ConfigureDeviceAttributeStringValue()
+        {
+
+            string deviceTypeStringVal = "";
+            if (deviceTypePRO)
+            {
+                deviceTypeStringVal = DEVICETYPE[0];
+            }
+
+            if (deviceTypeLITE)
+            {
+                if(string.IsNullOrEmpty(deviceTypeStringVal))
+                {
+                    deviceTypeStringVal = DEVICETYPE[1];
+                }
+                else
+                {
+                    deviceTypeStringVal = string.Concat(deviceTypeStringVal, "|",DEVICETYPE[1]);
+                }
+            }
+            if (deviceTypeCARDBOARD)
+            {
+                if(string.IsNullOrEmpty(deviceTypeStringVal))
+                {
+                    deviceTypeStringVal = DEVICETYPE[2];
+                }
+                else
+                {
+                    deviceTypeStringVal = string.Concat(deviceTypeStringVal, "|",DEVICETYPE[2]);
+                }
+               
+            }            
+            if (deviceTypeHOLOBOARD)
+            {
+                if(string.IsNullOrEmpty(deviceTypeStringVal))
+                {
+                    deviceTypeStringVal = DEVICETYPE[3];
+                }
+                else
+                {
+                    deviceTypeStringVal = string.Concat(deviceTypeStringVal, "|",DEVICETYPE[3]);
+                }
+            }
+                Debug.LogWarning("JMRSDK=> Device Type Attribute Key Set =>> " + deviceTypeStringVal);
+                 UpdateXMLRecurringAttributes(xmlMetaDataNotePath, AndroidValue, deviceTypeStringVal, AndroidName, attributeKey_PRO_LITE);
         }
 
         /// <summary>
@@ -288,6 +570,85 @@ namespace JMRSDK.EditorScript
             }
         }
 
+        private static void readXMLAttributes(string xmlNodePath, string xmlTargetAttributeName, string xmlSearchAttribute, string xmlSearchAttributeKey)
+        {
+            xmlString = File.ReadAllText(xmlPath);
+            XmlDocument doc = new XmlDocument();
+            doc.LoadXml(xmlString);
+
+            var list = doc.SelectNodes(xmlNodePath);
+
+            foreach (XmlElement element in list)
+            {
+                    Debug.LogError(element.ToString());
+                if (element != null && element.HasAttribute(xmlSearchAttribute) && element.HasAttribute(xmlTargetAttributeName))
+                {
+
+                    if (element.Attributes[xmlSearchAttribute].Value == xmlSearchAttributeKey)
+                    {
+                        Debug.LogError(element.ToString());   
+                    }
+                }
+                else
+                {
+                    Debug.LogError("XML Element not found. Please check the PATH");
+                }
+            }
+        }
+
         #endregion
+
+
+        public static void  WarningDialog()
+        {
+            bool popUpConfirmation= EditorUtility.DisplayDialog("Revalidating", "Please ensure you have entered correct DeviceType, InteractionType and License Key", "Proceed with the Build", "Let me Check");
+            if (!popUpConfirmation)
+                throw new BuildFailedException("Configure DeviceType, InteractionType and License Key in the editor. ");
+        }
+
     }
+
+    public class LicenseDiaplayWindow: EditorWindow
+    {
+        string licenseText = "";
+
+        void OnGUI()
+        {
+            GUILayout.Space(10);
+            EditorGUILayout.LabelField("Get the License Key generated from developer console", EditorStyles.wordWrappedLabel);
+            GUILayout.Space(10);
+            licenseText = EditorGUILayout.TextField("Key", licenseText);
+
+            if (GUILayout.Button("Save"))
+            {
+                ManifestConfig.ConfigureLisenceKey(licenseText);
+                Close();
+            }
+        }
+
+        [MenuItem("JioMixedReality/Manifest/Configure License Key", priority = 1)]
+        private static void ShowWindow()
+        {
+            LicenseDiaplayWindow window = new LicenseDiaplayWindow();
+            window.position = new Rect(Screen.width , Screen.height , 350, 100);
+            window.ShowPopup();
+        }
+
+
+    }
+
+#if UNITY_EDITOR
+    public class DisplayDialog : IPreprocessBuild
+    {
+
+        public int callbackOrder { get { return 0; } }
+        public void OnPreprocessBuild(BuildTarget buildTarget, string str)
+        {
+           ManifestConfig.WarningDialog();
+        }
+
+    }
+
+#endif
+
 }

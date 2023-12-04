@@ -16,7 +16,7 @@ public class GamePlayInputController : InputController1, ISwipeHandler
 
     private void Awake()
     {
-        
+        if(GetComponent<JMRInteraction>() == null) gameObject.AddComponent<JMRInteraction>();
     }
 
     private void Start()

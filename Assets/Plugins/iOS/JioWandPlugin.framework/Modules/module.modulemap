@@ -1,0 +1,4 @@
+framework module JioWandPlugin {
+  header "JioWandPlugin-Swift.h"
+  requires objc
+}

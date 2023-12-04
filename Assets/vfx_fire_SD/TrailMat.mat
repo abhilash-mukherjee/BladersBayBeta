@@ -39,6 +39,8 @@ Material:
     m_Ints: []
     m_Floats:
     - DissolveNoise_: 40
+    - _QueueControl: 0
+    - _QueueOffset: 0
     m_Colors:
     - Color01_: {r: 0, g: 22.614582, b: 518.0419, a: 0}
     - Color02_: {r: 37.19211, g: 37.19211, b: 37.19211, a: 0}

@@ -28,8 +28,8 @@ MonoBehaviour:
   prefabType: 0
   behaviourType: 0
   priority: 3
-  headertext: Controlpad successfully connected.
-  headerIconPath: Art/GreenDots
+  headertext: Virtual Controller Active
+  headerIconPath: 
   bodyText: 
   bodyInfoGraphicPath: 
   interactions: []

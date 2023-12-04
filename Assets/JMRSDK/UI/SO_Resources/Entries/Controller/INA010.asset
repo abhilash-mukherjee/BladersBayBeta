@@ -25,11 +25,11 @@ MonoBehaviour:
   - INA008
   - INA009
   prefabType: 3
-  behaviourType: 0
+  behaviourType: 3
   priority: 3
-  headertext: Virtual Controller Unavailable
+  headertext: Virtual Controller Inactive
   headerIconPath: 
-  bodyText: Please run the Virtual Controller on your phone\n as shown below to continue.
+  bodyText: Please run the Virtual Controller on your phone\n as shown above to continue.
   bodyInfoGraphicPath: Art/VC_Disconnected_Image
   interactions: []
   isAutoClose: 0

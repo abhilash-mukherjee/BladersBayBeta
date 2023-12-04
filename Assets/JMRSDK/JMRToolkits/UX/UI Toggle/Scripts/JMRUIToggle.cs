@@ -45,7 +45,7 @@ namespace JMRSDK.Toolkit.UI
         private void Start()
         {
             j_Animator = gameObject.GetComponent<Animator>();
-            j_Animator.keepAnimatorControllerStateOnDisable = false;
+//            j_Animator.keepAnimatorStateOnDisable = false;
             j_Interactable = gameObject.GetComponent<JMRInteractable>();
 
             j_Interactable.InputClicked += OnButtonClick;

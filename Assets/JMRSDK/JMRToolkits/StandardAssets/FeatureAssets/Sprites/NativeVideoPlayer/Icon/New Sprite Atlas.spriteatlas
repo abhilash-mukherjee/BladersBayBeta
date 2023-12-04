@@ -42,11 +42,15 @@ SpriteAtlas:
   - {fileID: 21300000, guid: e044f30652fb5d74da50c3d1551965b9, type: 3}
   - {fileID: 21300000, guid: 9dbea746db19c444b84aa04b7eebd737, type: 3}
   - {fileID: 21300000, guid: 737cad175175a1a4ba364d3ba7bef607, type: 3}
+  - {fileID: 21300000, guid: 7929b4b8c131d5440abf1b055ad3b5c1, type: 3}
   - {fileID: 21300000, guid: ad4a80f95029a1041846e151af26a591, type: 3}
   - {fileID: 21300000, guid: ea3c5ffa81082f54d8dd5b78751cc9cb, type: 3}
   - {fileID: 21300000, guid: 7f3e714b4d236bd4bb4bc1896cdf2cb4, type: 3}
+  - {fileID: 21300000, guid: 2a24f55bc48b38546a8c0460ccb7d440, type: 3}
   - {fileID: 21300000, guid: b7ddae5c1ed2b0c4b88d35612b75ddb3, type: 3}
   - {fileID: 21300000, guid: 81ca3d6c5fbf1de4ea4a5ec50ce468d2, type: 3}
+  - {fileID: 21300000, guid: cbd8a5ecae67c7a48b92dd4fd146583f, type: 3}
+  - {fileID: 21300000, guid: c096b13edef0ee2479796678db3e1b37, type: 3}
   - {fileID: 21300000, guid: 41c0c25ef0589dc4ebfc487de146767b, type: 3}
   - {fileID: 21300000, guid: 8d73473f05d8a2249bec21751f57c298, type: 3}
   - {fileID: 21300000, guid: 97d0c35f844afca4991168e2562d31d1, type: 3}
@@ -57,11 +61,15 @@ SpriteAtlas:
   - Forward 10 sec
   - Volume Mute
   - Pause
+  - Caption_Subtitles
   - ThickSlider
   - Small Screen_Minimise
   - Rewind 10 sec
+  - Video_Viewport
   - Add to Queue
   - Volume
+  - Wishlist_icon
+  - minimised_view_icon
   - AR Icon
   - Settings
   - Replay

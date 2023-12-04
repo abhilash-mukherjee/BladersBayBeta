@@ -1,0 +1,11 @@
+framework module JMR_Analytics {
+  umbrella header "JMR_Analytics.h"
+
+  export *
+  module * { export * }
+}
+
+module JMR_Analytics.Swift {
+  header "JMR_Analytics-Swift.h"
+  requires objc
+}

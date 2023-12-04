@@ -2,8 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="${applicationId}" xmlns:tools="http://schemas.android.com/tools" android:installLocation="preferExternal">
   <supports-screens android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" android:xlargeScreens="true" android:anyDensity="true" />
   <application android:theme="@style/UnityThemeSelector" android:icon="@mipmap/app_icon" android:label="@string/app_name" android:requestLegacyExternalStorage="true" android:screenOrientation="landscape">
-    <meta-data android:name="com.jiotesseract.mr.category" android:value="7" />
+    <meta-data android:name="com.jiotesseract.mr.category" android:value="1" />
+    <meta-data android:name="com.jiotesseract.mr.interactiontype" android:value="GazeAndClick|GazeAndDwell" />
     <meta-data android:name="com.jiotesseract.platform" android:value="LITE" />
+    <meta-data android:name="com.jiotesseract.licensekey" android:value="CCYh9iuDN+yqBUNq41LKgxk5k6/wIksAiD/zWyPKxHfLw8tAs6eA57oEgtV5ACT5FT6ca0oJVMXLJko6z7LkQGTx7fiL8e2a9GDKXASTfptqXixR8LQ816RIqS3B2BEiLsytq8C+qSGPQy/1VIG0A/ZAl4pAemeDehc/P5DGqZuOBpvUlDdMAS957BLM0Kd9PpnATpRsdolOwzx2xVwy2CVyqIv08OfYPorNjOJE0OY+zUirruP9Qx3cFuznZ9HEBSTF3t50dRk67vog2kXQAaxorbKkJF3j1lc9whF2dI+b1FDxrv1OGpWRJF5/ZCTyhJadta1Rut7EQJ9KPPPWNg==" />
     <activity android:name="com.jiotesseract.mr.sdk.JmrUnityActivity" android:label="@string/app_name" android:launchMode="singleTask" android:configChanges="orientation|keyboardHidden|screenSize|screenLayout" android:excludeFromRecents="false" noHistory="false">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
@@ -21,6 +23,7 @@
   <uses-permission android:name="android.permission.RECORD_AUDIO" tools:node="remove" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" tools:node="remove" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" tools:node="remove" />
+  <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
   <uses-permission android:name="android.permission.READ_PHONE_STATE" tools:node="remove" />
   <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" tools:node="remove" />
   <uses-permission android:name="android.permission.WAKE_LOCK" />

@@ -17,18 +17,15 @@ MonoBehaviour:
   - PLA000
   - PLA002
   prefabType: 1
-  behaviourType: 2
+  behaviourType: 0
   priority: 4
-  headertext: Phone Battery \n Too Low
+  headertext: Battery Too Low (5%)
   headerIconPath: Art/BatteryLow
-  bodyText: Please charge your phone to continue using\n JioGlass uninterrupted.
-  interactions:
-  - type: 0
-    interactionString: Okay
-    dismiss: 1
-    showButtonAppearAnimation: 0
+  bodyText: Please charge your Smartphone \n for uninterrupted service.
+  bodyInfoGraphicPath: 
+  interactions: []
   isAutoClose: 0
-  followBehaviours: 2
+  followBehaviours: 0
   popUpVisibleDuration: 0
   transitionData:
     useCommon: 1

@@ -1,0 +1,11 @@
+framework module JMR_Licensing {
+  umbrella header "JMR_Licensing.h"
+
+  export *
+  module * { export * }
+}
+
+module JMR_Licensing.Swift {
+  header "JMR_Licensing-Swift.h"
+  requires objc
+}

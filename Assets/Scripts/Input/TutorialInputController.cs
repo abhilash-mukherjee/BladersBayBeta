@@ -21,6 +21,7 @@ public class TutorialInputController : InputController1, IFn1Handler, ISwipeHand
 
     private void Start()
     {
+        if(GetComponent<JMRInteraction>() == null) gameObject.AddComponent<JMRInteraction>();
         m_moveDirection = Vector3.zero;
         JMRInputManager.Instance.AddGlobalListener(gameObject);
     }
