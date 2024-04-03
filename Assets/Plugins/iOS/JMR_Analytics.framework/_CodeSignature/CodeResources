@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/JMR_Analytics-Swift.h</key>
 		<data>
-		r9RLg6iVoao59GL6TsXBEVHwEcE=
+		g0t6F89ZYbUEYJL0y7NvaT8q+Vk=
 		</data>
 		<key>Headers/JMR_Analytics.h</key>
 		<data>
@@ -14,27 +14,35 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		H8D/Yc9nvJ7O//GcaMj3igNcvJM=
+		UIB3u+UzBVd/0IVvpcP12KhmowY=
 		</data>
 		<key>Modules/JMR_Analytics.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		7mtjGCsUZ/oeYo2gp6glEBhBDf4=
+		KMfAuaO2RxXfxDhmZxtKWqnkMOg=
 		</data>
 		<key>Modules/JMR_Analytics.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		FSPnLbho3G+LL9smI3XgVOqBIQ4=
+		YehxZONeD2A7Bv1eOEw6AWR7904=
+		</data>
+		<key>Modules/JMR_Analytics.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
+		<data>
+		r0HDvk0T+2ScFkLXo+9IwY7SM2I=
 		</data>
 		<key>Modules/JMR_Analytics.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		AT67+oEO22rFCEqVAmWB7lCVpsk=
+		RWkU7gmeuBYMkmewPWWoitALuPw=
+		</data>
+		<key>Modules/JMR_Analytics.swiftmodule/arm64-apple-ios.swiftinterface</key>
+		<data>
+		r0HDvk0T+2ScFkLXo+9IwY7SM2I=
 		</data>
 		<key>Modules/JMR_Analytics.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		QsonweKVkxB22s8ppm6kDIcyQik=
+		G0TxnDoQxTbQ8Fy3kMchxb4bd9M=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		0c4UZH8zjNauMVeRMgxSYL5MdqM=
+		kAGq7sySPBf7VmLdy2P/HGjUTFI=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -43,7 +51,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ShMeGxN/oOEeaF7tln0F6aW/yFHRMOCNxJ7+ZEGqqdc=
+			DtBCdlMX+POIZ9uhaohrRRqDZeziCFeYzz0mkvzLDUE=
 			</data>
 		</dict>
 		<key>Headers/JMR_Analytics.h</key>
@@ -57,35 +65,49 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			IqvzTMV+8EgerrHt0XIpbR4BEJjdhOyI8rmnEUnHd6c=
+			4hYAkO/rNs9luWx0s37l0oGHjKjRDT7PMF9VpLzQq64=
 			</data>
 		</dict>
 		<key>Modules/JMR_Analytics.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KnRdWE4y6t4QM5zi5JDptPdHFgJy1Tku+7GLkZS2aNM=
+			j7l/0FyWlKTN0JVn7uulXe/wRPh8d4OefN2Wyy75DkA=
+			</data>
+		</dict>
+		<key>Modules/JMR_Analytics.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			5YO1QUKFUnwSlnIm7Daf8A8YbP4ANDhDD+QKorbKRS0=
 			</data>
 		</dict>
 		<key>Modules/JMR_Analytics.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jfolfrmlgdfsBPnSORP4+glVQbw/flkWfLCUBxTfsrA=
+			5gDVC0kYkWpdddjmFP//K+wUONgSbhbHFt1M6ySK++8=
+			</data>
+		</dict>
+		<key>Modules/JMR_Analytics.swiftmodule/arm64-apple-ios.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			5YO1QUKFUnwSlnIm7Daf8A8YbP4ANDhDD+QKorbKRS0=
 			</data>
 		</dict>
 		<key>Modules/JMR_Analytics.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SMj4Qz/M+CxuA/bfxYRYs6S2Qp3LdboShyOSNTFXoIM=
+			o/hKXaSogBLSFPKosH5XyPu5V1szRxrRNWoNEmpnOyY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dZcYv0Cu4RkLQZPW476+vA5G4wSdTfqoNZ97g6Prad0=
+			dJcRen5/QL2+hBitpy3vHAzr8Y7Vut/Ri80KheagoLs=
 			</data>
 		</dict>
 	</dict>

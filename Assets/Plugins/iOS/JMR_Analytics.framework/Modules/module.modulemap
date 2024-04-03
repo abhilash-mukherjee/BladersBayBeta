@@ -1,7 +1,7 @@
 framework module JMR_Analytics {
   umbrella header "JMR_Analytics.h"
-
   export *
+
   module * { export * }
 }
 

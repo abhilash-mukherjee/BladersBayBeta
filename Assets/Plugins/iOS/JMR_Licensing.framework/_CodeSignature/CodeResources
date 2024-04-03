@@ -18,7 +18,7 @@
 		</data>
 		<key>Modules/JMR_Licensing.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		5cKnmwSd5HMktO5TZd+zYUaz3WA=
+		8yMUadaTADwcZKr/oubUJFOTH9o=
 		</data>
 		<key>Modules/JMR_Licensing.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/JMR_Licensing.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		L5CtH1cubGso7ynjv79+jxAcN5w=
+		tVy+pAQDulcRlV/JtwStTTLR7Gw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -57,7 +57,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pdxXFzDZftXwGAEcYGP3L5yCKKkGi4uQxeWmoV6z8ws=
+			EM9x/aiDvinx+ovTIpXvYbnLSed+MAfEmFs05zXQOio=
 			</data>
 		</dict>
 		<key>Modules/JMR_Licensing.swiftmodule/arm64-apple-ios.abi.json</key>
@@ -78,7 +78,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			CYssI1Tm3anxn6BoK4Wxghk4KYMUjtAu7HYfDt2792A=
+			oW8pmFaxIrwVwovoOhrY4+4FQfDpB7Lq9SucbD3TTAI=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

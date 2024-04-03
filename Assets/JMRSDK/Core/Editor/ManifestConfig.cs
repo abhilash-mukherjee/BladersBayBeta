@@ -261,14 +261,14 @@ namespace JMRSDK.EditorScript
         }
 
         #region Configure Device Type
-        [MenuItem("JioMixedReality/Manifest/Configure Device/Configure for PRO", priority = 1)]
+        //[MenuItem("JioMixedReality/Manifest/Configure Device/Configure for PRO", priority = 1)]
         public static void SetDeviceTypePROCheckBoxBool()
         {
             deviceTypePRO = !deviceTypePRO;
             ConfigureDeviceAttributeStringValue();
         }
 
-        [MenuItem("JioMixedReality/Manifest/Configure Device/Configure for PRO", true)]
+        //[MenuItem("JioMixedReality/Manifest/Configure Device/Configure for PRO", true)]
         public static bool ConfigDeviceType_PRO()
         {
             Menu.SetChecked("JioMixedReality/Manifest/Configure Device/Configure for PRO", deviceTypePRO);
@@ -277,14 +277,14 @@ namespace JMRSDK.EditorScript
 
 
         
-        [MenuItem("JioMixedReality/Manifest/Configure Device/Configure for LITE", priority = 2)]
+        //[MenuItem("JioMixedReality/Manifest/Configure Device/Configure for LITE", priority = 2)]
         public static void SetDeviceTypeLITECheckBoxBool()
         {
             deviceTypeLITE = !deviceTypeLITE;
             ConfigureDeviceAttributeStringValue();
         }
 
-        [MenuItem("JioMixedReality/Manifest/Configure Device/Configure for LITE", true)]
+        //[MenuItem("JioMixedReality/Manifest/Configure Device/Configure for LITE", true)]
         public static bool ConfigDeviceType_LITE()
         {
             Menu.SetChecked("JioMixedReality/Manifest/Configure Device/Configure for LITE", deviceTypeLITE);
@@ -294,14 +294,14 @@ namespace JMRSDK.EditorScript
         
 
         
-        [MenuItem("JioMixedReality/Manifest/Configure Device/Configure for CARDBOARD", priority = 3)]
+        //[MenuItem("JioMixedReality/Manifest/Configure Device/Configure for CARDBOARD", priority = 3)]
         public static void SetDeviceTypeCARDBOARDCheckBoxBool()
         {
             deviceTypeCARDBOARD = !deviceTypeCARDBOARD;
             ConfigureDeviceAttributeStringValue();
         }
 
-        [MenuItem("JioMixedReality/Manifest/Configure Device/Configure for CARDBOARD", true)]
+        //[MenuItem("JioMixedReality/Manifest/Configure Device/Configure for CARDBOARD", true)]
         public static bool ConfigDeviceType_CARDBOARD()
         {
             Menu.SetChecked("JioMixedReality/Manifest/Configure Device/Configure for CARDBOARD", deviceTypeCARDBOARD);
@@ -310,14 +310,14 @@ namespace JMRSDK.EditorScript
 
         
         
-        [MenuItem("JioMixedReality/Manifest/Configure Device/Configure for HOLOBOARD", priority = 4)]
+        //[MenuItem("JioMixedReality/Manifest/Configure Device/Configure for HOLOBOARD", priority = 4)]
         public static void SetDeviceTypeHOLOBOARDCheckBoxBool()
         {
             deviceTypeHOLOBOARD = !deviceTypeHOLOBOARD;
             ConfigureDeviceAttributeStringValue();
         }
 
-        [MenuItem("JioMixedReality/Manifest/Configure Device/Configure for HOLOBOARD", true)]
+        //[MenuItem("JioMixedReality/Manifest/Configure Device/Configure for HOLOBOARD", true)]
         public static bool ConfigDeviceType_HOLOBOARD()
         {
             Menu.SetChecked("JioMixedReality/Manifest/Configure Device/Configure for HOLOBOARD", deviceTypeHOLOBOARD);
@@ -327,49 +327,49 @@ namespace JMRSDK.EditorScript
         #endregion
 
         #region Configure Category
-        [MenuItem("JioMixedReality/Manifest/Configure Category/Entertainment")]
+        //[MenuItem("JioMixedReality/Manifest/Configure Category/Entertainment")]
         public static void ConfigCategory_Entertainment()
         {
             UpdateXMLRecurringAttributes(xmlMetaDataNotePath, AndroidValue, CATEGORIES[0], AndroidName, attributeKey_CATEGORY);
         }
 
-        [MenuItem("JioMixedReality/Manifest/Configure Category/Gaming")]
+        //[MenuItem("JioMixedReality/Manifest/Configure Category/Gaming")]
         public static void ConfigCategory_Gaming()
         {
             UpdateXMLRecurringAttributes(xmlMetaDataNotePath, AndroidValue, CATEGORIES[1], AndroidName, attributeKey_CATEGORY);
         }
 
-        [MenuItem("JioMixedReality/Manifest/Configure Category/Learning")]
+        //[MenuItem("JioMixedReality/Manifest/Configure Category/Learning")]
         public static void ConfigCategory_Learning()
         {
             UpdateXMLRecurringAttributes(xmlMetaDataNotePath, AndroidValue, CATEGORIES[2], AndroidName, attributeKey_CATEGORY);
         }
 
-        [MenuItem("JioMixedReality/Manifest/Configure Category/Productivity")]
+        //[MenuItem("JioMixedReality/Manifest/Configure Category/Productivity")]
         public static void ConfigCategory_Productivity()
         {
             UpdateXMLRecurringAttributes(xmlMetaDataNotePath, AndroidValue, CATEGORIES[3], AndroidName, attributeKey_CATEGORY);
         }
 
-        [MenuItem("JioMixedReality/Manifest/Configure Category/Utilities")]
+        //[MenuItem("JioMixedReality/Manifest/Configure Category/Utilities")]
         public static void ConfigCategory_Utilities()
         {
             UpdateXMLRecurringAttributes(xmlMetaDataNotePath, AndroidValue, CATEGORIES[4], AndroidName, attributeKey_CATEGORY);
         }
 
-        [MenuItem("JioMixedReality/Manifest/Configure Category/Health And Wellness")]
+        //[MenuItem("JioMixedReality/Manifest/Configure Category/Health And Wellness")]
         public static void ConfigCategory_HealthAndWellness()
         {
             UpdateXMLRecurringAttributes(xmlMetaDataNotePath, AndroidValue, CATEGORIES[5], AndroidName, attributeKey_CATEGORY);
         }
 
-        [MenuItem("JioMixedReality/Manifest/Configure Category/Shopping")]
+        //[MenuItem("JioMixedReality/Manifest/Configure Category/Shopping")]
         public static void ConfigCategory_Shopping()
         {
             UpdateXMLRecurringAttributes(xmlMetaDataNotePath, AndroidValue, CATEGORIES[6], AndroidName, attributeKey_CATEGORY);
         }
 
-        [MenuItem("JioMixedReality/Manifest/Configure Category/Miscellaneous")]
+        //[MenuItem("JioMixedReality/Manifest/Configure Category/Miscellaneous")]
         public static void ConfigCategory_Miscellaneous()
         {
             UpdateXMLRecurringAttributes(xmlMetaDataNotePath, AndroidValue, CATEGORIES[7], AndroidName, attributeKey_CATEGORY);
@@ -377,42 +377,42 @@ namespace JMRSDK.EditorScript
         #endregion
 
         #region Configure Interaction
-        [MenuItem("JioMixedReality/Manifest/Configure Interaction/Controller", priority =1)]
+        //[MenuItem("JioMixedReality/Manifest/Configure Interaction/Controller", priority =1)]
         public static void SetControllerCheckBoxBool()
         {
             interactionTypeController = !interactionTypeController;
             ConfigureInteractionAttributeStringValue();
         }
                 
-        [MenuItem("JioMixedReality/Manifest/Configure Interaction/Controller", true)]
+        //[MenuItem("JioMixedReality/Manifest/Configure Interaction/Controller", true)]
         public static bool ConfigInteraction_ControllerlInteraction()
         {
             Menu.SetChecked("JioMixedReality/Manifest/Configure Interaction/Controller", interactionTypeController);
             return true;
         }
         
-        [MenuItem("JioMixedReality/Manifest/Configure Interaction/Gaze and Click",priority =2)]
+        //[MenuItem("JioMixedReality/Manifest/Configure Interaction/Gaze and Click",priority =2)]
         public static void SetGazeAndClickCheckBoxBool()
         {
             interactionTypeGazeAndClick = !interactionTypeGazeAndClick;
             ConfigureInteractionAttributeStringValue();
         } 
                 
-        [MenuItem("JioMixedReality/Manifest/Configure Interaction/Gaze and Click",true)]
+        //[MenuItem("JioMixedReality/Manifest/Configure Interaction/Gaze and Click",true)]
         public static bool ConfigInteraction_GazeAndClickInteraction()
         {
             Menu.SetChecked("JioMixedReality/Manifest/Configure Interaction/Gaze and Click", interactionTypeGazeAndClick);
             return true;
         }
 
-        [MenuItem("JioMixedReality/Manifest/Configure Interaction/Gaze and Dwell",priority =3)]
+        //[MenuItem("JioMixedReality/Manifest/Configure Interaction/Gaze and Dwell",priority =3)]
         public static void SetGazeAndDwellCheckBoxBool()
         {
             interactionTypeGazeAndDwell = !interactionTypeGazeAndDwell;
             ConfigureInteractionAttributeStringValue();
         }
         
-        [MenuItem("JioMixedReality/Manifest/Configure Interaction/Gaze and Dwell",true)]
+        //[MenuItem("JioMixedReality/Manifest/Configure Interaction/Gaze and Dwell",true)]
         public static bool ConfigInteraction_GazeAndDwellInteraction()
         {
             Menu.SetChecked("JioMixedReality/Manifest/Configure Interaction/Gaze and Dwell", interactionTypeGazeAndDwell);
@@ -626,7 +626,7 @@ namespace JMRSDK.EditorScript
             }
         }
 
-        [MenuItem("JioMixedReality/Manifest/Configure License Key", priority = 1)]
+        //[MenuItem("JioMixedReality/Manifest/Configure License Key", priority = 1)]
         private static void ShowWindow()
         {
             LicenseDiaplayWindow window = new LicenseDiaplayWindow();

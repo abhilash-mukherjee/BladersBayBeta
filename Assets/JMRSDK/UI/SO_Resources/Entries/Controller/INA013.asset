@@ -28,7 +28,7 @@ MonoBehaviour:
   behaviourType: 0
   priority: 3
   headertext: Switched to Controller Pointer
-  headerIconPath: Art/Controller_Icon
+  headerIconPath: Art/VCIcon
   bodyText: 
   bodyInfoGraphicPath: 
   interactions: []

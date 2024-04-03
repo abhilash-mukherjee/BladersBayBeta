@@ -49,5 +49,15 @@ MonoBehaviour:
       type: 3}
     prefabPath: Prefab/Custom_RecenterCanvas
     isPrefabLoaded: 0
+  - type: 6
+    prefab: {fileID: 5155596753520626271, guid: 7a7e970a144daa24f82e923f509fa2a5,
+      type: 3}
+    prefabPath: Prefab/pf_FullSizePopup_WithToggle
+    isPrefabLoaded: 0
+  - type: 7
+    prefab: {fileID: 4032914640486998013, guid: c839ae7c4d1fac94d8bc3569bc1f3c73,
+      type: 3}
+    prefabPath: Prefab/pf_FullSizePopup_Loader
+    isPrefabLoaded: 0
   inputJsonString: 
-  outputJsonString: ' {"transitionData":{"useCommon":true,"startPosition":{"x":0.0,"y":510.0,"z":2.4000000953674318},"targetPosition":{"x":0.0,"y":0.0,"z":2.4000000953674318},"transitionDuration":1.0,"waitDuration":3.0},"popupConfigDataContainer":[{"type":0,"prefab":{"instanceID":24462},"prefabPath":"Prefab/pf_ToastPopup","isPrefabLoaded":false},{"type":1,"prefab":{"instanceID":24464},"prefabPath":"Prefab/pf_FullSizePopup","isPrefabLoaded":false},{"type":2,"prefab":{"instanceID":24466},"prefabPath":"Prefab/pf_FullSizePopup_WithImage","isPrefabLoaded":false},{"type":3,"prefab":{"instanceID":24468},"prefabPath":"Prefab/pf_FullSizePopup_NoButton","isPrefabLoaded":false},{"type":4,"prefab":{"instanceID":24470},"prefabPath":"Prefab/pf_FullSizePopup_WithImageAtTop","isPrefabLoaded":false},{"type":5,"prefab":{"instanceID":72580},"prefabPath":"Prefab/Custom_RecenterCanvas","isPrefabLoaded":false}]}'
+  outputJsonString: '{"transitionData":{"useCommon":true,"startPosition":{"x":0.0,"y":510.0,"z":2.4000000953674318},"targetPosition":{"x":0.0,"y":0.0,"z":2.4000000953674318},"transitionDuration":1.0,"waitDuration":3.0},"popupConfigDataContainer":[{"type":0,"prefab":{"instanceID":41780},"prefabPath":"Prefab/pf_ToastPopup","isPrefabLoaded":false},{"type":1,"prefab":{"instanceID":41866},"prefabPath":"Prefab/pf_FullSizePopup","isPrefabLoaded":false},{"type":2,"prefab":{"instanceID":41868},"prefabPath":"Prefab/pf_FullSizePopup_WithImage","isPrefabLoaded":false},{"type":3,"prefab":{"instanceID":41786},"prefabPath":"Prefab/pf_FullSizePopup_NoButton","isPrefabLoaded":false},{"type":4,"prefab":{"instanceID":41870},"prefabPath":"Prefab/pf_FullSizePopup_WithImageAtTop","isPrefabLoaded":false},{"type":5,"prefab":{"instanceID":41792},"prefabPath":"Prefab/Custom_RecenterCanvas","isPrefabLoaded":false},{"type":6,"prefab":{"instanceID":41884},"prefabPath":"Prefab/pf_FullSizePopup_WithToggle","isPrefabLoaded":false},{"type":7,"prefab":{"instanceID":311798},"prefabPath":"Prefab/pf_FullSizePopup_Loader","isPrefabLoaded":false}]}'

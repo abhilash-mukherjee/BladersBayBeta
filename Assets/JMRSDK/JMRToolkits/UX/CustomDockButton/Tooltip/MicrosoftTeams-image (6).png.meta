@@ -150,10 +150,10 @@ TextureImporter:
       name: MicrosoftTeams-image (6)_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 104
-        width: 59
-        height: 20
+        x: 2
+        y: 8
+        width: 447
+        height: 94
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,10 +171,10 @@ TextureImporter:
       name: MicrosoftTeams-image (6)_2
       rect:
         serializedVersion: 2
-        x: 98
-        y: 104
-        width: 69
-        height: 20
+        x: 410
+        y: 202
+        width: 206
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,10 +192,10 @@ TextureImporter:
       name: MicrosoftTeams-image (6)_3
       rect:
         serializedVersion: 2
-        x: 207
-        y: 104
-        width: 107
-        height: 20
+        x: 697
+        y: 194
+        width: 105
+        height: 45
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,10 +213,10 @@ TextureImporter:
       name: MicrosoftTeams-image (6)_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 253
-        height: 65
+        x: 884
+        y: 203
+        width: 130
+        height: 37
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,13 +234,13 @@ TextureImporter:
       name: MicrosoftTeams-image (6)_4
       rect:
         serializedVersion: 2
-        x: 293
-        y: 4
-        width: 296
-        height: 62
+        x: 530
+        y: 10
+        width: 517
+        height: 94
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 1}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -255,10 +255,10 @@ TextureImporter:
       name: MicrosoftTeams-image (6)_5
       rect:
         serializedVersion: 2
-        x: 625
-        y: 38
-        width: 206
-        height: 28
+        x: 1131
+        y: 57
+        width: 358
+        height: 46
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,6 +268,48 @@ TextureImporter:
       bones: []
       spriteID: 5adb3e79dca59e870800000000000000
       internalID: 8712594793188015525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MicrosoftTeams-image (6)_6
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 204
+        width: 111
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fb0a781bc630774f95a0946e7b376d7
+      internalID: -1822123351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MicrosoftTeams-image (6)_7
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 203
+        width: 130
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8759c571368a0cb4d857414c50c386fe
+      internalID: 1914929551
       vertices: []
       indices: 
       edges: []
@@ -283,12 +325,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      MicrosoftTeams-image (6)_0: -2058004621427595419
-      MicrosoftTeams-image (6)_1: 6172119545264029736
-      MicrosoftTeams-image (6)_2: -1582648166059048980
+      MicrosoftTeams-image (6)_7: -1822123351
+      MicrosoftTeams-image (6)_2: -2058004621427595419
+      MicrosoftTeams-image (6)_4: 6172119545264029736
+      MicrosoftTeams-image (6)_6: 76567605
+      MicrosoftTeams-image (6)_1: -1582648166059048980
       MicrosoftTeams-image (6)_3: -5574865602430634364
-      MicrosoftTeams-image (6)_4: -1407166154927051788
-      MicrosoftTeams-image (6)_5: 8712594793188015525
+      MicrosoftTeams-image (6)_5: -1407166154927051788
+      MicrosoftTeams-image (6)_0: 8712594793188015525
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
